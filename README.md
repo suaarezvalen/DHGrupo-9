@@ -14,7 +14,7 @@ https://www.ubisoft.com/es-mx/forward
 https://bethesda.net/es/dashboard
 https://www.g2a.com/
 
-Descripción de cada uno:
+Lucas Angiorama : tengo 23 años, me gustan los videjuegos y mi hobby son las motos. 
 
 Link trello: https://trello.com/b/Rrvt1Lch/dh-clase-9
 
