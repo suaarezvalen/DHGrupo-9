@@ -15,6 +15,7 @@ https://bethesda.net/es/dashboard
 https://www.g2a.com/
 
 Lucas Angiorama : tengo 23 años, me gustan los videjuegos y mi hobby son las motos. 
+
 Matías Tarasido: Tengo 35 años, me gusta la música, el cine y leer. Me interesa aprender nuevas cosas y ampliar mis conocimientos.
 
 Link trello: https://trello.com/b/Rrvt1Lch/dh-clase-9
