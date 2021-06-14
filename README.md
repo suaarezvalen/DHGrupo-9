@@ -20,5 +20,7 @@ Matías Tarasido: Tengo 35 años, me gusta la música, el cine y leer. Me intere
 
 Baez Mauro: Tengo 31 años, me gusta el futbol, el anime y los comics. Fanatico de star wars.
 
+Valentin Suarez: Tengo 17 años, soy fanatico de los videojuegos. Tengo como hobby el diseño web, y creacion de servidores de juegos.
+
 Link trello: https://trello.com/b/Rrvt1Lch/dh-clase-9
 
