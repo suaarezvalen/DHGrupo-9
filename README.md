@@ -18,5 +18,7 @@ Lucas Angiorama : tengo 23 años, me gustan los videjuegos y mi hobby son las mo
 
 Matías Tarasido: Tengo 35 años, me gusta la música, el cine y leer. Me interesa aprender nuevas cosas y ampliar mis conocimientos.
 
+Baez Mauro: Tengo 31 años, me gusta el futbol, el anime y los comics. Fanatico de star wars.
+
 Link trello: https://trello.com/b/Rrvt1Lch/dh-clase-9
 
