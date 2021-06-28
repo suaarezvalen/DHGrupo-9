@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/suaarezvalen/DHGrupo-9#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap-icons": "^1.5.0",
+    "express": "^4.17.1",
     "node-modules": "^1.0.1"
   }
 }
