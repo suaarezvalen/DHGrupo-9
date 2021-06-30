@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+    <header>
+      <nav id="nav-bar">
+          <img id="logo" src="./img/logo.png"></img>
+          <section id="botones-center">
+              <button class="botones-tienda" type="button">TIENDA</button>
+              <button class="botones-tienda" type="button">NOVEDADES</button>
+          </section>
+          <section id="botones-izq">
+              <button class="usuario" type="button"><i class="fas fa-search"></i></i></button>
+              <button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button>
+              <button class="usuario" type="button"><i class="fas fa-user-circle"></i></button>
+          </section>
+      </nav> 
+    </header>
     
+    <main>
+       <div id="formulario">
+          <form action="/login" method="POST">
+            
+            <p>
+            <label>Email:</label>
+            <input type="email" name="email">
+            </p>
+            <p>
+            <label for="clave">Password</label>
+            <input type="password" name="clave">
+            </p>
+            <p>
+            <button type="submit">Enviar</button>
+            </p>
+            </form>
+      </div>
+    </main>
+
+    <footer>
+      <section id="logo-redes">
+          <img id="logo-pie" src="./img/logo.png">
+              <section>
+                  <button class="redes" type="button"><i class="fab fa-instagram"></i></button>
+                  <button class="redes" type="button"><i class="fab fa-youtube"></i></button>
+                  <button class="redes" type="button"><i class="fab fa-twitter"></i></button>
+              </section>
+          </section>
+  </footer>
 </body>
 </html>
