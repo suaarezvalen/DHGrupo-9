@@ -52,13 +52,12 @@ main{
     display: flex;
     flex-direction: row;
     width: 100%;
-
 }
-
 #banners1{
     width: 590px;
     transition: 1.0s;
     height: 802px;
+    
 }
 #banners2{
     width: 590px;
