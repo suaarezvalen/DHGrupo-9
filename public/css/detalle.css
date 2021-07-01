@@ -1,0 +1,73 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+/* header*/
+
+header{
+    background-color: black;
+}
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 50px; 
+    height: 50px;
+      
+}
+.botones-tienda{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 8px;
+}
+.usuario{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
+
+/*header*/
+
+
+main{
+    background-color: #131823;
+    width: 100%;
+    height: 1000px;
+}
+#productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#lado-izquierdo{
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    color: white;
+}
+#lado-derecho{
+    margin: 10%;
+}
+#foto-producto{
+    width: 530px;
+    height: 320px;
+}
+#especificaiones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

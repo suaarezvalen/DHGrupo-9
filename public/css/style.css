@@ -120,7 +120,7 @@ main{
 .destacado-banner{
     width:110%;
     height: 85%;
-    transition: 1.5s;
+    transition: 0.2s;
     overflow:hidden;
 }
 #box-info{
@@ -149,6 +149,7 @@ main{
 .movimiento-banner:hover .destacado-banner{
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
+    transition: 1.5s;
 }
 
 
