@@ -23,21 +23,30 @@
     </header>
     
     <main>
-       <div id="formulario">
-          <form action="/login" method="POST">
+       <div class="cajaformulario">
+        <img id="logocaja" src="./img/logo.png"></img>   
+         
+       
+        <form id="formulario">
             
-            <p>
-            <label>Email:</label>
-            <input type="email" name="email">
-            </p>
-            <p>
-            <label for="clave">Password</label>
-            <input type="password" name="clave">
-            </p>
-            <p>
-            <button type="submit">Enviar</button>
+            <div id="email">
+            <label for="email"></label>
+            <input type="email" name="email" placeholder="usuario / email">
+            </div>
+            <br>
+           
+            <div id="password">
+            <label for="clave"></label>
+            <input type="password" name="clave" placeholder="contraseña">
+            </div>
+
+            <p id="boton-ingreso">
+            <button type="submit">Ingresar</button>
             </p>
             </form>
+            <p id="boton-registro">
+            <a href="http://www.localhost:3001/registro">Registrarse</a>
+            </p>
       </div>
     </main>
 
