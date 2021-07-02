@@ -47,6 +47,7 @@ main{
     background-color: #131823;
     width: 100%;
     height: 1000px;
+    font-family: ;
 }
 #productos{
     display: flex;
@@ -70,4 +71,8 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+#especificaciones-caja{
+    display: flex;
+    flex-direction: row;
 }

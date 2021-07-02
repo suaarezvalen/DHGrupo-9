@@ -7,7 +7,7 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/index.html"));
 });
 app.get("/detalle", (req, res) => {

@@ -43,9 +43,9 @@ header{
 body{
     background-image: url("../img/fondo-fifa.jpg");
     background-size: cover;
-    background-repeat: repeat;
-
-
+    
+    margin: 0%;
+    padding: 0%;
 }
 .cajaformulario{
     display: flex;
@@ -103,7 +103,7 @@ form input{
 footer{
     
     background-color: black;
-    height: 150px;
+    height: 175%;
     width: 100%;
     
 }

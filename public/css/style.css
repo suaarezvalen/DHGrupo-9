@@ -1,6 +1,7 @@
 body{
     margin: 0%;
     padding: 0%;
+    height: 100%;
 }
 
 /* header */ 
@@ -157,7 +158,7 @@ main{
 
 footer{
     background-color: black;
-    height: 150px;
+    height: 175%;
     width: 100%;
     
 }
