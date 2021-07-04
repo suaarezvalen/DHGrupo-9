@@ -53,7 +53,7 @@ header{
 /*main*/
 
 main{
-    background-image: url("/img/fondo-carrito.jpg");
+    background-image: url("/img/fondo-carrito.png");
     background-repeat: no-repeat;
     background-size: 1920px 1080px;
     background-position: center center;
@@ -78,7 +78,7 @@ main{
     color: white;
     font-size: 50px;
     font-weight: bold;
-    box-shadow: 4px 4px 5px rgb(130, 130, 130);
+    box-shadow: 4px 4px rgb(255, 255, 255);
     margin-bottom: 25px;
     padding-top: 12px;
     padding-right: 10px;
@@ -86,9 +86,17 @@ main{
 }
 
 .titulos-carrito:hover{
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(14, 14, 14);
+    box-shadow: none;
+    border: solid 3px white;
     transform: scale(1.07);
     transition: background-color .5s;
+}
+
+.titulos-chicos-carrito{
+    font-size: 30px;
+    margin-top: 15px;
+    font-weight: normal;
 }
 
 .subtitulos-carrito{
@@ -99,7 +107,7 @@ main{
     background-color: white;
     color: black;
     font-size: 30px;
-    box-shadow: 4px 4px 5px rgb(30, 30, 30);
+    box-shadow: 4px 4px rgb(30, 30, 30);
     margin-bottom: 25px;
     padding-top: 12px;
     padding-right: 10px;
@@ -108,15 +116,10 @@ main{
 
 .subtitulos-carrito:hover{
     background-color: rgb(219, 219, 219);
+    box-shadow: none;
+    border: solid 3px rgb(0, 0, 0);
     transform: scale(1.07);
     transition: background-color .5s;
-}
-
-#info-carrito{
-    display: flex;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .columnas-carrito img{
@@ -125,12 +128,37 @@ main{
     border: solid 4px black;
 }
 
-.texto-carrito{
+#info-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.info-texto-carrito{
     margin-left: 10px;
 }
 
-.boton-compra{
-    text-align: center;
+.texto-chico-carrito{
+    font-size: 23px;
+}
+
+#cupones-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.inpus-carrito{
+    padding-bottom: 15px;
+}
+
+.botones-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /*main*/
@@ -169,16 +197,21 @@ footer{
 @media (min-width: 360px) and (max-width:769px){
 
     main{
-        background-image: url("/img/fondo2-carrito.jpg");
+        background-image: url("/img/fondo2-carrito.png");
         background-size: 769px 1367px;
     }
-    
 
     .titulos-carrito{
         font-size: 40px;
         padding-right: none;
         box-shadow: none;
     }
+
+    .titulos-chicos-carrito{
+        font-size: 20px;
+        margin-top: 17px;
+    }
+    
     
     .subtitulos-carrito{
         font-size: 30px;
@@ -195,7 +228,7 @@ footer{
 @media (min-width: 770px) and (max-width:1079px){
 
     main{
-        background-image: url("/img/fondo3-carrito.jpg");
+        background-image: url("/img/fondo3-carrito.png");
         background-size: 1080px 1920px;
     }
 
