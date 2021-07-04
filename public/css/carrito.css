@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+}
+
+/* header*/
+
+header{
+    background-color: black;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 50px; 
+    height: 50px;
+}
+
+.botones-tienda{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 8px;
+}
+
+.usuario{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
+
+/*header*/
+
+/*main*/
+
+main{
+    background-image: url("/img/fondo-carrito.jpg");
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-position: center center;
+    border: solid 3px white;
+}
+
+.flex-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+/* .columnas-carrito article{
+
+} */
+
+.titulos-carrito{
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+.subtitulos-carrito{
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+#info-carrito{
+    display: flex;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.columnas-carrito img{
+    width: 200px;
+    height: 242px;
+    border: solid 4px black;
+}
+
+.texto-carrito{
+    margin-left: 10px;
+}
+
+.boton-compra{
+    text-align: center;
+}
+
+/*main*/
+
+/* footer */
+
+footer{
+    background-color: black;
+    height: 175%;
+    width: 100%;
+    
+}
+#logo-pie{
+    width: 5%;
+    height: 70%;
+    
+}
+#logo-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    margin-bottom: 9px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
+
+@media (min-width: 360px) and (max-width:769px){
+
+    .titulos-carrito{
+        font-size: 40px;
+        padding-right: none;
+    }
+    
+    .subtitulos-carrito{
+        font-size: 30px;
+        padding-right: none;
+    }
+
+    .columnas-carrito img{
+        display: none;
+    }
+
+}
