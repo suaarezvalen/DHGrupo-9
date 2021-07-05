@@ -10,16 +10,32 @@ body{
 header{
     background-color: black;
 }
+
 #nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 #logo{
     width: 50px; 
-    height: 50px;    
+    height: 50px;
+    margin-left: 20px;
 }
+
+.logo-texto{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.logo-texto2{
+    display: none;
+}
+
 .botones-tienda{
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -28,8 +44,10 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 8px;
+    font-size: 15px;
+    font-weight: bold;
 }
+
 .usuario{
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -38,8 +56,9 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     color: white;
+    margin-right: 20px;
 }
 
 
@@ -49,6 +68,9 @@ header{
 main{
     width: 100%;
     background-color: #131823;
+}
+#carouselExampleIndicators{
+    display: none;
 }
 #novedades{
     display: flex;
@@ -182,4 +204,106 @@ footer{
     color: white;
     font-size: 15px;
     color: white;
+}
+
+
+
+/* MEDIA */
+
+
+@media (min-width: 770px) and (max-width:1079px){
+
+#carouselExampleIndicators{
+    display: none;
+}
+#novedades{
+    height: 60vw;
+    width: 100vw;
+}
+#novedades img{
+    width: 35vw;
+    height: 55vh;
+}
+#banner1:hover #banners1{
+    transition: none;
+    transform: none;
+}#banner2:hover #banners2{
+    transition: none;
+    transform: none;
+}#banner3:hover #banners3{
+    transition: none;
+    transform: none;
+}
+
+#destacado{
+    width: 100vw;
+    height: 30vh;
+}
+#juego-banner{
+    display: none;
+}
+#destacado-juego{
+    width: 30vw;
+    height: 33vh;
+}
+#box-info{
+    width: 60vw;
+    height: 30vh;
+}
+.logo-texto2{
+    display: none;
+}
+
+}
+
+
+@media (min-width: 360px) and (max-width:769px){
+    #novedades{
+        display: none; 
+    }
+    #carouselExampleIndicators{
+        display: block;
+    }
+    #destacado{
+        width: 100vw;
+        height: 45vh;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #juego-banner{
+        display: none;
+    }
+    #destacado-juego{
+        width: 60vw;
+        height: 60vh;
+        margin-left: 0;
+
+    }
+    #info{
+        display: none;
+    } 
+    #ver-mas{
+        width: 30vw;
+        margin-top: 25%;
+    }.logo-texto{
+        display: none;
+    }
+    
+    .logo-texto2{
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding-top: 20px;
+        margin-left: 10px;
+    }
+    .botones-tienda{
+        font-size: 12px;
+    }
+    
+    .usuario{
+        font-size: 14px;
+        margin-right: 10px;
+    }
 }

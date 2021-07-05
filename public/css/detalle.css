@@ -5,43 +5,62 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
-/* header*/
+    /* header*/
 
-header{
-    background-color: black;
-}
-#nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-#logo{
-    width: 50px; 
-    height: 50px;
-      
-}
-.botones-tienda{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: white;
-    font-size: 8px;
-}
-.usuario{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: white;
-    font-size: 15px;
-    color: white;
-}
+    header{
+        background-color: black;
+    }
+    
+    #nav-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #logo{
+        width: 50px; 
+        height: 50px;
+        margin-left: 20px;
+    }
+    
+    .logo-texto{
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        padding-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .logo-texto2{
+        display: none;
+    }
+    
+    .botones-tienda{
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .usuario{
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        color: white;
+        font-size: 17px;
+        color: white;
+        margin-right: 20px;
+    }
+    
 
 /*main*/
 
@@ -134,16 +153,11 @@ main{
 
 
 #caja-info{
-    margin-left: 5%;
+    margin-left: 9%;
 }
 .info-juego{
     font-size: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#especificaiones{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 #especificaciones-caja{
     display: flex;
@@ -177,8 +191,6 @@ main{
     border-radius: 5px;
     border-color: #3B5B9C;
 }
-
-
 #productos-similares{
     display: flex;
     flex-direction: row;
@@ -238,4 +250,98 @@ footer{
     color: white;
     font-size: 15px;
     color: white;
+}
+
+
+/* media */
+
+
+@media (min-width: 770px) and (max-width:1079px){
+    body{
+        width: 100%;
+    }
+    #sliders{
+        height: 40vh;   
+    }
+    #sliders li{
+        margin-left: 37%;
+        width: 60vw;
+        height: 40vh; 
+    }
+    #sliders li img{
+        height: 40vh;
+    }
+    #productos{
+        width: 45vw;
+    }
+    #menu-sliders{
+        margin-left: 39%;
+    }
+    #lado-derecho{
+        width: 20vw; 
+        height: 50vh;
+        margin-top: 17%;
+    }
+    #caja-info{
+        margin-left: 48%;
+        width: 80vw;
+        height: 70vh;
+        font-size: 15px;
+    }
+    .info-similares{
+        font-size: 12px;
+    }
+    .logo-texto2{
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 360px) and (max-width:769px){
+    body{
+        width: 100%;
+    }
+    .logo-texto{
+        display: none;
+    }
+    
+    .logo-texto2{
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding-top: 20px;
+        margin-left: 10px;
+    }
+    
+    .botones-tienda{
+        font-size: 12px;
+    }
+    
+    .usuario{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    #productos{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #container-slider{
+        display: none;
+    }    
+    #info2{
+        display: none;
+    }
+    #titulo-similares{
+        display: none;
+    }
+    #productos-similares{
+        display: none;
+    }
+    #especificaciones-caja{
+       font-size: 12px;
+       display: flex;
+       flex-direction: column;
+    }
 }
