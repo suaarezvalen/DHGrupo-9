@@ -23,6 +23,20 @@ header{
 #logo{
     width: 50px; 
     height: 50px;
+    margin-left: 20px;
+}
+
+.logo-texto{
+    font-family:;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.logo-texto2{
+    display: none;
 }
 
 .botones-tienda{
@@ -33,7 +47,8 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 8px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .usuario{
@@ -44,8 +59,9 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     color: white;
+    margin-right: 20px;
 }
 
 /*header*/
@@ -58,6 +74,7 @@ main{
     background-size: 1920px 1080px;
     background-position: center center;
     border: solid 3px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .flex-carrito{
@@ -90,7 +107,7 @@ main{
     box-shadow: none;
     border: solid 3px white;
     transform: scale(1.07);
-    transition: background-color .5s;
+    transition: all 0.5s;
 }
 
 .titulos-chicos-carrito{
@@ -119,7 +136,7 @@ main{
     box-shadow: none;
     border: solid 3px rgb(0, 0, 0);
     transform: scale(1.07);
-    transition: background-color .5s;
+    transition: all 0.5s;
 }
 
 .columnas-carrito img{
@@ -196,6 +213,37 @@ footer{
 
 @media (min-width: 360px) and (max-width:769px){
 
+    /*HEADDER*/
+
+    .logo-texto{
+        display: none;
+    }
+    
+    .logo-texto2{
+        display: block;
+        font-family:;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding-top: 20px;
+        margin-left: 10px;
+    }
+
+    /*HEADDER*/
+    
+    .botones-tienda{
+        font-size: 12px;
+    }
+    
+    .usuario{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    /*HEADDER*/
+
+    /*MAIN*/
+
     main{
         background-image: url("/img/fondo2-carrito.png");
         background-size: 769px 1367px;
@@ -223,13 +271,27 @@ footer{
         display: none;
     }
 
+    /*MAIN*/
+
 }
 
 @media (min-width: 770px) and (max-width:1079px){
 
+    /*HEADDER*/
+    
+    .logo-texto2{
+        display: none;
+    }
+
+    /*HEADDER*/
+
+    /*MAIN*/
+    
     main{
         background-image: url("/img/fondo3-carrito.png");
         background-size: 1080px 1920px;
     }
+
+    /*MAIN*/
 
 }

@@ -1,21 +1,35 @@
+*{
+    box-sizing: border-box;
+}
 
-
-/* header */ 
+body{
+    padding: 0%;
+    margin: 0%;
+    
+    
+}
+main{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+/* header*/
 
 header{
     background-color: black;
 }
+
 #nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 #logo{
     width: 50px; 
     height: 50px;
-      
 }
+
 .botones-tienda{
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -26,6 +40,7 @@ header{
     color: white;
     font-size: 8px;
 }
+
 .usuario{
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -39,13 +54,20 @@ header{
 }
 
 /* main */
-
-body{
+main {
     background-image: url("../img/fondo-fifa.jpg");
-    background-size: cover;
-    
+    background-repeat: repeat;
+    background-size: 1920px 1080px;
+    background-position: center center;
+    border: solid 3px white; 
+    padding-bottom: 8.2%;
+}
+body{
+       
     margin: 0%;
     padding: 0%;
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .cajaformulario{
     display: flex;
@@ -58,19 +80,14 @@ body{
     margin: 10% 35%;
     backdrop-filter: blur(5px);
     box-sizing:border-box;
+    
+   
 }
 #logocaja{
     width: 35%;
     height: 35%;
 }
 
-form input{
-  display: flex;
-  align-items: stretch;
-}
-#boton-ingreso{
-    text-align: center;
-}
 
 #boton-registro{
    float:right;
@@ -83,7 +100,7 @@ form input{
    background:rgb(253, 50, 50, 0.5);
    color:black;
    cursor:pointer;
-   
+    
 } 
  
 #boton-registro:link{
@@ -93,9 +110,7 @@ form input{
      color: black;
     
 }
-
-
-  
+ 
 
 
 /* footer */
@@ -127,4 +142,25 @@ footer{
     color: white;
     font-size: 15px;
     color: white;
+}
+
+@media (min-width: 360px) and (max-width:769px){
+    .cajaformulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        margin: 10% 35%;
+        backdrop-filter: none;
+    }
+    #logocaja{
+        width: 75%;
+    }
+    main{
+        padding-bottom: 130%;
+       
+    }
 }
