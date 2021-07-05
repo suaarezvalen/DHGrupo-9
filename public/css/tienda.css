@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    
+    
+}
+main{
+    background-color: #131823;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+/* header*/
+
+header{
+    background-color: black;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 50px; 
+    height: 50px;
+}
+
+.botones-tienda{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 8px;
+}
+
+.usuario{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
+
+
+/*ofertas*/
+#ofertas {
+        
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 2vw;
+        font-weight: bold;
+        box-shadow: 4px 4px rgb(255, 255, 255);
+        margin-bottom: 25px;
+        padding-top: 12px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: 41%;
+        margin-right: 41%;
+        
+    }
+    
+ 
+
+
+.carousel {
+    margin: 0 auto;
+    display: flex;
+    width:25%;
+    height:35%;
+  }
+/*catalogo*/
+
+#catalogo{
+        
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    box-shadow: 4px 4px rgb(255, 255, 255);
+    margin-bottom: 25px;
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 41%;
+    margin-right: 41%;
+}
+
+
+.caja-catalogo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+}
+
+
+
+.fotos-catalogo:hover{
+   
+        -webkit-transform: scale(1.07);
+        transform: scale(1.07);
+    
+}
+.botones-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#ver-mas{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+/*footer*/
+
+footer{
+    background-color: black;
+    height: 175%;
+    width: 100%;
+    
+}
+#logo-pie{
+    width: 5%;
+    height: 70%;
+    
+}
+#logo-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    margin-bottom: 9px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
+
+@media (min-width: 360px) and (max-width:769px){
+    .carousel{
+        width:50%;
+        height:70%;  
+}
+.fotos-catalogo:hover{
+   
+    display: none;
+
+}
+   
+}
