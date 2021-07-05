@@ -27,7 +27,6 @@ header{
 }
 
 .logo-texto{
-    font-family:;
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -73,7 +72,7 @@ main{
     background-repeat: no-repeat;
     background-size: 1920px 1080px;
     background-position: center center;
-    border: solid 3px white;
+    border: solid 1px black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -221,15 +220,12 @@ footer{
     
     .logo-texto2{
         display: block;
-        font-family:;
         font-size: 12px;
         font-weight: bold;
         color: white;
         padding-top: 20px;
         margin-left: 10px;
     }
-
-    /*HEADDER*/
     
     .botones-tienda{
         font-size: 12px;
@@ -245,6 +241,7 @@ footer{
     /*MAIN*/
 
     main{
+        background-color: black;
         background-image: url("/img/fondo2-carrito.png");
         background-size: 769px 1367px;
     }
@@ -288,6 +285,7 @@ footer{
     /*MAIN*/
     
     main{
+        background-color: black;
         background-image: url("/img/fondo3-carrito.png");
         background-size: 1080px 1920px;
     }
