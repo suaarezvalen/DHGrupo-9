@@ -1,0 +1,147 @@
+/* header */ 
+
+header{
+    background-color: black;
+}
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 50px; 
+    height: 50px;
+      
+}
+.botones-tienda{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 8px;
+}
+.usuario{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
+
+
+/*main*/
+    
+body{
+    background-image: url("../imagen/Star_Wars_2.jpg");
+    background-size: cover;
+    
+    margin: 0%;
+    padding: 0%;
+}
+
+
+* {margin:0;
+  padding:0;
+  box-sizing: border-box; 
+}
+
+.form-registro{width: 400px;
+    background: #D6D0D0;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: Arial;
+    color:white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-registro h1{font-size: 25px;
+    margin-bottom: 22px;
+    text-align: center ;
+    color: black;
+}
+.form-registro h5{font-size: 15px;
+    margin-bottom: 15px;
+    text-align: center ;
+    color: black;
+}
+
+.casillero{
+    width: 335px;
+    padding:10px;
+    margin-bottom: 20px;
+    border:1px solid grey;
+    font-family:calibri;
+    font-size: 20px;
+    
+}
+
+.form-registro p{height: 40px;
+    color: black;
+    text-align:center;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.form-registro a{color:black;
+    text-decoration: none;
+}
+
+.form-registro a:hover {
+    color:black;
+    text-decoration: underline;
+    
+}
+.form-registro .boton{
+    
+    width: 100%;
+    background: grey;
+    border: none;
+    padding: 12px;
+    margin-bottom: 15px;
+
+}
+
+
+
+
+/* footer */
+
+footer{
+    
+    background-color: black;
+    height: 175%;
+    width: 100%;
+    
+}
+#logo-pie{
+    width: 5%;
+    height: 70%;
+    
+}
+#logo-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    color: white;
+}
