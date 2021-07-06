@@ -164,3 +164,11 @@ footer{
        
     }
 }
+@media (min-width: 770px) and (max-width:1079px){
+    main{
+        padding-bottom: 130%;
+        
+       
+    }
+
+}
