@@ -9,17 +9,19 @@
 <body>
     <header>        
         <nav id="nav-bar">
-            <img id="logo" src="./img/logo.png"></img>
+            <!--<img id="logo" src="./img/logo.png"></img>-->
+            <p class="logo-texto">METAGAMING</p>
+            <p class="logo-texto2">MG</p>
             <section id="botones-center">
-                <button class="botones-tienda" type="button">TIENDA</button>
-                <button class="botones-tienda" type="button">NOVEDADES</button>
+                <a href="http://www.localhost:3001/tienda"><button class="botones-tienda" type="button">TIENDA</button></a>
+                <a href="http://www.localhost:3001"><button class="botones-tienda" type="button">NOVEDADES</button></a>
             </section>
             <section id="botones-izq">
                 <button class="usuario" type="button"><i class="fas fa-search"></i></i></button>
-                <button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button>
-                <button class="usuario" type="button"><i class="fas fa-user-circle"></i></button>
+                <a href="http://www.localhost:3001/carrito"><button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button></a>
+                <a href="http://www.localhost:3001/login"><button class="usuario" type="button"><i class="fas fa-user-circle"></i></button></a>
             </section>
-        </nav>       
+        </nav> 
     </header>
     <main>
         <div id="productos">
@@ -78,7 +80,7 @@
                     <br>
                     <h3 class="info-juego">Acerca del juego</h3>
                     <p class="info-juego">Frostpunk, el título más reciente de los creadores de This War of Mine, es un juego de supervivencia en sociedad donde el calor es fuente de vida y cada decisión tiene un precio. En un mundo totalmente congelado, la humanidad ha desarrollado una tecnología basada en el vapor para hacer frente al frío implacable. Tu tarea consiste en construir la última ciudad de la Tierra y conseguir los recursos necesarios para que tu comunidad sobreviva.</p>
-                    <p class="info-juego">La gestión de recursos y su optimización a menudo chocan con la empatía y con las decisiones razonables. Aunque la administración de la ciudad y de su sociedad consume la mayor parte del tiempo del gobernante, llega un punto en el que se hace necesario explorar el mundo exterior para comprender su historia y su situación actual.
+                    <p class="info-juego" id="info2">La gestión de recursos y su optimización a menudo chocan con la empatía y con las decisiones razonables. Aunque la administración de la ciudad y de su sociedad consume la mayor parte del tiempo del gobernante, llega un punto en el que se hace necesario explorar el mundo exterior para comprender su historia y su situación actual.
                     ¿Qué decisiones tomarás para asegurar la supervivencia de tu sociedad? ¿Qué harás cuando estés entre la espada y la pared? ¿En qué te convertirás durante el proceso?</p>     
                     <br>
                     <article id="especificaciones-caja">
@@ -105,7 +107,7 @@
                     <p id="precio">$1498</p>
                     <button id="comprar" type="button">comprar</button>
                     <br>
-                    <button id="agregar-carrito" type="button">agregar al carrito</button>
+                    <a href="http://www.localhost:3001/carrito"><button id="agregar-carrito" type="button">agregar al carrito</button></a>
             </section> 
         </div> 
         <div>
@@ -135,7 +137,7 @@
                 <section class="similares">
                     <img class="foto-similar" src="./img/similar4.jpg">                    
                         <section class="info-similares">    
-                            <h4>Fallout new vegas</h4>
+                            <h4>Fallout</h4>
                             <p>$350</p>
                         </section>
                 </section>
