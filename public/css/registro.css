@@ -3,17 +3,32 @@
 header{
     background-color: black;
 }
+
 #nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 #logo{
     width: 50px; 
     height: 50px;
-      
+    margin-left: 20px;
 }
+
+.logo-texto{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.logo-texto2{
+    display: none;
+}
+
 .botones-tienda{
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -22,8 +37,10 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 8px;
+    font-size: 15px;
+    font-weight: bold;
 }
+
 .usuario{
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -32,8 +49,10 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     color: white;
+    margin-right: 20px;
+
 }
 
 
@@ -62,6 +81,7 @@ body{
     font-family: Arial;
     color:white;
     box-shadow: 7px 13px 37px #000;
+   
 }
 
 .form-registro h1{font-size: 25px;
@@ -144,4 +164,28 @@ footer{
     color: white;
     font-size: 15px;
     color: white;
+}
+
+@media (min-width: 360px) and (max-width:769px){
+    .logo-texto{
+        display: none;
+    }
+    
+    .logo-texto2{
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding-top: 20px;
+        margin-left: 10px;
+    }
+    
+    .botones-tienda{
+        font-size: 12px;
+    }
+    
+    .usuario{
+        font-size: 14px;
+        margin-right: 10px;
+    }
 }

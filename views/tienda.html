@@ -10,18 +10,20 @@
 <body>
     <header>
         <nav id="nav-bar">
-            <img id="logo" src="./img/logo.png"></img>
+            <!--<img id="logo" src="./img/logo.png"></img>-->
+            <p class="logo-texto">METAGAMING</p>
+            <p class="logo-texto2">MG</p>
             <section id="botones-center">
-                <button class="botones-tienda" type="button">TIENDA</button>
-                <button class="botones-tienda" type="button">NOVEDADES</button>
+                <a href="http://www.localhost:3001/tienda"><button class="botones-tienda" type="button">TIENDA</button></a>
+                <a href="http://www.localhost:3001"><button class="botones-tienda" type="button">NOVEDADES</button></a>
             </section>
             <section id="botones-izq">
                 <button class="usuario" type="button"><i class="fas fa-search"></i></i></button>
-                <button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button>
-                <button class="usuario" type="button"><i class="fas fa-user-circle"></i></button>
+                <a href="http://www.localhost:3001/carrito"><button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button></a>
+                <a href="http://www.localhost:3001/login"><button class="usuario" type="button"><i class="fas fa-user-circle"></i></button></a>
             </section>
         </nav> 
-   </header>
+    </header>
    
    <main>
        <p id="ofertas">OFERTAS</p>
