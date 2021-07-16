@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^5.0.2",
     "bootstrap-icons": "^1.5.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "node-modules": "^1.0.1"
   },
