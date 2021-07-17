@@ -11,66 +11,13 @@ body{
 main{
     background-color: #131823;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
-}
-/* header*/
-
-header{
-    background-color: black;
 }
 
-#nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logo{
-    width: 50px; 
-    height: 50px;
-    margin-left: 20px;
-}
-
-.logo-texto{
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    padding-top: 20px;
-    margin-left: 20px;
-}
-
-.logo-texto2{
-    display: none;
-}
-
-.botones-tienda{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.usuario{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: white;
-    font-size: 17px;
-    color: white;
-    margin-right: 20px;
-}
 
 
 /*ofertas*/
+
+
 #ofertas {
         
         text-align: center;
@@ -144,36 +91,6 @@ header{
     padding-bottom: 1%;
 }
 
-/*footer*/
-
-footer{
-    background-color: black;
-    height: 175%;
-    width: 100%;
-    
-}
-#logo-pie{
-    width: 5%;
-    height: 70%;
-    
-}
-#logo-redes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.redes{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    margin-bottom: 9px;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: white;
-    font-size: 15px;
-    color: white;
-}
 
 @media (min-width: 360px) and (max-width:769px){
     .logo-texto{

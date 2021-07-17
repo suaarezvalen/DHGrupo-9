@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="./css/detalle.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-</head>
+    <%- include("../partials/head") %>
+
 <body>
-    <header>
-        <nav id="nav-bar">
-            <!--<img id="logo" src="./img/logo.png"></img>-->
-            <p class="logo-texto">METAGAMING</p>
-            <p class="logo-texto2">MG</p>
-            <section id="botones-center">
-                <a href="/tienda.html"><button class="botones-tienda" type="button">TIENDA</button></a>
-                <a href="/home.html"><button class="botones-tienda" type="button">NOVEDADES</button></a>
-            </section>
-            <section id="botones-izq">
-                <button class="usuario" type="button"><i class="fas fa-search"></i></i></button>
-                <a href="/carrito.html"><button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button></a>
-                <a href="/login.html"><button class="usuario" type="button"><i class="fas fa-user-circle"></i></button></a>
-            </section>
-        </nav> 
-    </header>
+    
+    <%- include("../partials/header") %>
 
     <main>
         <div id="productos">
@@ -143,18 +127,11 @@
                         </section>
                 </section>
             </section>
+            <br>
         </div>     
     </main>
-    <footer>
-        <section id="logo-redes">
-            <img id="logo-pie" src="./img/logo.png">
-                <section>
-                    <button class="redes" type="button"><i class="fab fa-instagram"></i></button>
-                    <button class="redes" type="button"><i class="fab fa-youtube"></i></button>
-                    <button class="redes" type="button"><i class="fab fa-twitter"></i></button>
-                </section>
-            </section>
-    </footer>
-    </footer>
+    
+    <%- include("../partials/footer") %>
+    
 </body>
 </html>
