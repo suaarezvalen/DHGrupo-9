@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    font-family: Verdana, sans-serif;
+}
+
+::placeholder{
+    color: white;
+}
+
+/*MAIN*/
+
+main{
+    background-color: white;
+}
+
+.flex-contenedor{
+    background-color: #858585;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 200px;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+.formularios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    border: solid rgb(175, 175, 175) 2px;
+    border-radius: 10px;
+}
+
+.titulos{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.subtitulos{
+    text-align: center;
+}
+
+.flex-especificaciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.input2-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border-color: transparent;
+    outline: none;
+}
+
+.input3-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    margin-right: 10px;
+    border-color: white;
+    outline: none;
+}
+
+.formularios:hover{
+    box-shadow: 0px 0px 6px rgb( 100 , 100 , 100 );
+    transition: all 0.5s;
+}
+
+.boton-ingreso{
+    text-align: center;
+}
