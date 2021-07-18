@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     
-
+    <link rel="stylesheet" href="./css/crearProducto.css"/>
     <%- include("../partials/head") %>
 
 <body>
     <%- include("../partials/header") %>
 
     <main>
+        <h3>Crear producto</h3>
+        <form id="formulario">
+            
+            <div id="titulo">
+            <input type="text" name="tituloJuego" placeholder="Titulo">
+            </div>
+            <br>
+           
+            <div id="password">
+            <label for="clave"></label>
+            <input type="password" name="clave" placeholder="contraseña">
+            </div>
 
+            <p id="boton-ingreso">
+            <button type="submit">Ingresar</button>
+            </p>
+            </form>
+            <p id="boton-registro">
+            <a href="/registro.html">Registrarse</a>
+            </p>
+      </div>
         
     </main>
 
