@@ -2,19 +2,20 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+//RUTAS GLOBALES
 
 const carritoRoutes = require('./src/routes/carritoRoutes');
 const indexRoutes = require('./src/routes/indexRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const userRoutes = require('./src/routes/userRoutes');
-
-
 app.use('/carrito', carritoRoutes);
 app.use('/', indexRoutes);
 app.use('/', productRoutes);
 app.use('/', userRoutes);
 
+//RUTAS GLOBALES
 
+//ARCHIVOS PÚBLICOS
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
@@ -22,6 +23,7 @@ app.use(express.static(publicPath));
 const publicPath2 = path.resolve(__dirname, "./views");
 app.use(express.static(publicPath2));
 
+//ARCHIVOS PÚBLICOS
 
 app.set('view engine', 'ejs');
 
