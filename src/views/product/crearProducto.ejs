@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <link rel="stylesheet" href=".././css/crearProducto.css"/>
+    <%- include("../partials/head") %>
+
+<body>
+    <%- include("../partials/header") %>
+
+    <main>
+
+        <h3 class="titulos">Crear producto</h3>
+        <div class="flex-contenedor">
+
+            <form id="formulario">
+            
+                <div class="formularios">
+                    <input class="input-formulario" type="text" name="tituloJuego" placeholder="Título de su producto">
+                </div>
+
+                <div class="formularios">
+                    <input class="input-formulario" type="file" name="tituloJuego">
+                </div>
+
+                <div class="formularios">
+                    <textarea class="input2-formulario" name="descripción" placeholder="Descirpción de su producto"></textarea>
+                </div>
+
+                <p class="subtitulos">Especificaciones</p>
+                <div class="formularios">
+                    
+                    <section class="flex-especificaciones">
+
+                        <article>
+                        <input id="categoria1" class="categorias-formulario" type="checkbox" name="VoF">
+                        <label for="categoria1">Multijugador</label>
+                        </article>
+                        <article>
+                        <input id="categoria2" class="categorias-formulario" type="checkbox" name="VoF">
+                        <label for="categoria2">Cooperativo</label>
+                        </article>
+                        <article>
+                        <input id="categoria3" class="categorias-formulario" type="checkbox" name="VoF">
+                        <label for="categoria3">Campaña</label>
+                        </article>
+                    </section>
+                    
+                    <section class="flex-especificaciones">
+                        <article>
+                        <input id="categoria4" class="categorias-formulario" type="checkbox" name="VoF">
+                        <label for="categoria4">Tienda Online</label>
+                        </article>
+                        <article>
+                        <input id="categoria5" class="categorias-formulario" type="checkbox" name="VoF">
+                        <label for="categoria5">Inglés</label>
+                        </article>
+                        <article>
+                        <input id="categoria5" class="categorias-formulario" type="checkbox" name="VoF">
+                        <label for="categoria5">Español</label>
+                        </article>
+                    </section>
+
+                </div>
+
+                <div class="formularios">
+                    <input class="input3-formulario" type="number" name="Precio de su producto"> Precio en $ARS </input>
+                </div>
+
+                <p class="boton-ingreso">
+                    <button type="submit" class="btn btn-success">Crear</button>
+                </p>
+
+            </form>
+      </div>
+        
+    </main>
+
+    <%- include("../partials/footer") %>
+</body>
+</html>

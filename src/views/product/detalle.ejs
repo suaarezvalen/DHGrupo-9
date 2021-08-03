@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <link rel="stylesheet" href=".././css/detalle.css"/>
+    <%- include("../partials/head") %>
+
+<body>
+    
+    <%- include("../partials/header") %>
+
+    <main>
+        <div id="productos">
+            <section id="lado-izquierdo">
+                <section id="container-slider">
+                    <ul id="sliders">
+                        <li id="slider1">
+                            <img class="foto-producto" src=".././img/oferta2.jpg">
+                        </li>
+                        <li id="slider2">
+                            <img class="foto-producto" src=".././img/oferta3.jpg">
+                        </li>
+                        <li id="slider3">
+                            <img class="foto-producto" src=".././img/oferta4.jpg">
+                        </li>
+                        <li id="slider4">
+                            <img id="foto-producto" src=".././img/oferta5.jpg">
+                        </li>
+                        <li id="slider5">
+                            <img class="foto-producto" src=".././img/oferta6.jpg">
+                        </li>
+                        <li id="slider6">
+                            <img class="foto-producto" src=".././img/oferta7.jpg">
+                        </li>
+                        <li id="slider7">
+                            <img class="foto-producto" src=".././img/oferta8.jpg">
+                        </li>
+                    </ul>
+                    <ul id="menu-sliders">
+                        <li>
+                            <a href="#slider1"></a>
+                        </li>
+                        <li>
+                            <a href="#slider2"></a>
+                        </li>
+                        <li>
+                            <a href="#slider3"></a>
+                        </li>
+                        <li>
+                            <a href="#slider4"></a>
+                        </li>
+                        <li>
+                            <a href="#slider5"></a>
+                        </li>
+                        <li>
+                            <a href="#slider6"></a>
+                        </li>
+                        <li>
+                            <a href="#slider7"></a>
+                        </li>
+                    </ul>   
+                     
+                </section>
+                <section id="caja-info">
+                    <h1 id="titulo-juego"><%=detalleProducto.titulo  %> </h1>
+                    <br>
+                    <h3 class="info-juego">Acerca del juego</h3>
+                    <p class="info-juego"><%=detalleProducto.detalle  %> </p>     
+                    <br>
+                    <!--<article id="especificaciones-caja">
+                        <section id="especificaciones">
+                            <ul class="info-juego">
+                                <li>11 bit studios</li>
+                                <li><i class="fab fa-windows"></i> Windows 7/8/10 de 64 bits</li>
+                                <li>4 GB de RAM</li>
+                                <li>8 GB de espacio disponible</li>
+                            </ul>
+                        </section>  
+                        <section id="especificaciones">
+                            <ul class="info-juego">
+                                <li>Procesador Dual Core a 3,2 GHz</li>
+                                <li>GeForce GTX 660, Radeon R7 370 o equivalente con 2 GB de VRAM</li>
+                                <li>idioma: inglés</li>
+                            </ul>
+                        </section>
+                    </article>-->
+                </section> 
+            </section>     
+            <section id="lado-derecho">  
+                    <img id="logo-producto" src=".././img/<%=detalleProducto.img  %> ">
+                    <p id="precio"><%=detalleProducto.precio %> </p>
+                    <a href="/carrito"><button id="agregar-carrito" type="button">agregar al carrito</button></a>
+            </section> 
+        </div> 
+        <div>
+            <h3 id="titulo-similares">Productos similares</h3>
+            <section id="productos-similares">
+                <section class="similares">
+                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %> ">
+                        <section class="info-similares">
+                            <h4 class="datos-similares"><%=detalleProducto.titulo  %></h4>
+                            <p><%=detalleProducto.precio %></p>
+                        </section>    
+                </section>
+                <section class="similares">
+                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %>">
+                        <section class="info-similares">
+                            <h4><%=detalleProducto.titulo  %></h4>
+                            <p><%=detalleProducto.precio %></p>
+                        </section>
+                </section>
+                <section class="similares">
+                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %>">                    
+                        <section class="info-similares">    
+                            <h4><%=detalleProducto.titulo  %></h4>
+                            <p><%=detalleProducto.precio %></p>
+                        </section>
+                </section>
+                <section class="similares">
+                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %>">                    
+                        <section class="info-similares">    
+                            <h4><%=detalleProducto.titulo  %></h4>
+                            <p><%=detalleProducto.precio %></p>
+                        </section>
+                </section>
+            </section>
+            <br>
+        </div>     
+    </main>
+    
+    <%- include("../partials/footer") %>
+    
+</body>
+</html>

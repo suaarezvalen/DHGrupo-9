@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="./css/carrito.css"/>
+    <%- include("./partials/head") %>
+<body>
+
+    <%- include("./partials/header") %>
+    
+    <main>
+
+        <div class="flex-carrito">
+
+            <section class="columnas-carrito">
+                <article class="titulos-carrito">
+                    <p>CARRITO</p>
+                    <p class="titulos-chicos-carrito">1 OBJETO</p>
+                </article>
+                <article id="info-carrito" class="subtitulos-carrito">
+                    <div>
+                        <img src="./img/juego-carrito.jpg"></img>
+                    </div>
+                    <div class="info-texto-carrito">
+                        <p> x1 Tom Tlancy's Rainbow Six Siege </p>
+                        <p class="texto-chico-carrito"> Precio en $ARS 700</p>
+                        <p class="texto-chico-carrito"> Precio en $USD 7,33</p>
+                        <a class="texto-chico-carrito" href="https://www.ubisoft.com/es-mx/game/rainbow-six/siege"> info </a>
+                    </div>
+                </article>
+                <article class="subtitulos-carrito">
+                    <p>SUBTOTAL:</p>
+                    <p>$700</p>
+                </article>
+            </section>
+
+            <section class="columnas-carrito">
+                <article class="titulos-carrito">
+                    <p>RESUMEN</p>
+                </article>
+                <article id="cupones-carrito" class="subtitulos-carrito">
+                    <p>CUPONES:</p>
+                    <div class="inpus-carrito">
+                        <input class="form-control form-control-sm" type="text" placeholder="Aquí va tu código">
+                    </div>
+                </article>
+                <article class="subtitulos-carrito">
+                    <p>TOTAL:</p>
+                    <p>$700</p>
+                </article>
+                <div class="botones-carrito">
+                    <button type="button" class="btn btn-success">Comprar</button>
+                    <button type="button" class="btn btn-primary">Seguir Compra</button>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <%- include("./partials/footer") %>
+
+</body>
+</html>
