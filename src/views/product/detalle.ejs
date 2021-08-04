@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <link rel="stylesheet" href=".././css/detalle.css"/>
+    <link rel="stylesheet" href="../../css/detalle.css"/>
     <%- include("../partials/head") %>
 
 <body>
@@ -14,25 +14,25 @@
                 <section id="container-slider">
                     <ul id="sliders">
                         <li id="slider1">
-                            <img class="foto-producto" src=".././img/oferta2.jpg">
+                            <img class="foto-producto" src="../../img/oferta2.jpg">
                         </li>
                         <li id="slider2">
-                            <img class="foto-producto" src=".././img/oferta3.jpg">
+                            <img class="foto-producto" src="../../img/oferta3.jpg">
                         </li>
                         <li id="slider3">
-                            <img class="foto-producto" src=".././img/oferta4.jpg">
+                            <img class="foto-producto" src="../../img/oferta4.jpg">
                         </li>
                         <li id="slider4">
-                            <img id="foto-producto" src=".././img/oferta5.jpg">
+                            <img id="foto-producto" src="../../img/oferta5.jpg">
                         </li>
                         <li id="slider5">
-                            <img class="foto-producto" src=".././img/oferta6.jpg">
+                            <img class="foto-producto" src="../../img/oferta6.jpg">
                         </li>
                         <li id="slider6">
-                            <img class="foto-producto" src=".././img/oferta7.jpg">
+                            <img class="foto-producto" src="../../img/oferta7.jpg">
                         </li>
                         <li id="slider7">
-                            <img class="foto-producto" src=".././img/oferta8.jpg">
+                            <img class="foto-producto" src="../../img/oferta8.jpg">
                         </li>
                     </ul>
                     <ul id="menu-sliders">
@@ -86,7 +86,7 @@
                 </section> 
             </section>     
             <section id="lado-derecho">  
-                    <img id="logo-producto" src=".././img/<%=detalleProducto.img  %> ">
+                    <img id="logo-producto" src="../../img/<%=detalleProducto.img  %> ">
                     <p id="precio"><%=detalleProducto.precio %> </p>
                     <a href="/carrito"><button id="agregar-carrito" type="button">agregar al carrito</button></a>
             </section> 
@@ -94,34 +94,15 @@
         <div>
             <h3 id="titulo-similares">Productos similares</h3>
             <section id="productos-similares">
+                <% for(let i=0;i<novedadesProducto.length;i++) {%> 
                 <section class="similares">
-                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %> ">
+                    <img class="foto-similar" src="../../img/<%=novedadesProducto[i].img %> ">
                         <section class="info-similares">
-                            <h4 class="datos-similares"><%=detalleProducto.titulo  %></h4>
-                            <p><%=detalleProducto.precio %></p>
+                            <h4 class="datos-similares"><%=novedadesProducto[i].titulo  %></h4>
+                            <p><%=novedadesProducto[i].precio %></p>
                         </section>    
                 </section>
-                <section class="similares">
-                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %>">
-                        <section class="info-similares">
-                            <h4><%=detalleProducto.titulo  %></h4>
-                            <p><%=detalleProducto.precio %></p>
-                        </section>
-                </section>
-                <section class="similares">
-                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %>">                    
-                        <section class="info-similares">    
-                            <h4><%=detalleProducto.titulo  %></h4>
-                            <p><%=detalleProducto.precio %></p>
-                        </section>
-                </section>
-                <section class="similares">
-                    <img class="foto-similar" src=".././img/<%=detalleProducto.img %>">                    
-                        <section class="info-similares">    
-                            <h4><%=detalleProducto.titulo  %></h4>
-                            <p><%=detalleProducto.precio %></p>
-                        </section>
-                </section>
+                <% } %> 
             </section>
             <br>
         </div>     

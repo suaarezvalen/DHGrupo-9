@@ -17,13 +17,16 @@ const productControllers =
 
         let aux;
 
-        for(let i=0;i<product.length;i++){
-            if(product[i].id==idParaURL);
-            aux=i
-            break;
+        for (let i of product){
+            if (i.id==idParaURL){
+                aux=i;
+                break;
+            }
         }
 
-        res.render('product/detalle', {detalleProducto : aux})
+        const novedades = product.slice(-4)
+
+        res.render('product/detalle', {detalleProducto : aux, novedadesProducto : novedades})
     },
 
 
