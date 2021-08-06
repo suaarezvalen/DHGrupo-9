@@ -12,58 +12,26 @@
         <h3 class="titulos">Crear producto</h3>
         <div class="flex-contenedor">
 
-            <form id="formulario">
+            <form id="formulario" method="POST" action="/product/crear" enctype="multipart/form-data">
             
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="tituloJuego" placeholder="Título de su producto">
+                    <input class="input-formulario" type="text" name="titulo" placeholder="Título">
                 </div>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="file" name="tituloJuego">
+                    <input class="input3-formulario" type="number" name="precio"> Precio en $ARS </input>
+                </div>
+                
+                <div class="formularios">
+                    <input class="input3-formulario" type="number" name="descuento"> Descuento </input>
                 </div>
 
                 <div class="formularios">
-                    <textarea class="input2-formulario" name="descripción" placeholder="Descirpción de su producto"></textarea>
-                </div>
-
-                <p class="subtitulos">Especificaciones</p>
-                <div class="formularios">
-                    
-                    <section class="flex-especificaciones">
-
-                        <article>
-                        <input id="categoria1" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria1">Multijugador</label>
-                        </article>
-                        <article>
-                        <input id="categoria2" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria2">Cooperativo</label>
-                        </article>
-                        <article>
-                        <input id="categoria3" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria3">Campaña</label>
-                        </article>
-                    </section>
-                    
-                    <section class="flex-especificaciones">
-                        <article>
-                        <input id="categoria4" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria4">Tienda Online</label>
-                        </article>
-                        <article>
-                        <input id="categoria5" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria5">Inglés</label>
-                        </article>
-                        <article>
-                        <input id="categoria5" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria5">Español</label>
-                        </article>
-                    </section>
-
+                    <textarea class="input2-formulario" name="descripcion" placeholder="Descirpción"></textarea>
                 </div>
 
                 <div class="formularios">
-                    <input class="input3-formulario" type="number" name="Precio de su producto"> Precio en $ARS </input>
+                    <input class="input-formulario" type="file" name="Imagen">
                 </div>
 
                 <p class="boton-ingreso">

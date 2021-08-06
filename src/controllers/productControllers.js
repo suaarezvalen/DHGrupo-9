@@ -37,6 +37,37 @@ const productControllers =
 
 
 
+    crearProductoAccion: (req, res) => {
+        let idNuevo = 0;
+        
+        for (let i of product){
+            if (idNuevo<i.id){
+                idNuevo=i.id;
+            }
+        }
+
+        idNuevo++;
+
+        let nombreImagen = req.file.filename
+
+        let productoNuevo = {
+            id: idNuevo,
+            titulo: req.body.titulo,
+            precio: req.body.precio,
+            descuento: req.body.descuento,
+            descripcion: req.body.descripcion,
+            img: nombreImagen
+        }
+
+        product.push(productoNuevo);
+
+        fs.writeFileSync(productFilePath, JSON.stringify(product, null, " "))
+
+        res.redirect("/product/tienda")
+    },
+
+
+
     editarProducto: (req, res) => {
         res.render('product/editarProducto')
     }
