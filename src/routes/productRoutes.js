@@ -32,9 +32,9 @@ router.post('/crear', uploadFile.single("Imagen"), productControllers.crearProdu
 router.get('/detalle/:id', productControllers.detalle);
 
 router.get('/editar/:id', productControllers.editarProducto);
-//router.put('/editar/:id', productControllers.editarProductoAccion);
+router.put('/editar/:id', productControllers.editarProductoAccion);
 
-//router.delete('/:id', productControllers.eliminarProducto)
+router.delete('/:id', productControllers.eliminarProducto)
 
 /* RUTAS */
 

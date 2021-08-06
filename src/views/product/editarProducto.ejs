@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <link rel="stylesheet" href=".././css/editarProducto.css"/>
+    <link rel="stylesheet" href="../../css/crearProducto.css"/>
     <%- include("../partials/head") %>
 
 <body>
@@ -12,58 +12,26 @@
         <h3 class="titulos">Editar producto</h3>
         <div class="flex-contenedor">
 
-            <form id="formulario">
-            
+            <form id="formulario" method="POST" action="/product/editar/<%=productoAEditar.id%>?_method=PUT">
+
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="tituloJuego" placeholder="Título de su producto">
+                    <input class="input-formulario" type="text" name="titulo" value="<%=productoAEditar.titulo %>">
                 </div>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="file" name="tituloJuego">
+                    <input class="input-formulario" type="text" name="precio" value="<%=productoAEditar.precio %>"></input>
+                </div>
+                
+                <div class="formularios">
+                    <input class="input-formulario" type="text" name="descuento" value="<%=productoAEditar.descuento %>"></input>
                 </div>
 
                 <div class="formularios">
-                    <textarea class="input2-formulario" name="descripción" placeholder="Descirpción de su producto"></textarea>
-                </div>
-
-                <p class="subtitulos">Especificaciones</p>
-                <div class="formularios">
-                    
-                    <section class="flex-especificaciones">
-
-                        <article>
-                        <input id="categoria1" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria1">Multijugador</label>
-                        </article>
-                        <article>
-                        <input id="categoria2" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria2">Cooperativo</label>
-                        </article>
-                        <article>
-                        <input id="categoria3" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria3">Campaña</label>
-                        </article>
-                    </section>
-                    
-                    <section class="flex-especificaciones">
-                        <article>
-                        <input id="categoria4" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria4">Tienda Online</label>
-                        </article>
-                        <article>
-                        <input id="categoria5" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria5">Inglés</label>
-                        </article>
-                        <article>
-                        <input id="categoria5" class="categorias-formulario" type="checkbox" name="VoF">
-                        <label for="categoria5">Español</label>
-                        </article>
-                    </section>
-
+                    <textarea class="input2-formulario" name="descripcion" value="<%=productoAEditar.descripcion %>"></textarea>
                 </div>
 
                 <div class="formularios">
-                    <input class="input3-formulario" type="number" name="Precio de su producto"> Precio en $ARS </input>
+                    <input class="input-formulario" type="file" name="Imagen" value="<%=productoAEditar.img %>">
                 </div>
 
                 <p class="boton-ingreso">

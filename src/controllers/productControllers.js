@@ -22,7 +22,7 @@ const productControllers =
                 aux=i;
                 break;
             }
-        }
+        }                              //FOR DE JERO
 
         const novedades = product.slice(-4)
 
@@ -39,12 +39,18 @@ const productControllers =
 
     crearProductoAccion: (req, res) => {
         let idNuevo = 0;
+
+        for(let i=0;i<product.length; i++) {
+            if(idNuevo<product[i].id){
+                idNuevo=product[i].id
+            }
+        }
         
-        for (let i of product){
+        /*for (let i of product){
             if (idNuevo<i.id){
                 idNuevo=i.id;
             }
-        }
+        }*/                              //FOR DE JERO
 
         idNuevo++;
 
@@ -69,7 +75,58 @@ const productControllers =
 
 
     editarProducto: (req, res) => {
-        res.render('product/editarProducto')
+        let id = req.params.id
+
+        let productoEncontrado;
+
+        for(let i=0;i<product.length;i++){
+            if(id==product[i].id){
+                productoEncontrado=product[i];
+            }
+        }
+
+        res.render('product/editarProducto', {productoAEditar : productoEncontrado})
+    },
+
+
+
+    editarProductoAccion :(req, res) => {
+        let id = req.params.id
+
+        for(let i=0;i<product.length;i++){
+            if(id==product[i].id){
+                product[i].titulo = req.body.titulo,
+                product[i].precio = req.body.precio,
+                product[i].descuento = req.body.descuento,
+                product[i].descripcion = req.body.descripcion,
+                product[i].img = req.body.img
+                break;
+            }
+        }
+
+        /*for (let s of product){
+            if (id==s.id){
+                s.titulo= req.body.titulo;
+                s.precio= req.body.precio;
+                s.descuento= req.body.descuento;
+                s.descripcion= req.body.descripcion;
+                s.img= req.body.Imagen;
+                break;
+            }
+        }*/                                  //FOR JERO
+
+        fs.writeFileSync(productFilePath, JSON.stringify(product,null,' '));
+
+        res.redirect("/product/tienda")
+    },
+
+
+
+    eliminarProducto: (req, res) => {
+        
     }
+
+
+
 }   
 module.exports = productControllers;                                   
