@@ -2,6 +2,16 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const bodyParser = require('body-parser');
+
+// INTALACIONES
+
+app.set('view engine', 'ejs');
+app.use(methodOverride('_method'));
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//INTALACIONES
 
 //RUTAS GLOBALES
 
@@ -26,8 +36,6 @@ app.use(express.static(publicPath2));
 
 //ARCHIVOS PÚBLICOS
 
-app.set('view engine', 'ejs');
-app.use(methodOverride('_method'));
 
 //app.get("/", (req, res) => {
   //res.sendFile(path.resolve(__dirname, "./views/index.ejs"));

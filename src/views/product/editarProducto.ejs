@@ -12,7 +12,7 @@
         <h3 class="titulos">Editar producto</h3>
         <div class="flex-contenedor">
 
-            <form id="formulario" method="POST" action="/product/editar/<%=productoAEditar.id%>?_method=PUT">
+            <form id="formulario" action="/product/editar/<%=productoAEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="titulo" value="<%=productoAEditar.titulo %>">
@@ -27,12 +27,14 @@
                 </div>
 
                 <div class="formularios">
-                    <textarea class="input2-formulario" name="descripcion" value="<%=productoAEditar.descripcion %>"></textarea>
+                    <input class="input-formulario" type="file" name="Imagen" value="<%=productoAEditar.img %>">
                 </div>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="file" name="Imagen" value="<%=productoAEditar.img %>">
+                    <textarea class="input2-formulario" name="descripcion" value="<%=productoAEditar.descripcion %>"></textarea>
                 </div>
+
+                
 
                 <p class="boton-ingreso">
                     <button type="submit" class="btn btn-success">Editar</button>

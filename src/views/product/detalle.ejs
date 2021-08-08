@@ -89,7 +89,10 @@
                     <img id="logo-producto" src="../../img/<%=detalleProducto.img  %> ">
                     <p id="precio"><%=detalleProducto.precio %> </p>
                     <a href="/carrito"><button id="agregar-carrito" type="button">agregar al carrito</button></a>
-            </section> 
+                    <form action="/product/detalle/<%=detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
+                </section> 
         </div> 
         <div>
             <h3 id="titulo-similares">Novedades</h3>

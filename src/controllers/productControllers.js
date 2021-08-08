@@ -2,11 +2,12 @@ const fs = require('fs');
 const path = require("path");
 
 const productFilePath = path.join(__dirname, "../database/product.JSON");
-const product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
+let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const productControllers =  
 {
     tienda: (req, res) => {
+        product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
         res.render('product/tienda', {dataProductos : product})
     },
 
@@ -91,17 +92,19 @@ const productControllers =
 
 
     editarProductoAccion :(req, res) => {
-        let id = req.params.id
-
+        let id = req.params.id;
+        let nombreImagen = req.file.filename
+        
         for(let i=0;i<product.length;i++){
             if(id==product[i].id){
                 product[i].titulo = req.body.titulo,
                 product[i].precio = req.body.precio,
                 product[i].descuento = req.body.descuento,
-                product[i].descripcion = req.body.descripcion,
-                product[i].img = req.body.img
+                product[i].descripcion = req.body.descripcion
+                product[i].img = nombreImagen
                 break;
             }
+            
         }
 
         /*for (let s of product){
@@ -113,7 +116,7 @@ const productControllers =
                 s.img= req.body.Imagen;
                 break;
             }
-        }*/                                  //FOR JERO
+        }    */                             //FOR JERO
 
         fs.writeFileSync(productFilePath, JSON.stringify(product,null,' '));
 
@@ -123,10 +126,26 @@ const productControllers =
 
 
     eliminarProducto: (req, res) => {
-        
-    }
+        let id = req.params.id;
+		let ProductoEncontrado;
+        console.log("estoy aqui")
+		let Nproducts = product.filter(function(e){
+			return id!=e.id;
+		})
 
+		for (let producto of product){
+			if (producto.id == id){
+			    ProductoEncontrado=producto;
+			}
+		}
 
+		fs.unlinkSync(path.join(__dirname, '../../public/img', ProductoEncontrado.img));
+
+		fs.writeFileSync(productFilePath, JSON.stringify(Nproducts,null,' '));
+
+		res.redirect('/product/tienda');
+	}
+    
 
 }   
 module.exports = productControllers;                                   
