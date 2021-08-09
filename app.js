@@ -28,7 +28,7 @@ app.use('/user', userRoutes);
 
 //ARCHIVOS PÚBLICOS
 
-const publicPath = path.resolve(__dirname, "../public");
+const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
 const publicPath2 = path.resolve(__dirname, "./views");
