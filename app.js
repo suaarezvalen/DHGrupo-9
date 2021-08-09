@@ -15,10 +15,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //RUTAS GLOBALES
 
-const carritoRoutes = require('./routes/carritoRoutes');
-const indexRoutes = require('./routes/indexRoutes');
-const productRoutes = require('./routes/productRoutes');
-const userRoutes = require('./routes/userRoutes');
+const carritoRoutes = require('./src/routes/carritoRoutes');
+const indexRoutes = require('./src/routes/indexRoutes');
+const productRoutes = require('./src/routes/productRoutes');
+const userRoutes = require('./src/routes/userRoutes');
 app.use('/carrito', carritoRoutes);
 app.use('/', indexRoutes);
 app.use('/product', productRoutes);
