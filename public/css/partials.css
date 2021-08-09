@@ -63,10 +63,11 @@ footer{
     width: 100%;
     
 }
-#logo-pie{
-    width: 5%;
-    height: 70%;
-    
+.logo-texto-footer{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
 }
 #logo-redes{
     display: flex;
