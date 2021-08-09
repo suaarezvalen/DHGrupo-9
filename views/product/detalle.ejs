@@ -88,9 +88,9 @@
             <section id="lado-derecho">  
                     <img id="logo-producto" src="../../img/<%=detalleProducto.img  %> ">
                     <p id="precio"><%=detalleProducto.precio %> </p>
-                    <a href="/carrito"><button id="agregar-carrito" type="button">agregar al carrito</button></a>
+                    <a href="/carrito/<%=detalleProducto.id %> "><button id="agregar-carrito" type="button">COMPRAR</button></a>
                     <form action="/product/detalle/<%=detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                        <button type="submit" id="agregar-carrito">ELIMINAR</button>
                     </form>
                 </section> 
         </div> 
