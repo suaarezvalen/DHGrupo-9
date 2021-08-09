@@ -15,11 +15,13 @@ body{
 /*MAIN*/
 
 main{
-    background-color: white;
+    background-image: url("/img/fondo-formulario.jpg");
+    width: 100%;
+    height: 1080px;
 }
 
 .flex-contenedor{
-    background-color: #858585;
+    background-image: url("/img/fondo-formulario2.jpg");
     font-size: 18px;
     color: white;
     display: flex;
@@ -29,12 +31,18 @@ main{
     width: 500px;
     height: auto;
     margin: auto;
-    margin-top: 75px;
-    margin-bottom: 200px;
+    margin-top: 150px;
     padding-top: 20px;
     padding-bottom: 4px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+.flex-contenedor:hover{
+    background-color: rgb(156, 156, 156);
+    border: solid 3px rgb(255, 255, 255);
+    transform: scale(1.01);
+    transition: all 0.5s;
 }
 
 .formularios{
@@ -49,8 +57,12 @@ main{
 
 .titulos{
     text-align: center;
+    color: white; 
+    width: 1200px;
+    margin: auto;
     padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 32px;
+    border-bottom: solid white 2px;
 }
 
 .subtitulos{
