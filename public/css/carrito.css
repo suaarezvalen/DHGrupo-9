@@ -103,10 +103,8 @@ main{
     font-size: 23px;
 }
 
-#cupones-carrito{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.descuento-carrito{
+    color: #00ff00;
 }
 
 .inpus-carrito{
