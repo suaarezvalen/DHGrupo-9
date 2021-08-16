@@ -1,7 +1,7 @@
-/* header*/
-
+/* header 1*/
+/*
 header{
-    background-color: black;
+    background-color: rgb(37, 36, 36);
 }
 
 #nav-bar{
@@ -53,7 +53,143 @@ header{
     color: white;
     margin-right: 20px;
 }
+*/
+/*HEADER 1*/
 
+/*HEADER 2*/
+header{
+    background-color: rgb(37, 36, 36);
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+} 
+#botones-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/*buscador con movimiento*/
+
+#container{
+    margin:auto;
+    text-align:center;
+  }
+  #searchform{
+    display:inline;
+    font-size:1em;
+    border-radius: 8em;
+    border:0.1em solid rgba(255, 166, 0, 0);
+    box-shadow:0 0 0.3em rgba(236, 10, 10, 0);
+    padding:0.3em;
+    background: transparent;
+
+  }
+  #s{
+    transition:all 0.2s ease-out;
+    width:15px;
+    border-radius:0;
+    box-shadow:none;
+    outline: none;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+
+  }
+  #s:focus{
+    width:8em;
+    opacity:1;
+  }
+  label{
+    padding-left: 1px;
+    display:inline-block;
+    margin-top:0.3em;
+    color:rgba(218,208,190,1);
+    text-shadow:0 0 0.1em rgba(7, 6, 6, 0.979);
+    position: relative;
+    left:0.1em;
+    color: white;
+  }
+/*buscador con movimiento*/
+
+#superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#inferior{
+    height: 50px;
+    
+}
+#botones-inferiores{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    height: 100%;
+}
+.btn-group {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    border:none;
+    padding-left: 25%;
+}
+#boton1{
+    background-color: #632d33;
+}
+#boton2{
+    background-color: #804143;
+}
+
+.logo-texto{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.logo-texto2{
+    display: none;
+}
+
+.botones-tienda{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.usuario{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 17px;
+    color: white;
+    margin-right: 20px;
+}
+/*HEADER 2*/
 
 /* footer */
 

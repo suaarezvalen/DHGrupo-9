@@ -6,6 +6,7 @@ let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const carritoControllers =  
 {
+    
     carrito: (req, res) => {
         let idParaURL = req.params.id;
 

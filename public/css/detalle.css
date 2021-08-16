@@ -28,13 +28,14 @@ main{
 #lado-izquierdo{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 7% 3% 10% 10%;
     color: white;
     
 }
 
 
-/*slider*/
+
+/*slider
 
 
 #container-slider{
@@ -93,12 +94,8 @@ main{
 #menu-sliders li a:hover{
     background-color: black;
 }
+*/
 
-
-
-#caja-info{
-    margin-left: 9%;
-}
 .info-juego{
     font-size: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -112,8 +109,18 @@ main{
     flex-direction: column;
     margin: 7% 10% 10% 10%;
 }
-#comprar{
-    padding: 2%;
+#contenedor-derecho{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25px;
+}
+#precio{
+    color: white;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+#agregar-carrito{
+    width: 100%; 
     height: 48px;
     background-color: #3B5B9C;
     background-repeat:no-repeat;
@@ -126,31 +133,23 @@ main{
     color: white;
     border-radius: 5px;
 }
-#agregar-carrito{
-    padding: 2%;
-    height: 48px;
-    background-color: transparent;
-    font-size: 15px;
-    color: white;
-    border-radius: 5px;
-    border-color: #3B5B9C;
-}
 #productos-similares{
     display: flex;
     flex-direction: row;
-    background-color: #333333;
+    background-color: #19192e;
     justify-content: space-around;
-    margin-left: 10%;
-    margin-right: 10%;
-}
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 350px;
+    box-shadow: rgba(1, 1, 63, 0.548) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
 #titulo-similares{
     margin-left: 10%;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .foto-similar{
-    width: 95%;
-    height: 65%;
+    width: 100%;
+    height: 85%;
 }
 .similares{
     display: flex;
