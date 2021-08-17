@@ -10,7 +10,7 @@ body{
 
 main{
     width: 100%;
-    background-color: #131823;
+    background-color: #0b0b0f;
 }
 #carouselExampleIndicators{
     display: none;
@@ -58,9 +58,14 @@ main{
     overflow:hidden;
 }
 #subtitulo{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    color: white; 
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    border-bottom: solid white 2px;
 }
 #destacado{
     display: flex;
