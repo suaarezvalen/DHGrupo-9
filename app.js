@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
+const session = require("express-session");
+//cookies
 
 // INTALACIONES
 
@@ -10,6 +12,8 @@ app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(session({secret: "session message"}));
+//cookies
 
 //INTALACIONES
 
@@ -36,12 +40,15 @@ app.use(express.static(publicPath2));
 
 //ARCHIVOS PÚBLICOS
 
-
 //app.get("/", (req, res) => {
   //res.sendFile(path.resolve(__dirname, "./views/index.ejs"));
 //});
+
+//VIEW PORT
 
 app.listen(process.env.PORT || 3001, function() {
   console.log("Corriendo servidor en el puerto 3001");
 }
 )
+
+//VIEW PORT

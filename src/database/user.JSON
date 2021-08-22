@@ -22,5 +22,13 @@
   "usuario": "holaaa123",
   "contraseña": "",
   "img": "1629673747448Captura de pantalla 2021-08-03 011710.png"
+ },
+ {
+  "id": 4,
+  "nombre": "Jorge",
+  "mail": "jorge3473@gmail.com",
+  "usuario": "asdd12fec",
+  "contraseña": "$2a$10$Md4kq6r.nPhRBjKeR4qwnOu1nQZJQzHlD/cn0wS1Z6KqNnXXX3JIC",
+  "img": "1629675083876Captura de pantalla 2021-07-26 184226.png"
  }
 ]
