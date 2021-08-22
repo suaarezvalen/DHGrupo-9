@@ -1,9 +1,26 @@
 [
-    {
-        "id": 1,
-        "nombre": "¿?",
-        "mail": "¿?",
-        "usuario": "¿?",
-        "contraseña": "¿?"
-    }
+ {
+  "id": 1,
+  "nombre": "algo",
+  "mail": "algo@gmail.com",
+  "usuario": "algo123",
+  "contraseña": "1231456",
+  "img": "1629673648401Captura de pantalla 2021-08-02 194949.png"
+ },
+ {
+  "id": 2,
+  "nombre": "Valen",
+  "mail": "valensuarez@gmail.com",
+  "usuario": "holaaa123",
+  "contraseña": "contraselññaCopada",
+  "img": "1629673705283Captura de pantalla 2021-08-03 011710.png"
+ },
+ {
+  "id": 3,
+  "nombre": "Valen",
+  "mail": "valensuarez@gmail.com",
+  "usuario": "holaaa123",
+  "contraseña": "",
+  "img": "1629673747448Captura de pantalla 2021-08-03 011710.png"
+ }
 ]

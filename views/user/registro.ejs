@@ -15,15 +15,15 @@
         <h1>CREA TU USUARIO </h1>
    
     <h5>Completa tus datos para crear tu cuenta</h3>
-    <form>
-        <input class="casillero" type="text" name="nombres" id="nombres" placeholder="Nombre y Apellido">
-        <input class="casillero" type="email" name="email" id="email" placeholder="E-mail">
+    <form method="POST" action="/user/registro" enctype="multipart/form-data">
+        <input class="casillero" type="text" name="nombre" id="nombres" placeholder="Nombre y Apellido">
+        <input class="casillero" type="email" name="mail" id="email" placeholder="E-mail">
         <input class="casillero" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">
         <input class="casillero" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-        <input class="casillero" type="text" name="pais" id="pais" placeholder="Pais">
+        <input class="casillero" type="file" name="Imagen" id="pais">
         <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a> </p>
         <button class="boton" type="submit">Registrar</button>
-        <p><a href="/login">Ya Tengo Cuenta</a></p>
+        <p><a href="/user/login">Ya Tengo Cuenta</a></p>
     </form>
     </section>
 </main>
