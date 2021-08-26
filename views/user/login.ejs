@@ -12,8 +12,17 @@
        <div class="cajaformulario">
         <img id="logocaja" src="./img/logo.png"></img>   
          
-       
-        <form id="formulario">
+        <% if (typeof errors != "undefined") { %>
+            <p style="color:red">ERROR</p> 
+            <ul>
+                <% for(let i=0; i < errors.length; i++) { %>
+                    <li>
+                        <%=errors[i].msg %> 
+                    </li>
+                <% } %>  
+            </ul>
+            <% } %> 
+        <form id="formulario" action="/user/login" method="POST">
             
             <div id="email">
             <label for="email"></label>
@@ -23,7 +32,7 @@
            
             <div id="password">
             <label for="clave"></label>
-            <input type="password" name="clave" placeholder="contraseña">
+            <input type="password" name="contraseña" placeholder="contraseña">
             </div>
 
             <p id="boton-ingreso">

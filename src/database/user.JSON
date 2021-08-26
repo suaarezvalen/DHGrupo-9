@@ -30,5 +30,21 @@
   "usuario": "asdd12fec",
   "contraseña": "$2a$10$Md4kq6r.nPhRBjKeR4qwnOu1nQZJQzHlD/cn0wS1Z6KqNnXXX3JIC",
   "img": "1629675083876Captura de pantalla 2021-07-26 184226.png"
+ },
+ {
+  "id": 5,
+  "nombre": "Valen",
+  "mail": "123@gmail.com",
+  "usuario": "valen",
+  "contraseña": "$2a$10$A9Q5jojHHJsJi5UHCOt9c.Lgh7Sm9gA7fpMdBwQFm8GqIwLTXdzY6",
+  "img": "1630009026097Captura de pantalla 2021-08-23 192134.png"
+ },
+ {
+  "id": 6,
+  "nombre": "asdasd",
+  "mail": "suarez@gmail.com",
+  "usuario": "a",
+  "contraseña": "$2a$10$p2E7/sQ4s/WQHYAWqcPumudczD0znryh6A6U1ynjZm7qCvQknVv6O",
+  "img": "1630010340847Captura de pantalla 2021-08-01 143521.png"
  }
 ]

@@ -2,9 +2,9 @@ const userControllers = require('./../controllers/userControllers')
 
 const express = require('express');
 const router = express.Router();
-const path = require("path")
-
+const path = require("path");
 const multer = require("multer");
+const { check } = require('express-validator');
 
 /* MULTER */
 
@@ -28,6 +28,18 @@ router.get('/registro', userControllers.registro);
 router.post('/registro', uploadFile.single("Imagen"), userControllers.registroAccion);
 
 router.get('/login', userControllers.login);
+router.post('/login',
+    check('email').isEmail(),
+    check('contraseña')
+    ,userControllers.loginAccion)
+
+router.get("/check", function(req, res){
+    if (req.session.usuarioLogueado == undefined){
+        res.send("no anduvo :p")
+    }else{
+        res.send("anduvo, bien ahi! ;)" + req.session.usuarioLogueado.mail)
+    }
+})
 
 /* RUTAS */
 
