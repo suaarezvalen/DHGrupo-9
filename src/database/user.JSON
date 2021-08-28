@@ -46,5 +46,13 @@
   "usuario": "a",
   "contraseña": "$2a$10$p2E7/sQ4s/WQHYAWqcPumudczD0znryh6A6U1ynjZm7qCvQknVv6O",
   "img": "1630010340847Captura de pantalla 2021-08-01 143521.png"
+ },
+ {
+  "id": 7,
+  "nombre": "lucas",
+  "mail": "l@gmail.com",
+  "usuario": "adak",
+  "contraseña": "$2a$10$g5oyGzzyLSZk2ExoYpIUl./KZlKZwCvS90fV4Do3rtIT8c1GqlL66",
+  "img": "1630185415602auriculares.jpg"
  }
 ]

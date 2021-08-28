@@ -18,12 +18,10 @@ const userControllers =
 
     registroAccion: (req, res) => {
         let idNuevo = 0;
-
-        for(let i=0;i<user.length; i++) {
-            if(idNuevo<user[i].id){
-                idNuevo=user[i].id
-            }
-        }
+        
+        let errors = validationResult(req);
+    
+        
         
         /*for (let i of user){
             if (idNuevo<i.id){
@@ -64,24 +62,28 @@ const userControllers =
         }else{
             user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
             }
-        let usuarioALoguearse
+        
 
+        let usuarioALoguearse
         for (let i = 0; i < user.length; i++){
             if(user[i].mail == req.body.email) {
                 if (bcryptjs.compareSync(req.body.contraseña, user[i].contraseña)) {
                     usuarioALoguearse = user[i]
+                    req.session.usuarioLogueado = usuarioALoguearse
                     break;
                 }
             }
         }
+console.log(req.session)
 
         if (usuarioALoguearse == undefined) {
             return res.render('user/login', {errors: [
                 {msg: "Contraseña o email son invalidos"}
             ]})
         }
+        
 
-        req.session.usuarioLogueado == usuarioALoguearse
+
         //res.redirect("../product/tienda")
         res.redirect("../user/check")
     }else{
@@ -89,7 +91,8 @@ const userControllers =
         }
     },
 
-
+    
+    
 
 }   
 module.exports = userControllers;                                   
