@@ -36,20 +36,11 @@ main{
     background-color: black;
     color: white;
     font-size: 50px;
-    font-weight: bold;
     box-shadow: 4px 4px rgb(255, 255, 255);
     margin-bottom: 25px;
     padding-top: 12px;
     padding-right: 10px;
     padding-left: 10px;
-}
-
-.titulos-carrito:hover{
-    background-color: rgb(14, 14, 14);
-    box-shadow: none;
-    border: solid 3px white;
-    transform: scale(1.07);
-    transition: all 0.5s;
 }
 
 .titulos-chicos-carrito{
@@ -73,13 +64,6 @@ main{
     padding-left: 10px;
 }
 
-.subtitulos-carrito:hover{
-    background-color: rgb(219, 219, 219);
-    box-shadow: none;
-    border: solid 3px rgb(0, 0, 0);
-    transform: scale(1.07);
-    transition: all 0.5s;
-}
 
 .columnas-carrito img{
     width: 200px;
