@@ -109,6 +109,8 @@ main{
     flex-direction: column;
     margin: 7% 10% 10% 10%;
 }
+
+
 #contenedor-derecho{
     position: -webkit-sticky;
     position: sticky;
