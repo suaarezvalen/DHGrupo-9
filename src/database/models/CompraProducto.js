@@ -26,7 +26,16 @@ module.exports = (sequelize, dataTypes) => {
 
     const comprasproductos = sequelize.define(alias, cols, config);
     
-    
+    comprasproductos.associate = function(modelos){
+        producto.belongsToMany(usuario, { 
+            as: "compras",
+            through: 'compra_producto',
+            foreignKey: "producto_fk",
+            otherKey: "usuario_fk",
+            timestamps: false
+        });
+
+    }
 
     return comprasproductos;
 }
