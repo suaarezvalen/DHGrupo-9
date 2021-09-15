@@ -4,7 +4,7 @@
   "nombre": "algo",
   "mail": "algo@gmail.com",
   "usuario": "algo123",
-  "contraseña": "1231456",
+  "clave": "1231456",
   "img": "1629673648401Captura de pantalla 2021-08-02 194949.png"
  },
  {
@@ -12,7 +12,7 @@
   "nombre": "Valen",
   "mail": "valensuarez@gmail.com",
   "usuario": "holaaa123",
-  "contraseña": "contraselññaCopada",
+  "clave": "contraselññaCopada",
   "img": "1629673705283Captura de pantalla 2021-08-03 011710.png"
  },
  {
@@ -20,7 +20,7 @@
   "nombre": "Valen",
   "mail": "valensuarez@gmail.com",
   "usuario": "holaaa123",
-  "contraseña": "",
+  "clave": "",
   "img": "1629673747448Captura de pantalla 2021-08-03 011710.png"
  },
  {
@@ -28,7 +28,7 @@
   "nombre": "Jorge",
   "mail": "jorge3473@gmail.com",
   "usuario": "asdd12fec",
-  "contraseña": "$2a$10$Md4kq6r.nPhRBjKeR4qwnOu1nQZJQzHlD/cn0wS1Z6KqNnXXX3JIC",
+  "clave": "$2a$10$Md4kq6r.nPhRBjKeR4qwnOu1nQZJQzHlD/cn0wS1Z6KqNnXXX3JIC",
   "img": "1629675083876Captura de pantalla 2021-07-26 184226.png"
  },
  {
@@ -36,7 +36,7 @@
   "nombre": "Valen",
   "mail": "123@gmail.com",
   "usuario": "valen",
-  "contraseña": "$2a$10$A9Q5jojHHJsJi5UHCOt9c.Lgh7Sm9gA7fpMdBwQFm8GqIwLTXdzY6",
+  "clave": "$2a$10$A9Q5jojHHJsJi5UHCOt9c.Lgh7Sm9gA7fpMdBwQFm8GqIwLTXdzY6",
   "img": "1630009026097Captura de pantalla 2021-08-23 192134.png"
  },
  {
@@ -44,7 +44,7 @@
   "nombre": "asdasd",
   "mail": "suarez@gmail.com",
   "usuario": "a",
-  "contraseña": "$2a$10$p2E7/sQ4s/WQHYAWqcPumudczD0znryh6A6U1ynjZm7qCvQknVv6O",
+  "clave": "$2a$10$p2E7/sQ4s/WQHYAWqcPumudczD0znryh6A6U1ynjZm7qCvQknVv6O",
   "img": "1630010340847Captura de pantalla 2021-08-01 143521.png"
  },
  {
@@ -52,7 +52,23 @@
   "nombre": "lucas",
   "mail": "l@gmail.com",
   "usuario": "adak",
-  "contraseña": "$2a$10$g5oyGzzyLSZk2ExoYpIUl./KZlKZwCvS90fV4Do3rtIT8c1GqlL66",
+  "clave": "$2a$10$g5oyGzzyLSZk2ExoYpIUl./KZlKZwCvS90fV4Do3rtIT8c1GqlL66",
   "img": "1630185415602auriculares.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "carlos",
+  "mail": "lucasaNGIO@gmail.com",
+  "usuario": "ef",
+  "clave": "$2a$10$TEO4dVQpqGTjEAL1Nh7Xt.M5TK7NpX5A7JbdMj63HQm7Hc8Il2Lx6",
+  "img": "1631664854296moto2.jpeg"
+ },
+ {
+  "id": 8,
+  "nombre": "carlos",
+  "mail": "lucasaNGIO@gmail.com",
+  "usuario": "ef",
+  "clave": "$2a$10$/WKLk0rdcQCNuMv3fzx1OOQRwlVWL7u0Qk33LZ714HjXaa5eb/uiu",
+  "img": "1631664860296moto2.jpeg"
  }
 ]

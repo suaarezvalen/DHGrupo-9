@@ -10,22 +10,10 @@ const db = require('../database/models');
 
 const productControllers =  
 {
-    /*tienda: (req, res) => {
+    tienda: (req, res) => {
         product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
         res.render('product/tienda', {dataProductos : product})
-    },*/
- 
-// prueba pasandolo a base de datos
-
-    tienda: (req, res) => {
-        let product= db.Producto.findAll()
-        .then((productos) =>{
-            
-        }
-        res.render('product/tienda', {dataProductos: a})
-
     },
-
 
     detalle: (req, res) => {
         let idParaURL = req.params.id;

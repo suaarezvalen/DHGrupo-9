@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
         },
         fecha_venta:{
-            type: dataTypes.date,
+            type: dataTypes.DATE,
         }
     
     };
@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const ventasproductos = sequelize.define(alias, cols, config);
     
-    ventasproductos.associate = function(modelos){
+    /*ventasproductos.associate = function(modelos){
         producto.belongsToMany(usuario, { 
             as: "ventas",
             through: 'venta_producto',
@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         });
 
-    }
+    }*/
 
     return ventasproductos;
 }

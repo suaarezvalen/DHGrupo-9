@@ -30,7 +30,7 @@ router.post('/registro', uploadFile.single("Imagen"), userControllers.registroAc
 router.get('/login', userControllers.login);
 router.post('/login',
     check('email').isEmail(),
-    check('contraseña')
+    check('clave')
     ,userControllers.loginAccion)
 
 router.get("/check", function(req, res){
