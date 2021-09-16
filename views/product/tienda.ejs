@@ -38,70 +38,18 @@
         <p id="catalogo">CATALOGO</p>
 
         <div class="caja-catalogo">
-        <% for(let i=0;i<dataProductos.length;i++) {%> 
+        <% for(let i=0;i<todosLosProductos.length;i++) {%> 
         <section class="juego-catalogo">
             <article class="fotos-catalogo">
-                <img src=".././img/<%=dataProductos[i].img  %> "></img>
+                <img src=".././img/<%=todosLosProductos[i].img  %> "></img>
             </article>
             <div class="botones-carrito">
                 <br>
-                <a href="/product/detalle/<%=dataProductos[i].id %> "><button type="button" class="btn btn-success">Detalle</button></a>
+                <a href="/product/detalle/<%=todosLosProductos[i].id %> "><button type="button" class="btn btn-success">Detalle</button></a>
             </div>
         </section>
         <% } %> 
-        <!--<section class="juego-catalogo">
-            <article class="fotos-catalogo">
-                <img src="./img/tienda-cata3.jpg"></img>
-            </article>
-            <div class="botones-carrito">
-                <br>
-                <button type="button" class="btn btn-success">Comprar</button>
-            </div>
-        </section>
-        
-        <section class="juego-catalogo">
-            <article class="fotos-catalogo">
-                <img src="./img/tienda-cata4.jpg"></img>
-            </article>
-            <div class="botones-carrito">
-                <br>
-                <button type="button" class="btn btn-success">Comprar</button>
-            </div>
-        </section>
-        
 
-        <section class="juego-catalogo">
-            <article class="fotos-catalogo">
-                <img src="./img/tienda-cata5.jpg"></img>
-            </article>
-            <div class="botones-carrito">
-                <br>
-                <button type="button" class="btn btn-success">Comprar</button>
-            </div>
-        </section>
-
-        <section class="juego-catalogo">
-            <article class="fotos-catalogo">
-                <img src="./img/tienda-cata6.jpg"></img>
-            </article>
-            <div class="botones-carrito">
-                <br>
-                <button type="button" class="btn btn-success">Comprar</button>
-            </div>
-        </section>
-                
-
-
-        <section class="juego-catalogo">
-            <article class="fotos-catalogo">
-                <img src="./img/tienda-cata8.jpg"></img>
-            </article>
-            <div class="botones-carrito">
-                <br>
-                <button type="button" class="btn btn-success">Comprar</button>
-            </div>
-        </section>
--->
         
         </div>
 

@@ -46,20 +46,19 @@ const userControllers =
             mail: req.body.email
         }
     })
-    .then((resultadoQuery) => {
-        console.log('WOHOH')
+    .then((resultado) => {
 
 
-        if (resultadoQuery == []){
+        if (resultado == []){
             return res.render('user/login', {errors: [
             {msg: "clave o email son invalidos"}
         ]})
-        } else {// TOODO "fixed password"
-            if (bcryptjs.compareSync(req.body.clave, resultadoQuery['clave'])) {
-                usuarioALoguearse = resultadoQuery.usuario
+        } else {
+            if (bcryptjs.compareSync(req.body.clave, resultado['clave'])) {  
+                usuarioALoguearse = resultado.usuario
                 req.session.usuarioLogueado = usuarioALoguearse
-                console.log('sesion lista')
                 res.redirect("../user/check")
+        
             }
             return res.render('user/login', {errors: [
                 {msg: "clave o email son invalidos"}

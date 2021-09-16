@@ -12,26 +12,36 @@
         <h3 class="titulos">Editar producto</h3>
         <div class="flex-contenedor">
 
-            <form id="formulario" action="/product/editar/<%=productoAEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form id="formulario" action="/product/editar/<%=productoEncontrado.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="titulo" value="<%=productoAEditar.titulo %>">
+                    <input class="input-formulario" type="text" name="titulo" value="<%=productoEncontrado.titulo %>">
                 </div>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="precio" value="<%=productoAEditar.precio %>"></input>
+                    <input class="input-formulario" type="text" name="precio" value="<%=productoEncontrado.precio %>"></input>
                 </div>
                 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="descuento" value="<%=productoAEditar.descuento %>"></input>
+                    <input class="input-formulario" type="text" name="descuento" value="<%=productoEncontrado.descuento %>"></input>
+                </div>
+                <div class="create-form">
+                    <label for="categoria" class="form-label">Categoria:</label> 
+					<select name="categoria" aria-placeholder="Seleccionar">
+                        <option value="shooter">Shooter</option>
+                        <option value="simulador">Simulador</option>
+                        <option value="rol">Rol</option>
+                        <option value="estrategia">Estrategia</option>
+                    </select>
                 </div>
 
-                <div class="formularios">
-                    <input class="input-formulario" name="descripcion" value="<%=productoAEditar.descripcion %>"></input>
-                </div>
+
+                <!--<div class="formularios">
+                    <input class="input-formulario" name="descripcion" value="<%=productoEncontrado.descripcion %>"></input>
+                </div>-->
 
                 <div class="formularios">
-                    <input class="input-formulario" type="file" name="Imagen" value="<%=productoAEditar.img %>">
+                    <input class="input-formulario" type="file" name="Imagen" value="<%=productoEncontrado.img %>">
                 </div>
 
                 <p class="boton-ingreso">

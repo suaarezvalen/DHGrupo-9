@@ -129,21 +129,7 @@
             <button type="submit" id="agregar-carrito">EDITAR PRODUCTO</button><!-- falta editar la logica-->
         </form>  
         </div>    
-                    <div>
-            <h3 id="titulo-similares">Novedades</h3>
-            <section id="productos-similares">
-                <% for(let i=0;i<novedadesProducto.length;i++) {%> 
-                <section class="similares">
-                    <img class="foto-similar" src="../../img/<%=novedadesProducto[i].img %> ">
-                        <section class="info-similares">
-                            <h4 class="datos-similares"><%=novedadesProducto[i].titulo%></h4>
-                            <!--<p><%=novedadesProducto[i].precio %></p>-->
-                        </section>    
-                </section>
-                <% } %> 
-            </section>
-            <br>
-        </div>     
+     
     </main>
     
     <%- include("../partials/footer") %>

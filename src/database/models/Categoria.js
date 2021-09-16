@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
         nombre:{
             type: dataTypes.STRING,
         }
-    };
+    }; 
     
     let config ={
        tableName: "categoria",
@@ -19,12 +19,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const categorias = sequelize.define(alias, cols, config);
     
-    /*categorias.associate = function(modelos){
-        categorias.hasMany(modelos.producto,{
-            as:"categorias",
-            foreignKey: "categoria_fk"
+    categorias.associate = function (modelos){
+
+        categorias.hasMany(modelos.Producto, {   
+          as: "productos",
+          foreignKey: "categoria_fk"
         });
-    }*/
+      }
     
 
     return categorias;
