@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <link rel="stylesheet" href="../../css/usuario.css"/>
+    <%- include("../partials/head") %>
+
+<body>
+    
+    <%- include("../partials/header") %>
+    
+    <main>
+        <div id="contenedor-principal">
+            <article id="ladoizquierdo">
+                <img id="imagenUsuario" src="../../img/<%=detalleUsuario.img%> ">
+            </article>
+            <article id="ladoDerecho">
+                <h3 id="nombreUsuario"><%=detalleUsuario.nombre%></h3>
+                <p class="datos"><%=detalleUsuario.mail%></p>
+                <p class="datos"><%=detalleUsuario.usuario%></p>
+                <div id="botonesUsuario">
+                    <!--<form action="/user/usuario/<%=detalleUsuario.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
+                        <button type="submit" id="agregar-carrito">eliminar usuario</button>
+                    </form>-->
+                </div>
+            </article>    
+        </div>  
+    </main>
+
+    <%- include("../partials/footer") %>
+    
+</body>
+</html>

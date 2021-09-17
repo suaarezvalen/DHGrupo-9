@@ -71,5 +71,18 @@ const userControllers =
         console.log(error)
     })
     }, 
+    usuarioData: (req, res) => {
+        let idEncontrado = req.params.id;
+
+        let usuarioEncontrado;
+
+        db.Usuario.findOne({
+            where: {id: idEncontrado}
+        }).then(resultado =>{
+            usuarioEncontrado = resultado;
+
+        res.render('user/usuario', {detalleUsuario : usuarioEncontrado});
+        }
+        )},
 }   
 module.exports = userControllers;                                   

@@ -20,6 +20,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         categoria_fk:{
             type: dataTypes.INTEGER,
+        },
+        descripcion:{
+            type: dataTypes.TEXT,
         }
     
     };

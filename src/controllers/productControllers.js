@@ -34,7 +34,6 @@ const productControllers =
         }).then(resultado =>{
             productoEncontrado = resultado;
 
-        //const novedades = Producto.slice(-4)
 
         res.render('product/detalle', {detalleProducto : productoEncontrado});
         }
@@ -60,7 +59,8 @@ const productControllers =
 		    precio: req.body.precio,
 		    decuento: req.body.decuento,
             img: nombreImagen,
-            categoria_fk: categorias["id"]
+            categoria_fk: categorias["id"],
+            descripcion: req.body.descripcion
 
         })
         .then((resultado)=>{
@@ -100,7 +100,8 @@ const productControllers =
 		    precio: req.body.precio,
 		    decuento: req.body.decuento,
             img: req.file.filename,
-            categoria_fk: categorias["id"]
+            categoria_fk: categorias["id"],
+            descripcion: req.body.descripcion
         },
         {
             where: {id: idEncontrado}
