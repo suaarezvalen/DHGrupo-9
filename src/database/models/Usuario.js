@@ -7,16 +7,16 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(45),
         },
         mail:{
-            type: dataTypes.STRING(70),
+            type: dataTypes.STRING(45),
         },
         usuario:{
-            type: dataTypes.STRING(70),
+            type: dataTypes.STRING(45),
         },
         clave:{
-            type: dataTypes.STRING(60),
+            type: dataTypes.STRING(200),
         },
         img:{
             type: dataTypes.STRING(200),
@@ -44,8 +44,8 @@ module.exports = (sequelize, dataTypes) => {
     Usuario.belongsToMany(modelos.Producto, {
         as: "productos_venta",
         through: "venta_producto",   
-        foreignKey: "usuario_fk",  
-        otherKey: "producto_fk",    
+        foreignKey: "usuarioVenta_fk",  
+        otherKey: "productoVenta_fk",    
         timestamps: false
     });
     }
