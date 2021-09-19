@@ -37,56 +37,6 @@
                     <span class="sr-only">Next</span>
                     </a>
                 </div>
-            
-                <!--<section id="container-slider">
-                    <ul id="sliders">
-                        <li id="slider1">
-                            <img class="foto-producto" src="../../img/oferta2.jpg">
-                        </li>
-                        <li id="slider2">
-                            <img class="foto-producto" src="../../img/oferta3.jpg">
-                        </li>
-                        <li id="slider3">
-                            <img class="foto-producto" src="../../img/oferta4.jpg">
-                        </li>
-                        <li id="slider4">
-                            <img id="foto-producto" src="../../img/oferta5.jpg">
-                        </li>
-                        <li id="slider5">
-                            <img class="foto-producto" src="../../img/oferta6.jpg">
-                        </li>
-                        <li id="slider6">
-                            <img class="foto-producto" src="../../img/oferta7.jpg">
-                        </li>
-                        <li id="slider7">
-                            <img class="foto-producto" src="../../img/oferta8.jpg">
-                        </li>
-                    </ul>
-                    <ul id="menu-sliders">
-                        <li>
-                            <a href="#slider1"></a>
-                        </li>
-                        <li>
-                            <a href="#slider2"></a>
-                        </li>
-                        <li>
-                            <a href="#slider3"></a>
-                        </li>
-                        <li>
-                            <a href="#slider4"></a>
-                        </li>
-                        <li>
-                            <a href="#slider5"></a>
-                        </li>
-                        <li>
-                            <a href="#slider6"></a>
-                        </li>
-                        <li>
-                            <a href="#slider7"></a>
-                        </li>
-                    </ul>  --> 
-                     
-                
                 <section id="caja-info">
                     <h1 id="titulo-juego"><%=detalleProducto.titulo  %> </h1>
                     <br>
@@ -94,24 +44,6 @@
                     <p class="info-juego"><%=detalleProducto.descripcion  %> </p>     
                     <br>
                 </section>
-                    <!--<article id="especificaciones-caja">
-                        <section id="especificaciones">
-                            <ul class="info-juego">
-                                <li>11 bit studios</li>
-                                <li><i class="fab fa-windows"></i> Windows 7/8/10 de 64 bits</li>
-                                <li>4 GB de RAM</li>
-                                <li>8 GB de espacio disponible</li>
-                            </ul>
-                        </section>  
-                        <section id="especificaciones">
-                            <ul class="info-juego">
-                                <li>Procesador Dual Core a 3,2 GHz</li>
-                                <li>GeForce GTX 660, Radeon R7 370 o equivalente con 2 GB de VRAM</li>
-                                <li>idioma: inglés</li>
-                            </ul>
-                        </section>
-                    </article>-->
-                </section> 
             </section>     
             <section id="lado-derecho">  
                 <article id="contenedor-derecho">
@@ -125,8 +57,8 @@
         <form action="/product/detalle/<%=detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
             <button type="submit" id="agregar-carrito">ELIMINAR</button>
         </form>
-        <form action="/product/detalle/<%=detalleProducto.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
-            <button type="submit" id="agregar-carrito">EDITAR PRODUCTO</button><!-- falta editar la logica-->
+        <form action="/product/editar/<%=detalleProducto.id%>"> 
+            <button type="submit" id="agregar-carrito">EDITAR PRODUCTO</button>
         </form>  
         </div>    
      
