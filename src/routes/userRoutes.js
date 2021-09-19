@@ -33,16 +33,9 @@ router.post('/login',
     check('clave')
     ,userControllers.loginAccion)
 
-router.get('/usuario/:id', userControllers.usuarioData);
+router.get('/usuario', userControllers.usuarioData);
 
-router.get("/check", function(req, res){
-    if (req.session.usuarioLogueado == undefined){
-        res.send("no anduvo :p")
-    }else{
-        res.send("anduvo, bien ahi! ;)" + req.session.usuarioLogueado.mail)
-    }
-})
-
+router.get('/logout', userControllers.cerrarSession);
 /* RUTAS */
 
 module.exports = router;
