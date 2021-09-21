@@ -36,6 +36,7 @@ router.post('/login',
 router.get('/usuario', userControllers.usuarioData);
 
 router.get('/logout', userControllers.cerrarSession);
+
 /* RUTAS */
 
 module.exports = router;
