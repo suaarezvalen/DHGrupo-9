@@ -1,4 +1,12 @@
-
+/*prueba menu usuario*/
+.bg-custom-1 {
+    background-color: #85144b;
+  }
+  
+  .bg-custom-2 {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  }
+/*prueba menu usuario*/
 /*HEADER 2*/
 header{
     background-color: rgb(36, 36, 37);
@@ -13,6 +21,16 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+#logohiper{
+    text-decoration: none;
+}
+#cambio{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-right: 15px;
 }
 /*buscador con movimiento*/
 
@@ -92,11 +110,19 @@ header{
 #boton1{
     background-color: #FED766;
     font-weight: 500;
+    text-decoration: none;
 }
 #boton2{
     background-color: #444054;
     font-weight: 500;
+    text-decoration: none;
 
+}
+.botonInferiores{
+    background-color: transparent;
+    color: black;
+    border:none;
+    font-weight: 600;
 }
 
 .logo-texto{
@@ -133,7 +159,7 @@ header{
     color: white;
     font-size: 17px;
     color: white;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 

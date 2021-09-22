@@ -55,16 +55,15 @@ const userControllers =
         ]})
         } else {
             if (bcryptjs.compareSync(req.body.clave, resultado['clave'])) {  
-                usuarioALoguearse = resultado.usuario
-                req.session.usuarioLogueado = usuarioALoguearse
-                res.redirect("../user/check")
-        
+                //usuarioALoguearse = resultado.mail
+                req.session.usuarioLogueado = resultado;
+                res.redirect("../user/usuario")
+
             }
             return res.render('user/login', {errors: [
                 {msg: "clave o email son invalidos"}
             ]})
         }
-
     })
     .catch((error) => {
         console.log('ERRRO')
@@ -72,7 +71,7 @@ const userControllers =
     })
     }, 
     usuarioData: (req, res) => {
-        let idEncontrado = req.params.id;
+        /*let idEncontrado = req.params.id;
 
         let usuarioEncontrado;
 
@@ -80,9 +79,18 @@ const userControllers =
             where: {id: idEncontrado}
         }).then(resultado =>{
             usuarioEncontrado = resultado;
-
-        res.render('user/usuario', {detalleUsuario : usuarioEncontrado});
+        res.render('user/usuario', {detalleUsuario : usuarioEncontrado}); 
+    } */
+    
+        res.render('user/usuario', {
+            user: req.session.usuarioLogueado
         }
-        )},
+    )},
+   cerrarSession: (req, res) => {
+        req.session.destroy();
+        console.log(req.session)
+        return res.redirect('/');
+    }
+        
 }   
 module.exports = userControllers;                                   

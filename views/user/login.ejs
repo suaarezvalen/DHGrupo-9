@@ -9,8 +9,7 @@
     <%- include("../partials/header") %>
     
     <main>
-       <div class="cajaformulario">
-        <img id="logocaja" src="./img/logo.png"></img>   
+       <div class="cajaformulario">   
          
         <% if (typeof errors != "undefined") { %>
             <p style="color:red">ERROR</p> 
@@ -39,10 +38,11 @@
             <button type="submit">Ingresar</button>
             </p>
             
-            <p>
-            <button id="boton-registro" type="submit" href="/registro">Registrarse</button>
-            </p>
+            
         </form>
+            <p>
+                <a href="../user/registro"><button id="boton-registro" type="button">Registrarse</button></a>
+            </p>
       </div>
     </main>
 

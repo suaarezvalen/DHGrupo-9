@@ -11,16 +11,14 @@
     <main>
         <div id="contenedor-principal">
             <article id="ladoizquierdo">
-                <img id="imagenUsuario" src="../../img/<%=detalleUsuario.img%> ">
+                <img id="imagenUsuario" src="../../img/<%=user.img%> ">
             </article>
             <article id="ladoDerecho">
-                <h3 id="nombreUsuario"><%=detalleUsuario.nombre%></h3>
-                <p class="datos"><%=detalleUsuario.mail%></p>
-                <p class="datos"><%=detalleUsuario.usuario%></p>
+                <h3 id="nombreUsuario"><%=user.nombre%></h3>
+                <p class="datos"><%=user.mail%></p>
+                <p class="datos"><%=user.usuario%></p>
                 <div id="botonesUsuario">
-                    <!--<form action="/user/usuario/<%=detalleUsuario.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
-                        <button type="submit" id="agregar-carrito">eliminar usuario</button>
-                    </form>-->
+                    <a href="/user/logout">Cerrar sesión</a>
                 </div>
             </article>    
         </div>  
