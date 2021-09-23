@@ -18,7 +18,7 @@ main{
 /*ofertas*/
 
 
-#ofertas {
+/*#ofertas {
         
         text-align: center;
         background-color: black;
@@ -33,17 +33,70 @@ main{
         margin-left: 41%;
         margin-right: 41%;
         
+    }*/
+    .titulos{
+        text-align: center;
+        color: white; 
+        width: 1200px;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 32px;
+        /*border-bottom: solid white 2px;*/
+        text-align: left;
     }
     
- 
+/* portada*/
 
-
-.carousel {
-    margin: 0 auto;
+#contenedor-portada{
     display: flex;
-    width:25%;
-    height:35%;
-  }
+    flex-direction: row;
+
+
+
+}
+#portada{
+    height: 400px;
+    background-image: url("/img/panoramica1.jpg");
+    background-repeat: no-repeat;
+    width: 1000vw;
+    flex: 0.7;
+
+}
+#contenedor-izq{
+    flex: 0.5;
+    background-color: rgba(8, 8, 8, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 50px;
+     
+}
+#info-portada{
+    color: white;
+    width: 230px;
+    flex: 0.7;
+    margin-left: 30px;
+    
+}
+#logo-portada{
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    flex: 0.4;
+    margin-left: 20px;
+}
+#titulo-portada{
+    width: 300px;
+    text-align: center;
+}
+#descrip{
+    width: 400px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+
+
 /*catalogo*/
 
 #catalogo{
