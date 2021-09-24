@@ -99,21 +99,7 @@ main{
 
 /*catalogo*/
 
-#catalogo{
-        
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 2vw;
-    font-weight: bold;
-    box-shadow: 4px 4px rgb(255, 255, 255);
-    margin-bottom: 25px;
-    padding-top: 12px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-left: 41%;
-    margin-right: 41%;
-}
+
 
 
 .caja-catalogo{
@@ -121,29 +107,45 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-  
+    width: 85%;
+    margin-left: 7.5%;
 }
 
-
-
-.fotos-catalogo:hover{
-   
-        -webkit-transform: scale(1.07);
-        transform: scale(1.07);
-    
+img{
+    width: 200px;
+    height: 300px;
 }
-.botones-carrito{
+.juego-catalogo{
+    margin: 45px;
+    text-decoration: none;
+}
+.info{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: rgba(134, 134, 45, 0.41);
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+
 }
-#ver-mas{
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 1%;
+#redireccionamiento{
+    text-decoration: none;
+    color: white;
 }
 
+/*hover*/
+.juego-catalogo:hover{
+    transition: 0.5s;
+}
+.juego-catalogo:hover #titulo{
+    display: block;
+}
+
+
+
+/*hover*/
 
 @media (min-width: 360px) and (max-width:769px){
     .logo-texto{

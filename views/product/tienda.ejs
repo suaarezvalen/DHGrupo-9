@@ -28,22 +28,24 @@
         <div class="caja-catalogo">
         <% for(let i=0;i<todosLosProductos.length;i++) {%> 
         <section class="juego-catalogo">
+        <a href="/product/detalle/<%=todosLosProductos[i].id %> " id="redireccionamiento">
             <article class="fotos-catalogo">
                 <img src=".././img/<%=todosLosProductos[i].img  %> "></img>
             </article>
-            <div class="botones-carrito">
-                <br>
-                <a href="/product/detalle/<%=todosLosProductos[i].id %> "><button type="button" class="btn btn-success">Detalle</button></a>
+            <div class="info">
+                <p id="titulo"><%=todosLosProductos[i].titulo %></p>
+                <p>$<%=todosLosProductos[i].precio %></p>
             </div>
+        </a>
         </section>
         <% } %> 
 
         
         </div>
 
-        <div id="ver-mas">
+        <!--<div id="ver-mas">
             <button type="button" class="btn btn-primary">Ver más</button>
-        </div>
+        </div>-->
 
 
    </main>
