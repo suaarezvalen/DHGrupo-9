@@ -41,6 +41,16 @@ main{
         margin: auto;
         padding-top: 30px;
         padding-bottom: 32px;
+        border-bottom: solid white 2px;
+        text-align: left;
+    }
+    .titulos2{
+        text-align: center;
+        color: white; 
+        width: 500px;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 32px;
         /*border-bottom: solid white 2px;*/
         text-align: left;
     }
@@ -125,10 +135,10 @@ img{
     justify-content: space-around;
     padding-left: 20px;
     padding-top: 10px;
-    background-color: rgba(134, 134, 45, 0.41);
+    /*background-color: rgba(134, 134, 45, 0.41);*/
     border-end-end-radius: 20px;
     border-end-start-radius: 20px;
-
+    display: none;
 }
 #redireccionamiento{
     text-decoration: none;
@@ -139,11 +149,14 @@ img{
 .juego-catalogo:hover{
     transition: 0.5s;
 }
-.juego-catalogo:hover #titulo{
+.juego-catalogo:hover .info{
     display: block;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: 3.0s;
 }
-
-
 
 /*hover*/
 
