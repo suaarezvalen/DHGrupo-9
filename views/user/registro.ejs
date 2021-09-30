@@ -6,29 +6,49 @@
 
 <body>
 
-    <%- include("../partials/header") %>
-    
-      <main>
-    
-    
-    <section class="form-registro">
-        <h1>CREA TU USUARIO </h1>
+        <%- include("../partials/header") %>
+        
+    <main>
+        
+        <h3 class="titulos">Crea tu usuario</h3>
+        <div class="flex-contenedor">
 
-    <h5>Completa tus datos para crear tu cuenta</h3>
-    <form method="POST" action="/user/registro" enctype="multipart/form-data">
-        <input class="casillero" type="text" name="nombre" id="nombres" placeholder="Nombre y Apellido">
-        <input class="casillero" type="email" name="mail" id="email" placeholder="E-mail">
-        <input class="casillero" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">
-        <input class="casillero" type="password" name="clave" id="clave" placeholder="clave">
-        <input class="casillero" type="file" name="Imagen" id="pais">
-        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a> </p>
-        <button class="boton" type="submit">Registrar</button>
-        <p><a href="/user/login">Ya Tengo Cuenta</a></p>
-    </form>
-    </section>
-</main>
+            <form id="formulario" method="POST" action="/user/registro" enctype="multipart/form-data">
+                
+                <div class="formularios">
+                    <input class="input-formulario" type="text" name="nombre" id="nombres" placeholder="Nombre y Apellido">
+                </div>
 
-<%- include("../partials/footer") %>
+                <div class="formularios">
+                    <input class="input-formulario" type="email" name="mail" id="email" placeholder="E-mail">
+                </div>
+
+                <div class="formularios">
+                    <input class="input-formulario" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">
+                </div>
+
+                <div class="formularios">
+                    <input class="input-formulario" type="password" name="clave" id="clave" placeholder="clave">
+                </div>
+
+                <div class="formularios">
+                    <input class="input-formulario" type="file" name="Imagen" id="pais">
+                </div>
+
+                <p class="boton-ingreso">
+                    <button type="submit" class="btn btn-success">Registrar</button>
+                </p>
+
+                <p class="subtitulos">
+                    <a href="/user/login">Ya Tengo Cuenta</a>
+                </p>
+
+            </form>
+
+        </div>
+    </main>
+
+    <%- include("../partials/footer") %>
 
 </body>
 </html>

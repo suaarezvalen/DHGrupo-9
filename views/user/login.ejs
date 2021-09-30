@@ -9,9 +9,11 @@
     <%- include("../partials/header") %>
     
     <main>
-       <div class="cajaformulario">   
+
+        <h3 class="titulos">Ingresa con tu usuario</h3>
+        <div class="flex-contenedor">   
          
-        <% if (typeof errors != "undefined") { %>
+            <% if (typeof errors != "undefined") { %>
             <p style="color:red">ERROR</p> 
             <ul>
                 <% for(let i=0; i < errors.length; i++) { %>
@@ -21,29 +23,28 @@
                 <% } %>  
             </ul>
             <% } %> 
-        <form id="formulario" action="/user/login" method="POST">
-            
-            <div id="email">
-            <label for="email"></label>
-            <input type="email" name="email" placeholder="email">
-            </div>
-            <br>
-           
-            <div id="password">
-            <label for="clave"></label>
-            <input type="password" name="clave" placeholder="clave">
-            </div>
 
-            <p id="boton-ingreso">
-            <button type="submit">Ingresar</button>
-            </p>
+            <form id="formulario" action="/user/login" method="POST">
+                
+                <div class="formularios">
+                    <input class="input-formulario" type="email" name="email" placeholder="Email">
+                </div>
             
-            
-        </form>
-            <p>
-                <a href="../user/registro"><button id="boton-registro" type="button">Registrarse</button></a>
+                <div class="formularios">
+                    <input class="input-formulario" type="password" name="clave" placeholder="Clave">
+                </div>
+
+                <p class="boton-ingreso">
+                    <button class="btn btn-success" type="submit">Ingresar</button>
+                </p>
+                
+            </form>
+
+            <p class="boton-ingreso">
+                <a href="../user/registro"><button class="btn btn-primary" type="button">Registrarse</button></a>
             </p>
-      </div>
+
+        </div>
     </main>
 
     <%- include("../partials/footer") %>

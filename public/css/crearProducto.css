@@ -34,8 +34,7 @@ main{
     margin-top: 150px;
     padding-top: 20px;
     padding-bottom: 4px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
+    border-radius: 5px;
 }
 
 .formularios{
@@ -45,7 +44,7 @@ main{
     margin-bottom: 20px;
     padding: 5px 10px 5px 10px;
     border: solid rgb(175, 175, 175) 2px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .titulos{
@@ -80,15 +79,6 @@ main{
     color: white;
     width: 100%;
     border-color: transparent;
-    outline: none;
-}
-
-.input3-formulario{
-    background-color: transparent;
-    color: white;
-    width: 100%;
-    margin-right: 10px;
-    border-color: white;
     outline: none;
 }
 

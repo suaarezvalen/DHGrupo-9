@@ -4,114 +4,92 @@
 
 body{
     padding: 0%;
-    margin: 0%; 
+    margin: 0%;
+    font-family: Verdana, sans-serif;
 }
 
-
-/* main */
-main {
-    background-image: url("../img/fondo-fifa.jpg");
-    background-repeat: repeat;
-    background-size: 1920px 1080px;
-    background-position: center center;
-    border: solid 3px white; 
-    padding-bottom: 8.2%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+::placeholder{
+    color: white;
 }
 
-.cajaformulario{
+/*MAIN*/
+
+main{
+    background-image: url("/img/fondo-fifa.jpg");
+    width: 100%;
+    height: 1080px;
+    background-size: cover;
+}
+
+.flex-contenedor{
+    background-image: url("/img/fondo-fifa.jpg");
+    font-size: 18px;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 1px;
-    margin: 10% 35%;
-    backdrop-filter: blur(5px);
-    box-sizing:border-box;
-    
-   
-}
-#logocaja{
-    width: 35%;
-    height: 35%;
+    justify-content: space-around;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    border-radius: 5px;
 }
 
-
-#boton-registro{
-   float:right;
-   padding:8px 12px;
-   margin:8px 0 0;
-   font-family:arial;
-   font-weight: bold;
-   text-transform: uppercase; 
-   border-radius: 5px;
-   background:rgb(253, 50, 50, 0.5);
-   color:black;
-   cursor:pointer;
-    
-} 
- 
-#boton-registro:link{
-    color: black;
-}   
-#boton-registro:visited{
-     color: black;
-    
+.formularios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    border: solid rgb(175, 175, 175) 2px;
+    border-radius: 5px;
 }
- 
 
-
-@media (min-width: 360px) and (max-width:769px){
-    
-    .logo-texto{
-        display: none;
-    }
-    
-    .logo-texto2{
-        display: block;
-        font-size: 12px;
-        font-weight: bold;
-        color: white;
-        padding-top: 20px;
-        margin-left: 10px;
-    }
-    
-    .botones-tienda{
-        font-size: 12px;
-    }
-    
-    .usuario{
-        font-size: 14px;
-        margin-right: 10px;
-    }
-
-    
-    .cajaformulario {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border: none;
-        border-radius: none;
-        box-shadow: none;
-        margin: 10% 35%;
-        backdrop-filter: none;
-    }
-    #logocaja{
-        width: 75%;
-    }
-    main{
-        padding-bottom: 130%;
-       
-    }
+.titulos{
+    text-align: center;
+    color: white; 
+    width: 1200px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    border-bottom: solid white 2px;
 }
-@media (min-width: 770px) and (max-width:1079px){
-    main{
-        padding-bottom: 130%;
-        
-       
-    }
 
+.subtitulos{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.flex-especificaciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.input2-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border-color: transparent;
+    outline: none;
+}
+
+.formularios:hover{
+    box-shadow: 0px 0px 6px rgb( 100 , 100 , 100 );
+    transition: all 0.5s;
+}
+
+.boton-ingreso{
+    text-align: center;
 }

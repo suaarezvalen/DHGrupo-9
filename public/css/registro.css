@@ -1,101 +1,95 @@
+*{
+    box-sizing: border-box;
+}
 
-
-/*main*/
-    
 body{
-    background-image: url("../img/Star_Wars_2.jpg");
-    background-size: cover;
-    
-    margin: 0%;
     padding: 0%;
+    margin: 0%;
+    font-family: Verdana, sans-serif;
 }
 
-
-* {margin:0;
-  padding:0;
-  box-sizing: border-box; 
+::placeholder{
+    color: white;
 }
 
-.form-registro{width: 400px;
-    background: #D6D0D0;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-radius: 4px;
-    font-family: Arial;
-    color:white;
-    box-shadow: 7px 13px 37px #000;
-   
-}
+/*MAIN*/
 
-.form-registro h1{font-size: 25px;
-    margin-bottom: 22px;
-    text-align: center ;
-    color: black;
-}
-.form-registro h5{font-size: 15px;
-    margin-bottom: 15px;
-    text-align: center ;
-    color: black;
-}
-
-.casillero{
-    width: 335px;
-    padding:10px;
-    margin-bottom: 20px;
-    border:1px solid grey;
-    font-family:calibri;
-    font-size: 20px;
-    
-}
-
-.form-registro p{height: 40px;
-    color: black;
-    text-align:center;
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 15px;
-}
-
-.form-registro a{color:black;
-    text-decoration: none;
-}
-
-.form-registro a:hover {
-    color:black;
-    text-decoration: underline;
-    
-}
-.form-registro .boton{
-    
+main{
+    background-image: url("/img/fondo-formulario3.jpg");
     width: 100%;
-    background: grey;
-    border: none;
-    padding: 12px;
-    margin-bottom: 15px;
+    height: 1080px;
 }
 
-@media (min-width: 360px) and (max-width:769px){
-    .logo-texto{
-        display: none;
-    }
-    
-    .logo-texto2{
-        display: block;
-        font-size: 12px;
-        font-weight: bold;
-        color: white;
-        padding-top: 20px;
-        margin-left: 10px;
-    }
-    
-    .botones-tienda{
-        font-size: 12px;
-    }
-    
-    .usuario{
-        font-size: 14px;
-        margin-right: 10px;
-    }
+.flex-contenedor{
+    background-image: url("/img/fondo-formulario3.jpg");
+    /*background-color: rgb(104, 104, 104);*/
+    font-size: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+}
+
+.formularios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    border: solid rgb(175, 175, 175) 2px;
+    border-radius: 5px;
+}
+
+.titulos{
+    text-align: center;
+    color: white; 
+    width: 1200px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    border-bottom: solid white 2px;
+}
+
+.subtitulos{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.flex-especificaciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.input2-formulario{
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border-color: transparent;
+    outline: none;
+}
+
+.formularios:hover{
+    box-shadow: 0px 0px 6px rgb( 100 , 100 , 100 );
+    transition: all 0.5s;
+}
+
+.boton-ingreso{
+    text-align: center;
 }
