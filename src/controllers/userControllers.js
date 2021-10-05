@@ -19,9 +19,10 @@ const userControllers =
     },
     
     registroAccion: (req, res) => {
-        let errors = validationResult(req);
+        const resultValidate = validationResult(req);
 
-        db.Usuario.create({
+        if(resultValidate.isEmpty()){
+            db.Usuario.create({
 		    nombre: req.body.nombre,
 		    mail: req.body.mail,
 		    usuario: req.body.usuario,
@@ -36,6 +37,13 @@ const userControllers =
             console.log(error)
         })
         res.redirect("/product/tienda")
+        } else {
+            return res.render("user/registro", {errores: resultValidate.mapped(), oldData: req.body});
+            
+        }
+        
+
+        
     },
 
     loginAccion: (req, res) => {

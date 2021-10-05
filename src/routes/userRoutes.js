@@ -21,11 +21,37 @@ const configImagen = multer.diskStorage({
 const uploadFile = multer({storage: configImagen});
 
 /* MULTER */
+const validateRegister = [
+    check("nombre")
+        .notEmpty().withMessage("Debe completar el nombre").bail()
+        .isAlpha().withMessage("Solo puede contener letras").bail()
+        .isLength({min: 5, max: 30}).withMessage("El nombre debe tener un minimo de 5 caracteres y un maximo de 30"),
+    
+    check("mail")
+        .notEmpty().withMessage("Debe completar el email").bail()
+        .isEmail().withMessage("Debes completar un email valido"),
 
+    check("usuario")
+        .notEmpty().withMessage("Debe completar el usuario").bail()
+        .isLength({min: 3, max: 15}).withMessage("El usuario debe tener un minimo de 3 caracteres y un maximo de 15"),
+
+    check("clave")
+        .notEmpty().withMessage("Debe completar la contraseña").bail()
+        .isLength({min: 5, max: 25}).withMessage("La contraseña debe tener un minimo de 5 caracteres y un maximo de 25"),    
+    
+    /*check("Imagen")
+        .custom((value, {req}) =>{
+            let file = req.file;
+            if(!file){
+                throw new Error("Debe cargar una imagen");
+            }
+            return true;
+        })*/
+    ]
 /* RUTAS */
 
 router.get('/registro', userControllers.registro);
-router.post('/registro', uploadFile.single("Imagen"), userControllers.registroAccion);
+router.post('/registro', uploadFile.single("Imagen"), validateRegister, userControllers.registroAccion);
 
 router.get('/login', userControllers.login);
 router.post('/login',
