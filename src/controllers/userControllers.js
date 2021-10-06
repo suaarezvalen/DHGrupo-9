@@ -51,7 +51,7 @@ const userControllers =
     
     if(resultValidateLogin.isEmpty()){
         
-        /* prueba de else if */let resultadoDB = db.Usuario.findOne({
+        db.Usuario.findOne({
                 where: {
                     mail: req.body.email
                 }
@@ -70,9 +70,9 @@ const userControllers =
     .catch((error) => {
         console.log(error)
     })
-    /*}  else if(resultadoDB = []) {
-        return res.render("user/login", {errores: resultValidateLogin.mapped(), oldData: req.body})
-    }*/ else {
+    }  else if(resultado = []) {
+        return res.render("user/login", {erroresMail: resultValidateLogin.mapped(), oldData: req.body})
+    } else {
         return res.render("user/login", {errores: resultValidateLogin.mapped(), oldData: req.body});
     }
 },

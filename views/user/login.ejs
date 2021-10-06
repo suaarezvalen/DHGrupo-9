@@ -42,7 +42,12 @@
                         <%= "Contraseña incorrecta" %>
                     </div>
                     <% } %>
-
+                    
+                <% if(locals.erroresMail) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= "Mail incorrecta" %>
+                    </div>                 
+                <% } %>
                 
             </form>
 
