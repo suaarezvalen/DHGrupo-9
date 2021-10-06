@@ -18,7 +18,7 @@ main{
 /*ofertas*/
 
 
-/*#ofertas {
+/*ofertas {
         
         text-align: center;
         background-color: black;
@@ -34,26 +34,21 @@ main{
         margin-right: 41%;
         
     }*/
-    .titulos{
-        text-align: center;
-        color: white; 
-        width: 1200px;
-        margin: auto;
-        padding-top: 30px;
-        padding-bottom: 32px;
-        border-bottom: solid white 2px;
-        text-align: left;
-    }
-    .titulos2{
-        text-align: center;
-        color: white; 
-        width: 500px;
-        margin: auto;
-        padding-top: 30px;
-        padding-bottom: 32px;
-        /*border-bottom: solid white 2px;*/
-        text-align: left;
-    }
+
+.titulos{
+    text-align: center;
+    color: white; 
+    width: 1200px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    border-bottom: solid white 2px;
+}
+
+.titulos2{
+    width: 300px;
+    text-align: center;
+}
     
 /* portada*/
 
