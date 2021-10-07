@@ -13,30 +13,41 @@
         <h3 class="titulos">Ingresa con tu usuario</h3>
         <div class="flex-contenedor">   
          
-            <% if (typeof errors != "undefined") { %>
-            <p style="color:red">ERROR</p> 
-            <ul>
-                <% for(let i=0; i < errors.length; i++) { %>
-                    <li>
-                        <%=errors[i].msg %> 
-                    </li>
-                <% } %>  
-            </ul>
-            <% } %> 
 
             <form id="formulario" action="/user/login" method="POST">
                 
                 <div class="formularios">
                     <input class="input-formulario" type="email" name="email" placeholder="Email">
                 </div>
-            
+                <% if(locals.errores && errores.email) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.email.msg %>
+                    </div>
+                    <% } %>
+
                 <div class="formularios">
                     <input class="input-formulario" type="password" name="clave" placeholder="Clave">
                 </div>
+                <% if(locals.errores && errores.clave) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.clave.msg %>
+                    </div>
+                    <% } %>
 
                 <p class="boton-ingreso">
                     <button class="btn btn-success" type="submit">Ingresar</button>
                 </p>
+                <% if(locals.erroresClave) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= "Contraseña incorrecta" %>
+                    </div>
+                    <% } %>
+                    
+                <% if(locals.erroresMail) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= "Mail incorrecta" %>
+                    </div>                 
+                <% } %>
                 
             </form>
 

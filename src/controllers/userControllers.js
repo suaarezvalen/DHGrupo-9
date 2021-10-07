@@ -47,37 +47,36 @@ const userControllers =
     },
 
     loginAccion: (req, res) => {
-    let errors = validationResult(req);
-    console.log("body", req.body)
-    db.Usuario.findOne({
-        where: {
-            mail: req.body.email
-        }
+    let resultValidateLogin = validationResult(req);
+    
+    if(resultValidateLogin.isEmpty()){
+        
+        db.Usuario.findOne({
+                where: {
+                    mail: req.body.email
+                }
     })
     .then((resultado) => {
 
-
-        if (resultado == []){
-            return res.render('user/login', {errors: [
-            {msg: "clave o email son invalidos"}
-        ]})
+        if (bcryptjs.compareSync(req.body.clave, resultado['clave'])) {  
+            //usuarioALoguearse = resultado.mail
+            req.session.usuarioLogueado = resultado;
+            res.redirect("../user/usuario")
         } else {
-            if (bcryptjs.compareSync(req.body.clave, resultado['clave'])) {  
-                //usuarioALoguearse = resultado.mail
-                req.session.usuarioLogueado = resultado;
-                res.redirect("../user/usuario")
-
-            }
-            return res.render('user/login', {errors: [
-                {msg: "clave o email son invalidos"}
-            ]})
-        }
+            return res.render("user/login", {erroresClave: resultValidateLogin.mapped(), oldData: req.body});  
+        }     
     })
+    
     .catch((error) => {
-        console.log('ERRRO')
         console.log(error)
     })
-    }, 
+    }  else if(resultado = []) {
+        return res.render("user/login", {erroresMail: resultValidateLogin.mapped(), oldData: req.body})
+    } else {
+        return res.render("user/login", {errores: resultValidateLogin.mapped(), oldData: req.body});
+    }
+},
+
     usuarioData: (req, res) => {
         /*let idEncontrado = req.params.id;
 

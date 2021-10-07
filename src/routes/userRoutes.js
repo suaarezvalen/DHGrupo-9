@@ -21,6 +21,7 @@ const configImagen = multer.diskStorage({
 const uploadFile = multer({storage: configImagen});
 
 /* MULTER */
+/* VALIDATOR */
 const validateRegister = [
     check("nombre")
         .notEmpty().withMessage("Debe completar el nombre").bail()
@@ -48,16 +49,25 @@ const validateRegister = [
             return true;
         })*/
     ]
+ 
+    const validateLogin = [
+        check("email")
+            .notEmpty().withMessage("Debe completar el email").bail()
+            .isEmail().withMessage("Debes completar un email valido"),
+    
+        check("clave")
+            .notEmpty().withMessage("Debe completar la contraseña"),        
+        ]
+/* VALIDATOR */
+
+
 /* RUTAS */
 
 router.get('/registro', userControllers.registro);
 router.post('/registro', uploadFile.single("Imagen"), validateRegister, userControllers.registroAccion);
 
 router.get('/login', userControllers.login);
-router.post('/login',
-    check('email').isEmail(),
-    check('clave')
-    ,userControllers.loginAccion)
+router.post('/login', validateLogin, userControllers.loginAccion)
 
 router.get('/usuario', userControllers.usuarioData);
 
