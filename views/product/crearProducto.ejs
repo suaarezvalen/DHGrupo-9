@@ -17,14 +17,29 @@
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="titulo" placeholder="Título">
                 </div>
+                <% if(locals.errores && errores.titulo) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.titulo.msg %>
+                    </div>
+                    <% } %>
 
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="precio" placeholder="Precio"></input>
                 </div>
+                <% if(locals.errores && errores.precio) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.precio.msg %>
+                    </div>
+                    <% } %>
                 
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="descuento" placeholder="Descuento"></input>
                 </div>
+                <% if(locals.errores && errores.descuento) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.descuento.msg %>
+                    </div>
+                    <% } %>
 
                 <div class="formularios">
                     <label for="categoria" class="input-formulario">Categoria:</label> 
@@ -39,6 +54,11 @@
                 <div class="formularios">
                     <input class="input2-formulario" name="descripcion" placeholder="Descripción"></input>
                 </div>
+                <% if(locals.errores && errores.descripcion) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.descripcion.msg %>
+                    </div>
+                    <% } %>
 
                 <div class="formularios">
                     <input class="input-formulario" type="file" name="Imagen">

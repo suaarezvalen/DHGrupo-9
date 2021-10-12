@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require("path");
+const { validationResult } = require('express-validator');
 
 const productFilePath = path.join(__dirname, "../database/product.JSON");
 //let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
@@ -48,13 +49,14 @@ const productControllers =
 
 
     crearProductoAccion: async (req, res) => {
-         
+        const resultValidate = validationResult(req);
+
         let nombreImagen = req.file.filename
         let categorias = await db.categorias.findOne({
             where: {nombre: req.body.categoria}
         })
-
-        db.Producto.create({
+        if(resultValidate.isEmpty()){
+            db.Producto.create({
 		    titulo: req.body.titulo,
 		    precio: req.body.precio,
 		    decuento: req.body.decuento,
@@ -64,12 +66,19 @@ const productControllers =
 
         })
         .then((resultado)=>{
-            console.log("Se creo bien")
+            console.log("Se creo bien el producto")
         })
         .catch((error)=>{
             console.log("error ",error)
         })
         res.redirect("/product/tienda")
+        
+        }else{
+            return res.render("product/crearProducto", {errores: resultValidate.mapped(), oldData: req.body});
+
+        }
+        
+        
     },
 
     editarProducto:  (req, res) => {
