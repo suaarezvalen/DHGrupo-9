@@ -17,6 +17,10 @@
               
             <form id="formulario" method="POST" action="/user/registro" enctype="multipart/form-data">
                 
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="nombre" id="nombres" placeholder="Nombre y Apellido" value="<%= locals.oldData ? oldData.nombre : null %>">
                 </div>
@@ -63,7 +67,7 @@
                     <% } %>
 
                 <p class="boton-ingreso">
-                    <button type="submit" class="btn btn-success">Registrar</button>
+                    <button type="submit" class="btn btn-success" id="button">Registrar</button>
                 </p>
 
                 <p class="subtitulos">
@@ -76,6 +80,8 @@
     </main>
 
     <%- include("../partials/footer") %>
+
+    <script src=".././js/registro.js"></script>
 
 </body>
 </html>

@@ -16,8 +16,12 @@
 
             <form id="formulario" action="/user/login" method="POST">
                 
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
                 <div class="formularios">
-                    <input class="input-formulario" type="email" name="email" placeholder="Email">
+                    <input class="input-formulario" id="email" type="email" name="email" placeholder="Email">
                 </div>
                 <% if(locals.errores && errores.email) { %> 
                     <div style="color:red" class="msg-validator">
@@ -26,7 +30,7 @@
                     <% } %>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="password" name="clave" placeholder="Clave">
+                    <input class="input-formulario" id="password" type="password" name="clave" placeholder="Clave">
                 </div>
                 <% if(locals.errores && errores.clave) { %> 
                     <div style="color:red" class="msg-validator">
@@ -35,7 +39,7 @@
                     <% } %>
 
                 <p class="boton-ingreso">
-                    <button class="btn btn-success" type="submit">Ingresar</button>
+                    <button class="btn btn-success" id="button" type="submit">Ingresar</button>
                 </p>
                 <% if(locals.erroresClave) { %> 
                     <div style="color:red" class="msg-validator">
@@ -60,5 +64,7 @@
 
     <%- include("../partials/footer") %>
     
+    <script src=".././js/login.js"></script>
+
 </body>
 </html>
