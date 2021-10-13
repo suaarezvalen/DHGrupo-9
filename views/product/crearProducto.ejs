@@ -12,7 +12,7 @@
         <h3 class="titulos">Crear producto</h3>
         <div class="flex-contenedor">
 
-            <form id="formulario" method="POST" action="/product/crear" enctype="multipart/form-data">
+            <form id="formulario" method="POST" action="/product/crear" enctype="multipart/form-data" >
             
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="titulo" placeholder="Título">
@@ -61,7 +61,7 @@
                     <% } %>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="file" name="Imagen">
+                    <input class="input-formulario" type="file" name="Imagen" multiple>
                 </div>
 
                 <p class="boton-ingreso">

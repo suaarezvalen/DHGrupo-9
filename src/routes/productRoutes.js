@@ -42,6 +42,24 @@ const validateCrear = [
         .isLength({min: 20, max: 1000}).withMessage("La descripcion debe tener un minimo de 20 caracteres"),    
     
     ]
+
+    /*const validateEditar = [
+        check("titulo")
+            .isLength({min: 2, max: 30}).withMessage("El titulo debe tener un minimo de 2 caracteres y un maximo de 30"),
+        
+        check("precio")
+            .isNumeric().withMessage("El precio debe ser numerico").bail()
+            .isLength({ max: 5}).withMessage("El precio debe tener un maximo de 5 sifras"),
+    
+        check("descuento")
+            .isNumeric().withMessage("El descuento debe ser numerico").bail()
+            .isLength({min: 1, max: 100}).withMessage("error descuento"),
+    
+        check("descripcion")
+            .isLength({min: 20, max: 1000}).withMessage("La descripcion debe tener un minimo de 20 caracteres"),    
+        
+        ]
+    */
 /* VALIDATOR */
 
 /* RUTAS */
@@ -54,7 +72,7 @@ router.post('/crear',uploadFile.single("Imagen"), validateCrear, productControll
 router.get('/detalle/:id', productControllers.detalle);
 
 router.get('/editar/:id', productControllers.editarProducto);
-router.put('/editar/:id',uploadFile.single("Imagen"), productControllers.editarProductoAccion);
+router.put('/editar/:id',uploadFile.array("Imagen"), productControllers.editarProductoAccion);
 
 router.delete('/detalle/:id', productControllers.eliminarProducto);
 

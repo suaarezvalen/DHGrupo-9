@@ -99,6 +99,9 @@ const productControllers =
 
 
     editarProductoAccion : async (req, res) => {
+        
+        const resultValidate = validationResult(req);
+
         let idEncontrado = req.params.id;
         let categorias = await db.categorias.findOne({
             where: {nombre: req.body.categoria}
