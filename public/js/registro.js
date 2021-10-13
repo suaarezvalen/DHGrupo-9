@@ -7,22 +7,22 @@ window.addEventListener("load", function(){
         let errores = []
         let error = "Debe completar bien el formulario"
 
-        let nombres = document.querySelector("input#nombres");
-        let email = document.querySelector("input#email");
-        let usuario = document.querySelector("input#usuario");
-        let clave = document.querySelector("input#clave");
-        let button = document.querySelector("input#button");
+        let nombres = document.querySelector("#nombres");
+        let email = document.querySelector("#email");
+        let usuario = document.querySelector("#usuario");
+        let clave = document.querySelector("#clave");
+        let button = document.querySelector("#button");
 
         if (nombres.value == ""){
-            errores.push("Debe completar el email")
+            errores.push("Debe completar el nombre")
         }
 
         if (nombre.value.isAlfa){
-            errores.push("Debe completar el email")
+            errores.push("El nombre solo puede contener letras")
         }
 
         if (nombre.value.length >= 5 && nombre.value.length <=30){
-            errores.push("Debe completar el email")
+            errores.push("El nombre debe tener un mínimo de 5 y un máximo de 30 carácteres")
         }
 
 
@@ -36,11 +36,11 @@ window.addEventListener("load", function(){
 
 
         if (usuario.value == ""){
-            errores.push("Debe completar la contraseña")
+            errores.push("Debe completar el usuario")
         }
 
         if (usuario.value.length >= 3 && usuario.value.length <=15){
-            errores.push("Debe completar el email")
+            errores.push("El usuario debe tener un mínimo de 3 y un máximo de 15 carácteres")
         }
 
 
@@ -49,13 +49,14 @@ window.addEventListener("load", function(){
         }
 
         if (clave.value.length >= 5 && usuario.value.length <=25){
-            errores.push("Debe completar el email")
+            errores.push("La contraseña debe tener un mínimo de 5 y un máximo de 25 carácteres")
         }
 
 
         if(errores.length > 0){
             //alert(error)
-                let ulErrores = document.querySelector("div.errores ul");
+            let ulErrores = document.querySelector("div.errores ul");
+            ulErrores.innerHTML = ""
             for(let i = 0; i < errores.length; i++){
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
