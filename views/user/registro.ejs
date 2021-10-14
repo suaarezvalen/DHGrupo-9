@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="nombre" id="nombres" placeholder="Nombre y Apellido" value="<%= locals.oldData ? oldData.nombre : null %>">
+                    <input class="input-formulario" id="nombres" type="text" name="nombre" placeholder="Nombre y Apellido" value="<%= locals.oldData ? oldData.nombre : null %>">
                 </div>
                 <% if(locals.errores && errores.nombre) { %> 
                 <div style="color:red" class="msg-validator">
@@ -31,7 +31,7 @@
                 <% } %>
                 
                 <div class="formularios">
-                    <input class="input-formulario" type="email" name="mail" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.mail : null %>">
+                    <input class="input-formulario" id="email" type="email" name="mail" placeholder="E-mail" value="<%= locals.oldData ? oldData.mail : null %>">
                 </div>
                 <% if(locals.errores && errores.mail) { %>
                     <div style="color:red" class="msg-validator">
@@ -40,7 +40,7 @@
                     <% } %>
                 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
+                    <input class="input-formulario" id="usuario" type="text" name="usuario" placeholder="Nombre de Usuario" value="<%= locals.oldData ? oldData.usuario : null %>">
                 </div>
                 <% if(locals.errores && errores.usuario) { %>
                     <div style="color:red" class="msg-validator">
@@ -49,7 +49,7 @@
                     <% } %>
                 
                 <div class="formularios">
-                    <input class="input-formulario" type="password" name="clave" id="clave" placeholder="clave">
+                    <input class="input-formulario" id="clave" type="password" name="clave" placeholder="clave">
                 </div>
                 <% if(locals.errores && errores.clave) { %>
                     <div style="color:red" class="msg-validator">
@@ -67,7 +67,7 @@
                     <% } %>
 
                 <p class="boton-ingreso">
-                    <button type="submit" class="btn btn-success" id="button">Registrar</button>
+                    <button class="btn btn-success" id="button" type="submit">Registrar</button>
                 </p>
 
                 <p class="subtitulos">

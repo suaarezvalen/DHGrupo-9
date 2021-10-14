@@ -9,19 +9,20 @@ window.addEventListener("load", function(){
 
         let email = document.querySelector("input#email");
         let password = document.querySelector("input#password");
-        let button = document.querySelector("input#button");
 
         if (!email.value){
             errores.push("Debe completar el email")
         }
-
+        
         if (!email.value.includes("@")){
             errores.push("Debe completar el email con formato de email")
         }
 
+        
         if (!password.value){
             errores.push("Debe completar la contraseña")
         }
+
 
 
         if(errores.length > 0){
