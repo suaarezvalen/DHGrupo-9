@@ -43,7 +43,7 @@ const validateCrear = [
     
     ]
 
-    /*const validateEditar = [
+    const validateEditar = [
         check("titulo")
             .isLength({min: 2, max: 30}).withMessage("El titulo debe tener un minimo de 2 caracteres y un maximo de 30"),
         
@@ -59,7 +59,7 @@ const validateCrear = [
             .isLength({min: 20, max: 1000}).withMessage("La descripcion debe tener un minimo de 20 caracteres"),    
         
         ]
-    */
+    
 /* VALIDATOR */
 
 /* RUTAS */
@@ -72,7 +72,7 @@ router.post('/crear',uploadFile.single("Imagen"), validateCrear, productControll
 router.get('/detalle/:id', productControllers.detalle);
 
 router.get('/editar/:id', productControllers.editarProducto);
-router.put('/editar/:id',uploadFile.array("Imagen"), productControllers.editarProductoAccion);
+router.put('/editar/:id',uploadFile.single("Imagen"), validateEditar, productControllers.editarProductoAccion);
 
 router.delete('/detalle/:id', productControllers.eliminarProducto);
 

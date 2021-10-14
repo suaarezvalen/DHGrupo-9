@@ -14,20 +14,37 @@
 
             <form id="formulario" action="/product/editar/<%=productoEncontrado.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
+
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="titulo" value="<%=productoEncontrado.titulo %>">
                 </div>
-                
+                <% if(locals.errores && errores.titulo) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.titulo.msg %>
+                    </div>
+                    <% } %>
 
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="precio" value="<%=productoEncontrado.precio %>"></input>
                 </div>
-                
+                <% if(locals.errores && errores.precio) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.precio.msg %>
+                    </div>
+                    <% } %>
                 
                 <div class="formularios">
                     <input class="input-formulario" type="text" name="descuento" value="<%=productoEncontrado.descuento %>"></input>
                 </div>
-                
+                <% if(locals.errores && errores.descuento) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.descuento.msg %>
+                    </div>
+                    <% } %>
 
                 <div class="formularios">
                     <label for="categoria" class="input-formulario">Categoria:</label> 
@@ -43,7 +60,11 @@
                 <div class="formularios">
                     <input class="input-formulario" name="descripcion" value="<%=productoEncontrado.descripcion %>"></input>
                 </div>
-                
+                <% if(locals.errores && errores.descripcion) { %> 
+                    <div style="color:red" class="msg-validator">
+                        <%= errores.descripcion.msg %>
+                    </div>
+                    <% } %>
 
                 <div class="formularios">
                     <input class="input-formulario" type="file" name="Imagen" value="<%=productoEncontrado.img %>">
@@ -59,5 +80,9 @@
     </main>
 
     <%- include("../partials/footer") %>
+
+
+    <script src=".././js/editarProducto.js"></script>
+
 </body>
 </html>

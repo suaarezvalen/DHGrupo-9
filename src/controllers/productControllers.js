@@ -102,11 +102,16 @@ const productControllers =
         
         const resultValidate = validationResult(req);
 
+        if(resultValidate.errors.length > 0){
+            return res.render('product/editarProducto', { errores: resultValidate.mapped()})
+        }
+
+
         let idEncontrado = req.params.id;
         let categorias = await db.categorias.findOne({
             where: {nombre: req.body.categoria}
         })
-
+       
         db.Producto.update({
             titulo: req.body.titulo,
 		    precio: req.body.precio,

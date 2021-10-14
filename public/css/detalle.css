@@ -23,6 +23,7 @@ main{
 #titulo-juego{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 5%;
+    border-bottom: solid white 2px;
 }
 
 #lado-izquierdo{
@@ -99,7 +100,9 @@ main{
 .info-juego{
     font-size: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 40px;
 }
+
 #especificaciones-caja{
     display: flex;
     flex-direction: row;
