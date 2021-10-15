@@ -13,13 +13,13 @@ const configImagen = multer.diskStorage({
      cb(null, path.join(__dirname,'../../public/img'));
     },
     filename: function(req, file, cb) {
-     let imageName =  Date.now() + file.originalname ;
-     cb(null, imageName);
+        console.log(file)
+        let imageName =  Date.now() + file.originalname ;
+        cb(null, imageName);
     }
 });
 
 const uploadFile = multer({storage: configImagen});
-
 /* MULTER */
 
 /* VALIDATOR */
@@ -67,7 +67,7 @@ const validateCrear = [
 router.get('/tienda', productControllers.tienda);
 
 router.get('/crear', productControllers.crearProducto);
-router.post('/crear',uploadFile.single("Imagen"), validateCrear, productControllers.crearProductoAccion);
+router.post('/crear',uploadFile.any("Imagen"), validateCrear, productControllers.crearProductoAccion);
 
 router.get('/detalle/:id', productControllers.detalle);
 

@@ -52,9 +52,9 @@ window.addEventListener("load", function(){
             errores.push("Debe completar el descuento")
         }
 
-        if(descuento.value.length <= 20 || descuento.value.length >= 1000){
-            errores.push("La descripción debe tener un mínimo de 20 y un máximo de 1000 carácteres")
-        }
+        //if(descuento.value.length <= 20 || descuento.value.length >= 1000){
+          //  errores.push("La descripción debe tener un mínimo de 20 y un máximo de 1000 carácteres")
+        //}
 
 
 

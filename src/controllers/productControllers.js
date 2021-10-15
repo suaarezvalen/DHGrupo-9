@@ -54,6 +54,7 @@ const productControllers =
         let nombreImagen = req.file.filename
         let categorias = await db.categorias.findOne({
             where: {nombre: req.body.categoria}
+            
         })
         if(resultValidate.isEmpty()){
             db.Producto.create({
@@ -63,10 +64,11 @@ const productControllers =
             img: nombreImagen,
             categoria_fk: categorias["id"],
             descripcion: req.body.descripcion
-
+            
         })
         .then((resultado)=>{
             console.log("Se creo bien el producto")
+            console.log(filename)
         })
         .catch((error)=>{
             console.log("error ",error)
@@ -78,7 +80,7 @@ const productControllers =
 
         }
         
-        
+        console.log(req.file)
     },
 
     editarProducto:  (req, res) => {
