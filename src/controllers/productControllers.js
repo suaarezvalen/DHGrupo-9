@@ -51,7 +51,7 @@ const productControllers =
     crearProductoAccion: async (req, res) => {
         const resultValidate = validationResult(req);
 
-        let nombreImagen = req.file.filename
+        let nombreImagen = req.files.filename
         let categorias = await db.categorias.findOne({
             where: {nombre: req.body.categoria}
             
@@ -68,7 +68,6 @@ const productControllers =
         })
         .then((resultado)=>{
             console.log("Se creo bien el producto")
-            console.log(filename)
         })
         .catch((error)=>{
             console.log("error ",error)

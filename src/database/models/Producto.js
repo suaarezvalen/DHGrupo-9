@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
         },
         img:{
-            type: dataTypes.STRING(60),
+            type: dataTypes.STRING(50),
         },
         categoria_fk:{
             type: dataTypes.INTEGER,
