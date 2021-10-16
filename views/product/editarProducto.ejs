@@ -18,9 +18,8 @@
                     <ul></ul>
                 </div>
 
-
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="titulo" value="<%=productoEncontrado.titulo %>">
+                    <input class="input-formulario" id="titulo" type="text" name="titulo" value="<%=productoEncontrado.titulo %>">
                 </div>
                 <% if(locals.errores && errores.titulo) { %> 
                     <div style="color:red" class="msg-validator">
@@ -29,7 +28,7 @@
                     <% } %>
 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="precio" value="<%=productoEncontrado.precio %>"></input>
+                    <input class="input-formulario" id="precio" type="text" name="precio" value="<%=productoEncontrado.precio %>"></input>
                 </div>
                 <% if(locals.errores && errores.precio) { %> 
                     <div style="color:red" class="msg-validator">
@@ -38,7 +37,7 @@
                     <% } %>
                 
                 <div class="formularios">
-                    <input class="input-formulario" type="text" name="descuento" value="<%=productoEncontrado.descuento %>"></input>
+                    <input class="input-formulario" id="descuento" type="text" name="descuento" value="<%=productoEncontrado.descuento %>"></input>
                 </div>
                 <% if(locals.errores && errores.descuento) { %> 
                     <div style="color:red" class="msg-validator">
@@ -58,7 +57,7 @@
 
 
                 <div class="formularios">
-                    <input class="input-formulario" name="descripcion" value="<%=productoEncontrado.descripcion %>"></input>
+                    <input class="input-formulario" id="descripcion" name="descripcion" value="<%=productoEncontrado.descripcion %>"></input>
                 </div>
                 <% if(locals.errores && errores.descripcion) { %> 
                     <div style="color:red" class="msg-validator">
@@ -71,7 +70,7 @@
                 </div>
 
                 <p class="boton-ingreso">
-                    <button type="submit" class="btn btn-success">Editar</button>
+                    <button class="btn btn-success" id="button" type="submit">Editar</button>
                 </p>
 
             </form>
