@@ -17,18 +17,18 @@
                 </article>
                 <article id="info-carrito" class="subtitulos-carrito">
                     <div>
-                        <img src="../img/<%=carritoProducto.img %>"></img>
+                        <img src="../img/<%=productoCarrito.img %>"></img>
                     </div>
                     <div class="info-texto-carrito">
                         <p> x1 <%=carritoProducto.titulo %> </p>
-                        <p class="texto-chico-carrito"> Precio en $ARS <%=carritoProducto.precio %></p>
-                        <p class="texto-chico-carrito"> Precio en $USD <%=carritoProducto.precio / 170 %></p>
-                        <a class="texto-chico-carrito" href="/product/detalle/<%=carritoProducto.id %> "> info </a>
+                        <p class="texto-chico-carrito"> Precio en $ARS <%=productoCarrito.precio %></p>
+                        <p class="texto-chico-carrito"> Precio en $USD <%=productoCarrito.precio / 170 %></p>
+                            <!--<a class="texto-chico-carrito" href="/product/detalle/<%=productoCarrito.id %> "> info </a>-->
                     </div>
                 </article>
                 <article class="subtitulos-carrito">
                     <p>SUBTOTAL:</p>
-                    <p>$<%=carritoProducto.precio %></p>
+                    <p>$<%=productoCarrito.precio %></p>
                 </article>
             </section>
 
@@ -38,11 +38,11 @@
                 </article>
                 <article class="subtitulos-carrito">
                     <p>DESCUENTO:</p>
-                    <p class="descuento-carrito"><%=carritoProducto.descuento %>%</p>
+                    <p class="descuento-carrito"><%=productoCarrito.descuento %>%</p>
                 </article>
                 <article class="subtitulos-carrito">
                     <p>TOTAL:</p>
-                    <p>$<%=carritoProducto.precio * (1-(carritoProducto.descuento/100)) %></p>
+                    <p>$<%=productoCarrito.precio * (1-(productoCarrito.descuento/100)) %></p>
                 </article>
                 <div class="botones-carrito">
                     <button type="button" class="btn btn-success">Comprar</button>

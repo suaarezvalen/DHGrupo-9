@@ -1,9 +1,10 @@
 window.addEventListener("load", function(){
     let form = document.querySelector("#formulario");
 
-    
+    console.log("entro a validate front ")
     form.addEventListener("submit", function(event){
         event.preventDefault();
+        
         let errores = []
         let error = "Debe completar bien el formulario"
 
@@ -15,6 +16,7 @@ window.addEventListener("load", function(){
 
         if(!titulo.value){
             errores.push("Debe completar el título")
+            
         }
 
         if(titulo.value.length <= 2 || titulo.value.length >= 30){

@@ -1,25 +1,23 @@
 const fs = require('fs');
 const path = require("path");
 
-const productFilePath = path.join(__dirname, "../database/product.JSON");
-let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
-const carritoControllers =  
-{
+const carritoControllers =  {
     
     carrito: (req, res) => {
-        let idParaURL = req.params.id;
+        let idEncontrado = req.params.id;
 
-        let aux;
+        let productoEnCarrito;
 
-        for (let i of product){
-            if (i.id==idParaURL){
-                aux=i;
-                break;
-            }
-        }                          //FOR DE JERO
-        
-        res.render('carrito', {carritoProducto : aux})
-    }
+        db.Producto.findOne({
+            where: {id: idEncontrado}
+        }).then(resultado =>{
+            productoEnCarrito = resultado;
+
+        console.log("producto   " + resultado)
+        res.render('carrito', {productoCarrito : productoEnCarrito});
+    })
+}
+
 }   
 module.exports = carritoControllers;                                   

@@ -75,12 +75,15 @@ const productControllers =
         res.redirect("/product/tienda")
         
         }else{
+            
             return res.render("product/crearProducto", {errores: resultValidate.mapped(), oldData: req.body});
-
         }
         
         console.log(req.file)
     },
+
+    
+
 
     editarProducto:  (req, res) => {
         let id = req.params.id
@@ -103,17 +106,20 @@ const productControllers =
         
         const resultValidate = validationResult(req);
 
-        if(resultValidate.errors.length > 0){
-            return res.render('product/editarProducto', { errores: resultValidate.mapped()})
-        }
+        if(resultValidate.errors.length == 0){
+            
+            let idEncontrado = req.params.id;
+            let categorias = await db.categorias.findOne({
+                where: {nombre: req.body.categoria}
+            })
+            
+            db.Producto.findOne({
+                where: {
+                    id: idEncontrado
+                }
+            })
 
-
-        let idEncontrado = req.params.id;
-        let categorias = await db.categorias.findOne({
-            where: {nombre: req.body.categoria}
-        })
-       
-        db.Producto.update({
+            db.Producto.update({
             titulo: req.body.titulo,
 		    precio: req.body.precio,
 		    decuento: req.body.decuento,
@@ -123,8 +129,24 @@ const productControllers =
         },
         {
             where: {id: idEncontrado}
-        });
-        res.redirect("/product/tienda")
+        })
+        .then(() =>{
+            res.redirect("/product/tienda")
+        })
+        }else{
+            let idEncontrado = req.params.id;
+            db.Producto.findOne({
+                where: {
+                    id: idEncontrado
+                }
+            }).then(producto => {
+                productoEncontrado = producto;
+                return res.render('product/editarProducto', {productoEncontrado, errores: resultValidate.mapped(), oldData: req.body})
+            });
+            
+        } 
+
+        
     },
 
 
