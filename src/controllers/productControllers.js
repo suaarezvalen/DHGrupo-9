@@ -6,6 +6,7 @@ const productFilePath = path.join(__dirname, "../database/product.JSON");
 //let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const db = require('../database/models');
+const { Console } = require('console');
 
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -29,17 +30,29 @@ const productControllers =
         let idEncontrado = req.params.id;
 
         let productoEncontrado;
-
         db.Producto.findOne({
             where: {id: idEncontrado}
+
+        
+
         }).then(resultado =>{
             productoEncontrado = resultado;
+        console.log("imagen de base de datos     " + productoEncontrado.img.split(";"))
+        let arrayImg = productoEncontrado.img.split(";")
+        
+        let imgLogo = arrayImg[0]
+        let imgGameplay = arrayImg[1]
 
-
-        res.render('product/detalle', {detalleProducto : productoEncontrado});
+        //console.log(imgGameplay)
+        //console.log("imagen de base de datos     " + img)
+        res.render('product/detalle', {detalleProducto : productoEncontrado , detalleProductoImg : imgLogo , detalleProductoImgGameplay : imgGameplay});
         }
-        )},
-
+        
+        )
+        .catch((error)=>{
+            console.log("error ",error)
+        })
+    },
 
 
     crearProducto: (req, res) => {
@@ -51,17 +64,33 @@ const productControllers =
     crearProductoAccion: async (req, res) => {
         const resultValidate = validationResult(req);
 
-        let nombreImagen = req.files.filename
+        
+        const imagenes = Object.keys(req.files)
+
+        let nombresImagenes = "" 
+
+        for(i in imagenes) {
+            nombresImagenes += req.files[i].filename + ";"
+            
+        }
+        console.log("final   " + nombresImagenes)
+        console.log("imagen 0     " + nombresImagenes[2])
+
+        
         let categorias = await db.categorias.findOne({
             where: {nombre: req.body.categoria}
             
         })
+        
+
+
+
         if(resultValidate.isEmpty()){
             db.Producto.create({
 		    titulo: req.body.titulo,
 		    precio: req.body.precio,
-		    decuento: req.body.decuento,
-            img: nombreImagen,
+		    descuento: req.body.descuento,
+            img: nombresImagenes,
             categoria_fk: categorias["id"],
             descripcion: req.body.descripcion
             
@@ -79,7 +108,8 @@ const productControllers =
             return res.render("product/crearProducto", {errores: resultValidate.mapped(), oldData: req.body});
         }
         
-        console.log(req.file)
+        //console.log(req.file)
+        
     },
 
     

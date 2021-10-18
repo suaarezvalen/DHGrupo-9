@@ -16,19 +16,16 @@
                     <p class="titulos-chicos-carrito">1 OBJETO</p>
                 </article>
                 <article id="info-carrito" class="subtitulos-carrito">
-                    <div>
-                        <img src="../img/<%=productoCarrito.img %>"></img>
+                    <div id="item-en-seccion">
+                    
                     </div>
                     <div class="info-texto-carrito">
-                        <p> x1 <%=carritoProducto.titulo %> </p>
-                        <p class="texto-chico-carrito"> Precio en $ARS <%=productoCarrito.precio %></p>
-                        <p class="texto-chico-carrito"> Precio en $USD <%=productoCarrito.precio / 170 %></p>
-                            <!--<a class="texto-chico-carrito" href="/product/detalle/<%=productoCarrito.id %> "> info </a>-->
+                        
                     </div>
                 </article>
                 <article class="subtitulos-carrito">
                     <p>SUBTOTAL:</p>
-                    <p>$<%=productoCarrito.precio %></p>
+                    
                 </article>
             </section>
 
@@ -38,11 +35,10 @@
                 </article>
                 <article class="subtitulos-carrito">
                     <p>DESCUENTO:</p>
-                    <p class="descuento-carrito"><%=productoCarrito.descuento %>%</p>
+                    <p class="descuento-carrito"> % </p>
                 </article>
                 <article class="subtitulos-carrito">
                     <p>TOTAL:</p>
-                    <p>$<%=productoCarrito.precio * (1-(productoCarrito.descuento/100)) %></p>
                 </article>
                 <div class="botones-carrito">
                     <button type="button" class="btn btn-success">Comprar</button>
@@ -56,6 +52,8 @@
     </main>
 
     <%- include("./partials/footer") %>
+ 
 
+    <script src="/js/carrito.js"></script>
 </body>
 </html>

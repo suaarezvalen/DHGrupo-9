@@ -12,30 +12,9 @@
         <div id="productos">
             <section id="lado-izquierdo">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="../../img/oferta2.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../../img/oferta3.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../../img/oferta4.jpg" alt="Third slide">
-                    </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
+                    
+                        <img class="d-block w-100" src="../../img/<%=detalleProductoImgGameplay  %> " alt="First slide">
+                    
                 </div>
                 <section id="caja-info">
                     <h1 id="titulo-juego"><%=detalleProducto.titulo  %> </h1>
@@ -47,9 +26,9 @@
             </section>     
             <section id="lado-derecho">  
                 <article id="contenedor-derecho">
-                        <img id="logo-producto" src="../../img/<%=detalleProducto.img  %> ">
+                        <img id="logo-producto" src="../../img/<%=detalleProductoImg  %> ">
                         <p id="precio">$<%=detalleProducto.precio %></p>
-                        <a href="/carrito/<%=detalleProducto.id %> "><button id="agregar-carrito" type="button">COMPRAR AHORA</button></a>
+                        <button type="submit" id="agregar-carrito" >COMPRAR AHORA</button>
                 </article>
             </section> 
         </div>
@@ -66,5 +45,7 @@
     
     <%- include("../partials/footer") %>
     
+    <script src="./../../js/detalleProducto.js"></script>
+
 </body>
 </html>

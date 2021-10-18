@@ -6,7 +6,7 @@ const path = require("path")
 
 /* RUTAS */
 
-router.get('/carrito/:id', carritoControllers.carrito);
+router.get('/', carritoControllers.carrito);
 
 /* RUTAS */
 
