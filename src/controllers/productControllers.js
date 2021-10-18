@@ -41,7 +41,7 @@ const productControllers =
         let arrayImg = productoEncontrado.img.split(";")
         
         let imgLogo = arrayImg[0]
-        let imgGameplay = arrayImg[1]
+        let imgGameplay = arrayImg[1,2,3,4]
 
         //console.log(imgGameplay)
         //console.log("imagen de base de datos     " + img)

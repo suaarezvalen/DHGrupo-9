@@ -1,7 +1,6 @@
-const { json } = require("body-parser");
 
 window.addEventListener('load', () => {
-    alert("holis")
+    //alert("holis")
 
     let articuloEnCarrito =document.querySelector("#item-en-seccion");
     let productoCarrito = localStorage.getItem("productoEnCarrito");
@@ -13,12 +12,26 @@ window.addEventListener('load', () => {
             articuloEnCarrito.innerHTML +=
             `<div class="items-carrito">
                 <img src="${producto.img}" alt="" class="carrito-img">
-                <h5 class="carrito-nombre">${producto.nombre}</h5>
-                <h5 class="carrito-precio">${producto.precio}</h5>
-                <h5 class="carrito-precio-total">${producto.precio}</h5>
-                <i class="fas fa-trash borrar-item"></i>
+                <h3 class="carrito-nombre">${producto.nombre}</h3>
+                <h3 class="carrito-precio">${producto.precio}</h3>
+                <i class="fas fa-trash borrar-producto"></i>
             </div>`
         }
+    }
+    
+    let buttonDelete = document.getElementsByClassName('borrar-producto');
+    
+    for (let i = 0; i < buttonDelete.length; i++){
+
+        buttonDelete[i].addEventListener('click', productoEliminado);{
+        
+        
+        function productoEliminado(productoEnCarrito){
+            localStorage.removeItem("productoEnCarrito")  
+
+            window.location.reload();
+        }
+    }
     }
 
     
