@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    alert("holis")
+    //alert("holis")
 
     let button = document.querySelector('#agregar-carrito');
     let nombre = document.querySelector('#titulo-juego').innerText;
