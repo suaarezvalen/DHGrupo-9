@@ -17,6 +17,22 @@ const productControllers =
         db.Producto.findAll()
         .then(productos =>{
             todosLosProductos = productos;  
+            
+            let arrayImg = Object.keys(todosLosProductos)
+
+            let imagen = " " //devuelve un string de todas las img de cada producto falta obtener solo la de logo para ponerlo en tienda
+
+            
+        for(i in arrayImg) {
+            imagen += todosLosProductos[i].img 
+        }
+             let arreglo = imagen.split(";")
+
+             let imglogo = arreglo[0] //consegui el logo de del primer producto me faltan las otras
+             
+            
+
+            console.log("que devuelveee    " + imglogo)
             res.render('product/tienda', {todosLosProductos})
         })
         .catch((error) => {
@@ -37,15 +53,13 @@ const productControllers =
 
         }).then(resultado =>{
             productoEncontrado = resultado;
-        console.log("imagen de base de datos     " + productoEncontrado.img.split(";"))
+        //console.log("imagen de base de datos     " + productoEncontrado.img.split(";"))
         let arrayImg = productoEncontrado.img.split(";")
         
         let imgLogo = arrayImg[0]
-        let imgGameplay = arrayImg[1,2,3,4]
 
-        //console.log(imgGameplay)
-        //console.log("imagen de base de datos     " + img)
-        res.render('product/detalle', {detalleProducto : productoEncontrado , detalleProductoImg : imgLogo , detalleProductoImgGameplay : imgGameplay});
+        
+        res.render('product/detalle', {detalleProducto : productoEncontrado , detalleProductoImg : imgLogo , detalleProductoImgGameplay : arrayImg});
         }
         
         )
