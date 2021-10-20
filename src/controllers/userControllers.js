@@ -97,7 +97,37 @@ const userControllers =
         req.session.destroy();
         console.log(req.session)
         return res.redirect('/');
-    }
-        
+    },
+       
+    
+    /* APIS */
+
+    allUsers: (req, res) => {
+        db.Usuario.findAll()
+         
+        .then(usuarios =>{
+             return res.status(200).json({
+                 total: usuarios.length,
+                 data: usuarios,
+                 status: 200
+             })
+         })
+         
+ 
+     },
+ 
+     idUser: (req, res) => {
+         db.Usuario.findByPk(req.params.id)
+          
+         .then(usuario =>{
+              return res.status(200).json({
+                 data: usuario,
+                 status: 200
+              })
+          })
+          
+  
+      }
+     /* APIS */
 }   
 module.exports = userControllers;                                   
