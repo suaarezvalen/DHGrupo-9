@@ -2,11 +2,16 @@ const fs = require('fs');
 const path = require("path");
 const { validationResult } = require('express-validator');
 const mysql = require("mysql");
+
 const productFilePath = path.join(__dirname, "../database/product.JSON");
+
 //let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const db = require('../database/models');
-const { Console } = require('console');
+const { Console, count } = require('console');
+const { post } = require('../routes/productRoutes');
+
+
 
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -210,44 +215,51 @@ const productControllers =
 
     /* APIS */
 
-    allProducts: (req, res) => {
-       db.Producto.findAll()
+    allProducts:  (req, res) => {
+        db.Producto.findAll()
         
-       .then(productos =>{
-
+        .then(async productos =>{
             
-            for (let i = 0; i < productos.length; i++) {
-                
-                let prueba = productos[i].categoria_fk
-                
-                for (let i = 0; i < prueba.length; i++) {
-                    
-                    if(i = 1 ){
-                        return console.log("es 1")
-                    }else if(i = 2 ){
-                        return console.log("es 2")
-                    }
-                    
+            let countShooter = await db.Producto.count({
+                where: {
+                  categoria_fk: 1
                 }
-                  
-                
-                //console.log("que devuelve    " + prueba)
-            }
+            })
+            let countSimulador = await db.Producto.count({
+                where: {
+                  categoria_fk: 2
+                }
+            })
+            let countRol = await db.Producto.count({
+                where: {
+                  categoria_fk: 3
+                }
+            })
+            let countEstrategia = await db.Producto.count({
+                where: {
+                  categoria_fk: 4
+                }
+            })
+                //.then(categorias =>{
+                let countCategory = {
+                Shooter: countShooter, 
+                Simulador: countSimulador,
+                Rol: countRol, 
+                Estrategia: countEstrategia
+                }
 
-            let categoriasCount = "SELECT COUNT(*) from Producto where categoria_fk= 1"
-              
-            
-                console.log(categoriasCount)
-
-            return res.status(200).json({
-                
+                return res.status(200).json({
                 count: productos.length,
-                //countByCategory: categoriasCount,
+                countByCategory: countCategory,
                 products: productos,
                 status: 200 , 
-            })
-
+                })
+               //}) 
         })
+
+           
+
+        
         
         .catch((error)=>{
             console.log("error   ",error)
@@ -267,21 +279,6 @@ const productControllers =
          
  
      },
-
-    allCategories: (req, res) => {
-        db.Categoria.findAll()
-         
-        .then(categorias =>{
-             return res.status(200).json({
-                 count: categorias.length,
-                 data: categorias,
-                 status: 200
-             })
-         })
-         
- 
-     }
-    /* APIS */
 
 }   
 module.exports = productControllers;        
