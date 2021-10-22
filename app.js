@@ -26,6 +26,8 @@ const carritoRoutes = require('./src/routes/carritoRoutes');
 const indexRoutes = require('./src/routes/indexRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const categoriaRoutes = require('./src/routes/categoriaRoutes');
+
 
 app.use('/carrito', carritoRoutes);
 app.use('/', indexRoutes);
@@ -33,7 +35,7 @@ app.use('/product', productRoutes);
 app.use('/user', userRoutes);
 app.use("/productos" , productRoutes)
 app.use("/usuarios" , userRoutes)
-app.use("/categorias" , productRoutes)
+app.use("/categorias" , categoriaRoutes)
 
 
 //RUTAS GLOBALES

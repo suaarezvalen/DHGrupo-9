@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require("path");
 let bcryptjs = require("bcryptjs");
 const { validationResult } = require('express-validator');
+const _ = require('lodash');
 
 const userFilePath = path.join(__dirname, "../database/user.JSON");
 let user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
@@ -103,9 +104,14 @@ const userControllers =
     /* APIS */
 
     allUsers: (req, res) => {
-        db.Usuario.findAll()
+        db.Usuario.findAll({
+            attributes: ["id","nombre","mail","usuario","img"]
+        })
+        
          
         .then(usuarios =>{
+            
+        
              return res.status(200).json({
                  total: usuarios.length,
                  data: usuarios,
