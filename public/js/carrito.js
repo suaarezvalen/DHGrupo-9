@@ -18,49 +18,71 @@ window.addEventListener('load', () => {
         for(let producto of productoArray){
             articuloEnCarrito.innerHTML +=
             `<div class="items-carrito" indice="${producto.indice}">
-                <img src="${producto.img}" alt="" class="carrito-img">
-                <h3 class="carrito-nombre">${producto.nombre}</h3>
+                <h3 class="carrito-nombre">${"x1 " + producto.nombre}</h3>
                 <i class="fas fa-trash borrar-producto"></i>
             </div>`
         }
-    
-        for(let producto of productoArray){
-            subtotal.innerHTML +=
-            `<div class="subtotal">
-                <h3 class="carrito-precio">${producto.precio}</h3>
-            </div>`
-        }
 
-        for(let producto of productoArray){
-            descuento.innerHTML +=
-            `<div class="subtotal">
-                <h3 class="carrito-precio">${producto.descuento}</h3>
-            </div>`
-        }
 
-        for(let producto of productoArray){
-            total.innerHTML +=
-            `<div class="subtotal">
-                <h3 class="carrito-precio">${producto.precio}</h3>
-            </div>`
-        }
-
-        /*let aux = [];
         let sumador = 0;
 
-        for(let i = 0; i <= productoArray.length; i++){
+        for(let i = 0; i < productoArray.length; i++){
 
-            aux.push(productoArray[i].precio);
-            let aux2 = sumador += aux[i]
+            let precioNumero = productoArray[i].precio.substring(1, productoArray[i].precio.length)
 
-            subtotal.innerHTML +=
-            `<div class="subtotal">
-                <h3 class="carrito-precio">${aux2}</h3>
+            var aux3 = Number(precioNumero)
+            
+            sumador += aux3
+
+        }
+        console.log(sumador)
+
+        subtotal.innerHTML +=
+            `<div>
+                <h3 class="total-subtotal-descuento-js">${sumador}</h3>
             </div>`
-        }*/
-    
-        
 
+
+        /*let sumador = 0;
+
+        for(let i = 0; i < productoArray.length; i++){
+
+            let precioNumero = productoArray[i].precio.substring(1, productoArray[i].precio.length)
+
+            var aux3 = Number(precioNumero)
+            
+            sumador += aux3 * productoArray[i].descuento
+            console.log(productoArray)
+        }
+        console.log(sumador)
+
+        descuento.innerHTML +=
+            `<div>
+                <h3 class="total-subtotal-descuento-js">${sumador}</h3>
+            </div>`
+
+
+        function totalFuncion (){
+            let sumador = 0;
+
+            for(let i = 0; i < productoArray.length; i++){
+
+                let precioNumero = productoArray[i].precio.substring(1, productoArray[i].precio.length)
+
+                var aux3 = Number(precioNumero)
+                
+                sumador += aux3
+
+            }
+            console.log(sumador)
+
+            total.innerHTML +=
+                `<div>
+                    <h3 class="total-subtotal-descuento-js">${sumador}</h3>
+                </div>`
+        }*/
+        
+ 
     }
     
     let buttonDelete = document.getElementsByClassName('borrar-producto');

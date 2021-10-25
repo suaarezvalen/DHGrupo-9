@@ -4,11 +4,13 @@ window.addEventListener('load', () => {
     let button = document.querySelector('#agregar-carrito');
     let nombre = document.querySelector('#titulo-juego').innerText;
     let precio = document.querySelector('#precio').innerText;
+    let descuento = document.querySelector('#descuento').innerText;
     let imagen = document.querySelector('#logo-producto').src;
 
     let producto = {
         nombre: nombre,
         precio: precio,
+        descuento: descuento,
         img: imagen
     }
 
