@@ -76,8 +76,6 @@ router.put('/editar/:id',uploadFile.single("Imagen"), validateEditar, productCon
 
 router.delete('/detalle/:id', productControllers.eliminarProducto);
 
-router.get("/", productControllers.allProducts)
-router.get("/:id", productControllers.idProduct)
 
 
 

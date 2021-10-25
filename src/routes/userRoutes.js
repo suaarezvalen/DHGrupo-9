@@ -73,8 +73,7 @@ router.get('/usuario', userControllers.usuarioData);
 
 router.get('/logout', userControllers.cerrarSession);
 
-router.get("/", userControllers.allUsers)
-router.get("/:id", userControllers.idUser)
+
 
 
 /* RUTAS */

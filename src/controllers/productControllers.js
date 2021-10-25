@@ -198,8 +198,6 @@ const productControllers =
         
     },
 
-
-
     eliminarProducto: (req, res) => {
         let idEncontrado = req.params.id;
 		
@@ -211,75 +209,7 @@ const productControllers =
 
         
     },
-
-
-    /* APIS */
-
-    allProducts:  (req, res) => {
-        db.Producto.findAll()
-        
-        .then(async productos =>{
-            
-            let countShooter = await db.Producto.count({
-                where: {
-                  categoria_fk: 1
-                }
-            })
-            let countSimulador = await db.Producto.count({
-                where: {
-                  categoria_fk: 2
-                }
-            })
-            let countRol = await db.Producto.count({
-                where: {
-                  categoria_fk: 3
-                }
-            })
-            let countEstrategia = await db.Producto.count({
-                where: {
-                  categoria_fk: 4
-                }
-            })
-                //.then(categorias =>{
-                let countCategory = {
-                Shooter: countShooter, 
-                Simulador: countSimulador,
-                Rol: countRol, 
-                Estrategia: countEstrategia
-                }
-
-                return res.status(200).json({
-                count: productos.length,
-                countByCategory: countCategory,
-                products: productos,
-                status: 200 , 
-                })
-               //}) 
-        })
-
-           
-
-        
-        
-        .catch((error)=>{
-            console.log("error   ",error)
-        })
-        
-
-    },
-
-    idProduct: (req, res) => {
-        db.Producto.findByPk(req.params.id)
-        .then(producto =>{
-            return res.status(200).json({
-                product: producto,
-                status: 200
-             }) 
-         })
-         
- 
-     },
-
+    
 }   
 module.exports = productControllers;        
 
