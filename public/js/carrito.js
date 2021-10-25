@@ -4,6 +4,8 @@ window.addEventListener('load', () => {
 
     let articuloEnCarrito =document.querySelector("#item-en-seccion");
     let subtotal =document.querySelector("#subtotal");
+    let descuento =document.querySelector("#descuento");
+    let total =document.querySelector("#total");
 
 
     let productoCarrito = localStorage.getItem("productoEnCarrito");
@@ -24,6 +26,20 @@ window.addEventListener('load', () => {
     
         for(let producto of productoArray){
             subtotal.innerHTML +=
+            `<div class="subtotal">
+                <h3 class="carrito-precio">${producto.precio}</h3>
+            </div>`
+        }
+
+        for(let producto of productoArray){
+            descuento.innerHTML +=
+            `<div class="subtotal">
+                <h3 class="carrito-precio">${producto.descuento}</h3>
+            </div>`
+        }
+
+        for(let producto of productoArray){
+            total.innerHTML +=
             `<div class="subtotal">
                 <h3 class="carrito-precio">${producto.precio}</h3>
             </div>`

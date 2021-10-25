@@ -46,8 +46,10 @@ main{
 }
 
 .titulos2{
-    width: 300px;
-    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 30px;
 }
     
 /* portada*/
@@ -96,8 +98,10 @@ main{
 }
 #descrip{
     width: 400px;
-    margin-top: 40px;
-    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    text-align: justify;
 }
 
 
