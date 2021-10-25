@@ -28,6 +28,20 @@ window.addEventListener('load', () => {
                 <h3 class="carrito-precio">${producto.precio}</h3>
             </div>`
         }
+
+        /*let aux = [];
+        let sumador = 0;
+
+        for(let i = 0; i <= productoArray.length; i++){
+
+            aux.push(productoArray[i].precio);
+            let aux2 = sumador += aux[i]
+
+            subtotal.innerHTML +=
+            `<div class="subtotal">
+                <h3 class="carrito-precio">${aux2}</h3>
+            </div>`
+        }*/
     
         
 
