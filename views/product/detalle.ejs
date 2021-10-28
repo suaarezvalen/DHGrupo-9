@@ -60,7 +60,10 @@
             <section id="lado-derecho">  
                 <article id="contenedor-derecho">
                         <img id="logo-producto" src="../../img/<%=detalleProductoImg  %> ">
-                        <p id="precio">$<%=detalleProducto.precio %></p>
+                        <div id="precio-descuento">
+                            <p id="precio">$<%=detalleProducto.precio %></p>
+                            <p id="descuento"><%=detalleProducto.descuento %>%</p>
+                        </div>
                         <button type="submit" id="agregar-carrito" >COMPRAR AHORA</button>
                 </article>
             </section> 

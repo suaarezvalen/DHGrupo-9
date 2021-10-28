@@ -2,7 +2,7 @@ body{
     margin: 0%;
     padding: 0%;
     background-color: #37383a;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, sans-serif;
     color: white;
 }
  
@@ -21,8 +21,13 @@ main{
     justify-content: space-around;
 }
 #titulo-juego{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 5%;
+    text-align: start;
+    color: white; 
+    font-size: 30px;
+    width: 1050px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 32px;
     border-bottom: solid white 2px;
 }
 
@@ -43,7 +48,8 @@ main{
 /*slider*/
 
 .info-juego{
-    font-size: 100%;
+    font-size: 16px;
+    text-align: justify;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 40px;
 }
@@ -68,8 +74,21 @@ img{
     width: 250px;
     height: 350px;
 }
+#precio-descuento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+}
 #precio{
     color: white;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+#descuento{
+    color: rgb(21, 255, 0);
     margin-top: 3%;
     margin-left: 2%;
 }

@@ -7,6 +7,7 @@
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   }
 /*prueba menu usuario*/
+
 /*HEADER 2*/
 header{
     background-color: rgb(36, 36, 37);
@@ -27,7 +28,7 @@ header{
 }
 #cambio{
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     margin-right: 15px;
@@ -40,7 +41,7 @@ header{
   }
   #searchform{
     display:inline;
-    font-size:1em;
+    font-size: 18px;
     border-radius: 8em;
     border:0.1em solid rgba(255, 166, 0, 0);
     box-shadow:0 0 0.3em rgba(236, 10, 10, 0);
@@ -121,13 +122,14 @@ header{
 .botonInferiores{
     background-color: transparent;
     color: black;
+    font-size: 18px;
     border:none;
     font-weight: 600;
-    padding-top: 10px;
+    padding: 9px;
 }
 
 .logo-texto{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     padding-top: 10px;
@@ -158,7 +160,7 @@ header{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 17px;
+    font-size: 18px;
     color: white;
     margin-right: 15px;
 }
@@ -185,7 +187,7 @@ footer{
     
 }
 .logo-texto-footer{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     padding-top: 20px;
@@ -204,7 +206,7 @@ footer{
     overflow: hidden;
     outline:none;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
 }
 

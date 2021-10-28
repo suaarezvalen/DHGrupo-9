@@ -2,7 +2,7 @@ body{
     margin: 0%;
     padding: 0%;
     height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, sans-serif;
 }
 
 /* MAIN */
@@ -60,10 +60,11 @@ main{
 #subtitulo{
     text-align: center;
     color: white; 
-    width: 30%;
+    font-size: 30px;
+    width: 1050px;
     margin: auto;
-    margin-bottom: 20px;
-    padding-top: 30px;
+    margin-bottom: 25px;
+    padding-top: 55px;
     padding-bottom: 32px;
     border-bottom: solid white 2px;
 }
@@ -151,6 +152,10 @@ main{
     transform: none;
 }
 
+#subtitulo{
+    width: 90vw;
+}
+
 #destacado{
     width: 100vw;
     height: 30vh;
@@ -179,6 +184,9 @@ main{
     }
     #carouselExampleIndicators{
         display: block;
+    }
+    #subtitulo{
+        width: 60vw;
     }
     #destacado{
         width: 100vw;

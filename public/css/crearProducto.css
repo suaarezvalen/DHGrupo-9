@@ -28,7 +28,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 500px;
+    width: 700px;
     height: auto;
     margin: auto;
     margin-top: 150px;
@@ -40,8 +40,9 @@ main{
 .formularios{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 25px;
     padding: 5px 10px 5px 10px;
     border: solid rgb(175, 175, 175) 2px;
     border-radius: 5px;
@@ -50,7 +51,8 @@ main{
 .titulos{
     text-align: center;
     color: white; 
-    width: 1200px;
+    font-size: 30px;
+    width: 1050px;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 32px;
@@ -59,6 +61,8 @@ main{
 
 .subtitulos{
     text-align: center;
+    text-decoration: none;
+    color: white;
 }
 
 .flex-especificaciones{
@@ -89,4 +93,24 @@ main{
 
 .boton-ingreso{
     text-align: center;
+}
+
+@media (min-width: 770px) and (max-width:1079px){
+    .titulos{
+        width: 90vw;
+    }
+}
+
+@media (min-width: 360px) and (max-width:769px){
+    .flex-contenedor{
+        width: 70vw;
+    }
+
+    .titulos{
+        width: 70vw;
+    }
+
+    .formularios    {
+        width: 60vw;
+    }
 }

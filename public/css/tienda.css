@@ -5,9 +5,9 @@
 body{
     padding: 0%;
     margin: 0%;
-    
-    
+    font-family: Verdana, sans-serif;
 }
+
 main{
     background-color: #131823;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,7 +38,8 @@ main{
 .titulos{
     text-align: center;
     color: white; 
-    width: 1200px;
+    font-size: 30px;
+    width: 1050px;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 32px;
@@ -158,6 +159,12 @@ img{
 
 /*hover*/
 
+@media (min-width: 770px) and (max-width:1079px){
+    .titulos{
+        width: 90vw;
+    }
+}
+
 @media (min-width: 360px) and (max-width:769px){
     .logo-texto{
         display: none;
@@ -170,6 +177,10 @@ img{
         color: white;
         padding-top: 20px;
         margin-left: 10px;
+    }
+
+    .titulos{
+        width: 70vw;
     }
     
     .botones-tienda{
