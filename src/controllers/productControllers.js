@@ -89,11 +89,11 @@ const productControllers =
             nombresImagenes += req.files[i].filename + ";"
             
         }
-        console.log("final   " + nombresImagenes)
-        console.log("imagen 0     " + nombresImagenes[2])
+        //console.log("final   " + nombresImagenes)
+        //console.log("imagen 0     " + nombresImagenes[2])
 
         
-        let categorias = await db.categorias.findOne({
+        let categorias = await db.Categoria.findOne({
             where: {nombre: req.body.categoria}
             
         })
@@ -155,7 +155,7 @@ const productControllers =
         if(resultValidate.errors.length == 0){
             
             let idEncontrado = req.params.id;
-            let categorias = await db.categorias.findOne({
+            let categorias = await db.Categoria.findOne({
                 where: {nombre: req.body.categoria}
             })
             
