@@ -4,16 +4,12 @@ const { validationResult } = require('express-validator');
 const mysql = require("mysql");
 
 const productFilePath = path.join(__dirname, "../database/product.JSON");
-
-//let product = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
-
 const db = require('../database/models');
 const { Console, count } = require('console');
 const { post } = require('../routes/productRoutes');
 
 
 
-//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productControllers =  
 {
@@ -23,7 +19,6 @@ const productControllers =
         .then(productos =>{
             todosLosProductos = productos;  
             
-            let arrayImg = Object.keys(todosLosProductos)
 
             //console.log(todosLosProductos)
 
