@@ -25,20 +25,17 @@ const productControllers =
             
             let arrayImg = Object.keys(todosLosProductos)
 
-            let imagen = " " //devuelve un string de todas las img de cada producto falta obtener solo la de logo para ponerlo en tienda
+            //console.log(todosLosProductos)
 
-            
-        for(i in arrayImg) {
-            imagen += todosLosProductos[i].img 
+            let imagen = []
+        for(i in todosLosProductos) {
+            imagen += todosLosProductos[i].img.split(";")[0] +";"
         }
-             let arreglo = imagen.split(";")
-
-             let imglogo = arreglo[0] //consegui el logo de del primer producto me faltan las otras
-             
+            let imagenesLogo = imagen.split(";")
+             console.log("prueba 1" , imagenesLogo[1])
             
 
-            console.log("que devuelveee    " + imglogo)
-            res.render('product/tienda', {todosLosProductos})
+            res.render('product/tienda', {todosLosProductos , imagenesLogo})
         })
         .catch((error) => {
             console.log('ERRRO')
