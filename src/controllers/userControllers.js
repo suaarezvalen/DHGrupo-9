@@ -9,6 +9,7 @@ let user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 
 const db = require('../database/models')
 
+
 const userControllers =  
 {
     login: (req, res) => {
@@ -62,6 +63,7 @@ const userControllers =
         if (bcryptjs.compareSync(req.body.clave, resultado['clave'])) {  
             //usuarioALoguearse = resultado.mail
             req.session.usuarioLogueado = resultado;
+     
             res.redirect("../user/usuario")
         } else {
             return res.render("user/login", {erroresClave: resultValidateLogin.mapped(), oldData: req.body});  
@@ -89,16 +91,21 @@ const userControllers =
             usuarioEncontrado = resultado;
         res.render('user/usuario', {detalleUsuario : usuarioEncontrado}); 
     } */
+
     
         res.render('user/usuario', {
+            
             user: req.session.usuarioLogueado
+        
+
         }
-    )},
+        
+    )}, 
    cerrarSession: (req, res) => {
-        req.session.destroy();
+       req.session.destroy();
         console.log(req.session)
         return res.redirect('/');
-    },
+   }, 
        
 }   
 module.exports = userControllers;                                   

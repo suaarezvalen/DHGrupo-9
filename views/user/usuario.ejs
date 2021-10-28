@@ -15,7 +15,7 @@
             </article>
             <article id="ladoDerecho">
                 <h3 id="nombreUsuario"><%=user.nombre%></h3>
-                <p class="datos"><%=user.mail%></p>
+                <p class="datos" ><%=user.mail%></p>
                 <p class="datos"><%=user.usuario%></p>
                 <div id="botonesUsuario">
                     <a href="/user/logout">Cerrar sesión</a>
@@ -25,6 +25,8 @@
     </main>
 
     <%- include("../partials/footer") %>
-    
+
+    <script src="./../../js/detalleUsuario.js"></script>
+
 </body>
 </html>

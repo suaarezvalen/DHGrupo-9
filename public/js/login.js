@@ -1,6 +1,7 @@
 window.addEventListener("load", function(){
     let form = document.querySelector("#formulario");
 
+
     
     form.addEventListener("submit", function(event){
         event.preventDefault();
