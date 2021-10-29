@@ -20,6 +20,9 @@ main{
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
+#nombreUsuario{
+    text-transform: uppercase;
+}
 #ladoDerecho{
     display: flex;
     flex-direction: column;

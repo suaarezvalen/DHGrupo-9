@@ -33,6 +33,14 @@ header{
     color: white;
     margin-right: 15px;
 }
+#nombreLogeado{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0%;
+    text-decoration: none;
+}
 /*buscador con movimiento*/
 
 #container{
@@ -132,8 +140,12 @@ header{
     font-size: 18px;
     font-weight: bold;
     color: white;
-    padding-top: 10px;
+    margin-top: 10px;
     margin-left: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+    border: solid 3px;
+    border-color: white;
+   
 }
 
 .logo-texto2{
@@ -177,6 +189,8 @@ footer{
 .logo-texto-footer{
     text-align: center;
     color: white; 
+    font-family: 'Do Hyeon', sans-serif;
+
     font-size: 18px;
     width: 1100px;
     margin: auto;
@@ -187,18 +201,20 @@ footer{
 }
 .contenedor-footer{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     padding-bottom: 20px;
     font-size: 17px;
+    align-items: center;
 }
 .sections-footer1{
     width: 400px;
     text-align: center;
-    margin-top: 55px;
 }
 .sections-footer2{
-    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: justify;
 }
 .sections-footer2 a{
@@ -219,6 +235,10 @@ footer{
     outline:none;
     color: rgb(161, 161, 161);
     font-size: 18px;
+}
+.footerInfo{
+    margin-top: 2%;
+    width: 25%;
 }
 
 /* FOOTER */
@@ -241,8 +261,9 @@ footer{
         width: 375px;
     }
 
-    .sections-footer2{
-        width: 375px;
+    .footerInfo{
+        margin-top: 2%;
+        width: 25%;
     }
 
     /*HEADDER*/
@@ -281,6 +302,7 @@ footer{
     .sections-footer2{
         display: none;
     }
+
 
     /*HEADDER*/
 }

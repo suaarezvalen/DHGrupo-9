@@ -53,7 +53,7 @@ main{
 #contenedor-portada{
     display: flex;
     flex-direction: row;
-    height: 400px;
+    height: 45vh;
 
 }
 #portada{
@@ -71,7 +71,7 @@ main{
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 30px;
-    width: 50vw;
+    width: 50%;
     font-size: 20px;
      
 }
@@ -178,13 +178,33 @@ img{
     .titulos{
         width: 90vw;
     }
+    #contenedor-portada{
+        background-image: url("/img/panoramica1.jpg");
+        height: 45vh;
+    }
+    #contenedor-izq{
+        width: 500px;
+    }
+    #portada{
+        display: none;
+    }
 }
 
 @media (min-width: 360px) and (max-width:769px){
     .logo-texto{
         display: none;
     }
-    
+    #portada{
+        display: none;
+    }
+    #contenedor-izq{
+        width: 100%;
+        height: 80%;
+    }
+    #logo-portada{
+        width: 30vw;
+        height: 30vh;
+    }
     .logo-texto2{
         display: block;
         font-size: 12px;
@@ -193,7 +213,9 @@ img{
         padding-top: 20px;
         margin-left: 10px;
     }
-
+    .titulos2{
+        margin: 0%;
+    }
     .titulos{
         width: 70vw;
     }

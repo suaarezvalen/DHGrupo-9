@@ -1,3 +1,4 @@
+
 body{
     margin: 0%;
     padding: 0%;
@@ -12,40 +13,32 @@ body{
 main{
     background-color: #0b0b0f;
     width: 100%;
-    height: 100%;
     
 }
 #productos{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
 }
 #titulo-juego{
     text-align: start;
     color: white; 
     font-size: 30px;
     width: 1050px;
-    margin: auto;
     padding-top: 30px;
     padding-bottom: 32px;
     border-bottom: solid white 2px;
+    
 }
 
 #lado-izquierdo{
     display: flex;
     flex-direction: column;
-    margin: 7% 3% 10% 10%;
+    margin: 7% 0% 6% 10%;
     color: white;
     
 }
-
-
-
-/*slider*/
-
-
-
-/*slider*/
 
 .info-juego{
     font-size: 16px;
@@ -62,8 +55,12 @@ main{
     display: flex;
     flex-direction: column;
     margin: 7% 10% 10% 10%;
-}
+    width: 100%;
 
+}
+#caja-info{
+    margin: 1.5%;
+}
 
 #contenedor-derecho{
     position: -webkit-sticky;
@@ -112,36 +109,7 @@ img{
     justify-content: space-around;
     padding-bottom: 35px;
 }
-#productos-similares{
-    display: flex;
-    flex-direction: row;
-    background-color: #212124;
-    justify-content: space-around;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 350px;
-    box-shadow: rgba(77, 77, 119, 0.548) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
-#titulo-similares{
-    margin-left: 10%;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.foto-similar{
-    width: 100%;
-    height: 85%;
-}
-.similares{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin: 1%;
 
-}
-.info-similares{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
 
 

@@ -1,3 +1,4 @@
+
 body{
     margin: 0%;
     padding: 0%;
@@ -49,6 +50,7 @@ main{
     display: flex;
     flex-direction: row;
     margin-left: 3%;
+    width: 100%;
 
 }
 #destacado-juego{
@@ -138,7 +140,7 @@ main{
 }
 
 #destacado{
-    width: 100vw;
+    width: 100%;
     height: 30vh;
     margin-left: 5%;
 }
