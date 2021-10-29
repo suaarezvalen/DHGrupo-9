@@ -20,7 +20,13 @@ const configImagen = multer.diskStorage({
 
 const uploadFile = multer({storage: configImagen});
 
-/* MULTER */
+
+/*MIDDLEWARES*/
+
+const guestMiddleware = require ("../middlewares/guestMiddleware");
+const authMiddleware = require ("../middlewares/authMiddleware");
+
+
 /* VALIDATOR */
 const validateRegister = [
     check("nombre")
@@ -58,24 +64,22 @@ const validateRegister = [
         check("clave")
             .notEmpty().withMessage("Debe completar la contraseña"),        
         ]
-/* VALIDATOR */
 
 
 /* RUTAS */
 
-router.get('/registro', userControllers.registro);
+router.get('/registro', guestMiddleware, userControllers.registro);
 router.post('/registro', uploadFile.single("Imagen"), validateRegister, userControllers.registroAccion);
 
-router.get('/login', userControllers.login);
+router.get('/login', guestMiddleware, userControllers.login);
 router.post('/login', validateLogin, userControllers.loginAccion)
 
-router.get('/usuario', userControllers.usuarioData);
+router.get('/usuario', authMiddleware, userControllers.usuarioData);
 
 router.get('/logout', userControllers.cerrarSession);
 
 
 
 
-/* RUTAS */
 
 module.exports = router;

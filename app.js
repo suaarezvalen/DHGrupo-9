@@ -4,6 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const session = require("express-session");
+const userLoggedMiddleware = require ('./src/middlewares/userLoggedMiddleware');
 const cors = require('cors');
 //cookies
 
@@ -14,6 +15,7 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({secret: "session message", resave:false, saveUninitialized:false}));
+app.use(userLoggedMiddleware);
 app.use(cors())
 
 //cookies

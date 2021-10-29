@@ -63,7 +63,7 @@ const userControllers =
         if (bcryptjs.compareSync(req.body.clave, resultado['clave'])) {  
             //usuarioALoguearse = resultado.mail
             req.session.usuarioLogueado = resultado;
-     
+            
             res.redirect("../user/usuario")
         } else {
             return res.render("user/login", {erroresClave: resultValidateLogin.mapped(), oldData: req.body});  
@@ -77,24 +77,14 @@ const userControllers =
         return res.render("user/login", {erroresMail: resultValidateLogin.mapped(), oldData: req.body})
     } else {
         return res.render("user/login", {errores: resultValidateLogin.mapped(), oldData: req.body});
-    }
+    } 
 },
 
     usuarioData: (req, res) => {
-        /*let idEncontrado = req.params.id;
 
-        let usuarioEncontrado;
 
-        db.Usuario.findOne({
-            where: {id: idEncontrado}
-        }).then(resultado =>{
-            usuarioEncontrado = resultado;
-        res.render('user/usuario', {detalleUsuario : usuarioEncontrado}); 
-    } */
-
-    
         res.render('user/usuario', {
-            
+          
             user: req.session.usuarioLogueado
         
 
@@ -103,7 +93,7 @@ const userControllers =
     )}, 
    cerrarSession: (req, res) => {
        req.session.destroy();
-        console.log(req.session)
+
         return res.redirect('/');
    }, 
        
