@@ -228,9 +228,21 @@ footer{
 @media (min-width: 770px) and (max-width:1079px){
 
     /*HEADDER*/
+
+    .logo-texto-footer{
+        width: 90vw;
+    }
     
     .logo-texto2{
         display: none;
+    }
+
+    .sections-footer1{
+        width: 375px;
+    }
+
+    .sections-footer2{
+        width: 375px;
     }
 
     /*HEADDER*/
@@ -239,6 +251,10 @@ footer{
 @media (min-width: 360px) and (max-width:769px){
 
     /*HEADDER*/
+
+    .logo-texto-footer{
+        width: 70vw;
+    }
 
     .logo-texto{
         display: block;
@@ -260,6 +276,10 @@ footer{
     .usuario{
         font-size: 14px;
         margin-right: 10px;
+    }
+
+    .sections-footer2{
+        display: none;
     }
 
     /*HEADDER*/

@@ -18,69 +18,63 @@ window.addEventListener('load', () => {
         for(let producto of productoArray){
             articuloEnCarrito.innerHTML +=
             `<div class="items-carrito" indice="${producto.indice}">
-                <h3 class="carrito-nombre">${"x1 " + producto.nombre}</h3>
-                <i class="fas fa-trash borrar-producto"></i>
+                <h3 class="carrito-nombre">${"x1 " + producto.nombre + " "}<i class="fas fa-trash borrar-producto"></i></h3>
             </div>`
         }
 
+        /*SUBTOTAL*/
 
-        let sumador = 0;
+        let sumadorSubtotal = 0;
 
         for(let i = 0; i < productoArray.length; i++){
 
-            let precioNumero = productoArray[i].precio.substring(1, productoArray[i].precio.length)
+            let precioNumeroSubtotal = productoArray[i].precio.substring(1, productoArray[i].precio.length)
 
-            var aux3 = Number(precioNumero)
+            var auxSubtotal = Number(precioNumeroSubtotal)
             
-            sumador += aux3
+            sumadorSubtotal += auxSubtotal
 
         }
-        console.log(sumador)
+        console.log(sumadorSubtotal)
 
         subtotal.innerHTML +=
             `<div>
-                <h3 class="total-subtotal-descuento-js">${sumador}</h3>
+                <h3 class="total-subtotal-descuento-js">${sumadorSubtotal}</h3>
             </div>`
 
-
-        /*let sumador = 0;
+        /*DESCUENTO*/
+        
+        let sumadorDescuento = 0;
 
         for(let i = 0; i < productoArray.length; i++){
 
-            let precioNumero = productoArray[i].precio.substring(1, productoArray[i].precio.length)
+            let precioNumeroDescuento = productoArray[i].precio.substring(1, productoArray[i].precio.length)
+            let descuentoNumeroDescuento = productoArray[i].descuento.substring(0, productoArray[i].descuento.length-1)
 
-            var aux3 = Number(precioNumero)
-            
-            sumador += aux3 * productoArray[i].descuento
-            console.log(productoArray)
+            var auxDescuento = Number(precioNumeroDescuento)
+            var auxDescuento2 = Number(descuentoNumeroDescuento)
+            console.log(auxDescuento2)
+
+            if(auxDescuento2 != 0 && auxDescuento2 != 100){
+                sumadorDescuento += (100 - auxDescuento2) * auxDescuento / 100
+            }else{
+                sumadorDescuento += auxDescuento
+            }
+
         }
-        console.log(sumador)
+        console.log(sumadorDescuento)
 
         descuento.innerHTML +=
             `<div>
-                <h3 class="total-subtotal-descuento-js">${sumador}</h3>
+                <h3 class="total-subtotal-descuento-js">${sumadorDescuento}</h3>
             </div>`
 
+        /*TOTAL*/
 
-        function totalFuncion (){
-            let sumador = 0;
-
-            for(let i = 0; i < productoArray.length; i++){
-
-                let precioNumero = productoArray[i].precio.substring(1, productoArray[i].precio.length)
-
-                var aux3 = Number(precioNumero)
-                
-                sumador += aux3
-
-            }
-            console.log(sumador)
-
-            total.innerHTML +=
-                `<div>
-                    <h3 class="total-subtotal-descuento-js">${sumador}</h3>
-                </div>`
-        }*/
+        total.innerHTML +=
+            `<div>
+                <h3 class="total-subtotal-descuento-js">${sumadorDescuento}</h3>
+            </div>`
         
  
     }
