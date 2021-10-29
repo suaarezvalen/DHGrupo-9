@@ -82,12 +82,10 @@ const userControllers =
 
     usuarioData: (req, res) => {
 
-
+console.log (req.session.usuarioLogueado)
         res.render('user/usuario', {
-          
             user: req.session.usuarioLogueado
         
-
         }
         
     )}, 

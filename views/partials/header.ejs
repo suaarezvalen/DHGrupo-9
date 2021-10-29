@@ -15,6 +15,8 @@
                             </div>                        
                       
                         <% if (locals.isLogged) { %>       
+                          <h3><%= locals.usuarioLogueado.nombre  %>    </h3>
+                    
                           <a href="/user/usuario"><button class="usuario" type="button"><i class="fas fa-user-circle"></i></button></a>
                           <a href="/carrito"><button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button></a>
 
