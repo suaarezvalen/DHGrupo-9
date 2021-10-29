@@ -38,7 +38,7 @@ const userControllers =
         .catch((error)=>{
             console.log(error)
         })
-        res.redirect("/product/tienda")
+        res.redirect("/user/login")
         } else {
             return res.render("user/registro", {errores: resultValidate.mapped(), oldData: req.body});
             
@@ -82,7 +82,6 @@ const userControllers =
 
     usuarioData: (req, res) => {
 
-console.log (req.session.usuarioLogueado)
         res.render('user/usuario', {
             user: req.session.usuarioLogueado
         
