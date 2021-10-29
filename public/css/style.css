@@ -25,7 +25,7 @@ main{
 #banners1{
     width: 645px;
     transition: 1.0s;
-    height: 882px;
+    height: 100%;
 }
 #banner1:hover #banners1{
     -webkit-transform: scale(1.3);
@@ -48,6 +48,8 @@ main{
 #destacado{
     display: flex;
     flex-direction: row;
+    margin-left: 3%;
+
 }
 #destacado-juego{
     margin-left: 30px;
@@ -89,7 +91,6 @@ main{
     font-size: 18px;
 }
 #ver-mas{
-    /*padding: 2%;
     height: 48px;
     background-color: #3B5B9C;
     background-repeat:no-repeat;
@@ -100,11 +101,8 @@ main{
     color: white;
     font-size: 15px;
     color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: ;
-    border-bottom-left-radius: ;
-    border-bottom-right-radius: ;*/
-    clip-path: polygon(50% 0, 100% 0, 0 100%);
+    border-radius: 5px;
+    
 
 }
 .movimiento-banner:hover .destacado-banner{
@@ -123,20 +121,14 @@ main{
     display: none;
 }
 #novedades{
-    height: 60vw;
+    height: 100%;
     width: 100vw;
 }
 #novedades img{
     width: 35vw;
-    height: 55vh;
+    height: 100%;
 }
 #banner1:hover #banners1{
-    transition: none;
-    transform: none;
-}#banner2:hover #banners2{
-    transition: none;
-    transform: none;
-}#banner3:hover #banners3{
     transition: none;
     transform: none;
 }
@@ -148,17 +140,23 @@ main{
 #destacado{
     width: 100vw;
     height: 30vh;
+    margin-left: 5%;
 }
 #juego-banner{
     display: none;
 }
 #destacado-juego{
-    width: auto;
-    height: auto;
+    width: 20%;
+    height: 90%;
+    margin-top: 3%;
 }
 #box-info{
     width: 60vw;
     height: 30vh;
+    margin-top: 5%;
+}
+#info{
+    margin-bottom: 5%;
 }
 .logo-texto2{
     display: none;
@@ -182,6 +180,7 @@ main{
         height: auto;
         flex-direction: column;
         align-items: center;
+        margin: 0%;
         
     }
     #juego-banner{
@@ -190,7 +189,9 @@ main{
     #destacado-juego{
         width: auto;
         height: auto;
-        margin-left: 0;
+        margin: 0 auto;
+        align-items: center;
+
 
     }
     #info{
@@ -199,8 +200,15 @@ main{
     #ver-mas{
         width: 30vw;
         margin-top: 25%;
-    }.logo-texto{
+    }
+    .logo-texto{
         display: none;
+    }
+    #box-info{
+        margin: 0%;
+        width: 100%;
+        height: 100%;
+        
     }
     
     .logo-texto2{
