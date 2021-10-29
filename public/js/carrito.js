@@ -35,16 +35,17 @@ window.addEventListener('load', () => {
             sumadorSubtotal += auxSubtotal
 
         }
-        console.log(sumadorSubtotal)
+        //console.log(sumadorSubtotal)
 
         subtotal.innerHTML +=
             `<div>
                 <h3 class="total-subtotal-descuento-js">${sumadorSubtotal}</h3>
             </div>`
 
-        /*DESCUENTO*/
+        /*DESCUENTO y TOTAL*/
         
         let sumadorDescuento = 0;
+        let sumadorTotal = 0;
 
         for(let i = 0; i < productoArray.length; i++){
 
@@ -53,27 +54,34 @@ window.addEventListener('load', () => {
 
             var auxDescuento = Number(precioNumeroDescuento)
             var auxDescuento2 = Number(descuentoNumeroDescuento)
-            console.log(auxDescuento2)
 
+            var auxTotal = Number(precioNumeroDescuento)
+            var auxTotal2 = Number(descuentoNumeroDescuento)
+            
             if(auxDescuento2 != 0 && auxDescuento2 != 100){
-                sumadorDescuento += (100 - auxDescuento2) * auxDescuento / 100
+                sumadorDescuento += auxDescuento2 * auxDescuento / 100
             }else{
-                sumadorDescuento += auxDescuento
+                sumadorDescuento += auxDescuento2
+            }
+
+            if(auxTotal2 != 0 && auxTotal2 != 100){
+                sumadorTotal += (100 - auxTotal2) * auxTotal / 100
+            }else{
+                sumadorTotal += auxTotal
             }
 
         }
         console.log(sumadorDescuento)
+        console.log(sumadorTotal)
 
         descuento.innerHTML +=
             `<div>
                 <h3 class="total-subtotal-descuento-js">${sumadorDescuento}</h3>
             </div>`
 
-        /*TOTAL*/
-
         total.innerHTML +=
             `<div>
-                <h3 class="total-subtotal-descuento-js">${sumadorDescuento}</h3>
+                <h3 class="total-subtotal-descuento-js">${sumadorTotal}</h3>
             </div>`
         
  
@@ -93,6 +101,6 @@ window.addEventListener('load', () => {
         }
     }
     }
-
+    console.log(buttonDelete)
     
 })
