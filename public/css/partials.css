@@ -3,7 +3,7 @@
     background-color: #85144b;
   }
   
-  .bg-custom-2 {
+.bg-custom-2 {
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   }
 /*prueba menu usuario*/
@@ -164,18 +164,6 @@ header{
     color: white;
     margin-right: 15px;
 }
-
-
-/*prueba usuario hover*/
-
-
-
-
-
-/*prueba usuario hover*/
-
-
-
 /*HEADER 2*/
 
 /* footer */
@@ -187,15 +175,39 @@ footer{
     
 }
 .logo-texto-footer{
+    text-align: center;
+    color: white; 
     font-size: 18px;
-    font-weight: bold;
-    color: white;
+    width: 1100px;
+    margin: auto;
+    margin-bottom: 20px;
     padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid white 2px;
 }
-#logo-redes{
+.contenedor-footer{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+.sections-footer1{
+    width: 400px;
+    text-align: center;
+    margin-top: 55px;
+}
+.sections-footer2{
+    width: 400px;
+    text-align: justify;
+}
+.sections-footer2 a{
+    color: rgb(161, 161, 161);
+    text-decoration: none;
+}
+.subtitulo-footer{
+    color: rgb(161, 161, 161);
+    text-align: center;
 }
 .redes{
     background-color: Transparent;
@@ -205,9 +217,8 @@ footer{
     cursor:pointer;
     overflow: hidden;
     outline:none;
-    color: white;
+    color: rgb(161, 161, 161);
     font-size: 18px;
-    color: white;
 }
 
 /* FOOTER */
