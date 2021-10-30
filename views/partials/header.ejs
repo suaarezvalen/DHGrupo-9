@@ -16,11 +16,9 @@
                       
                         <% if (locals.isLogged) { %>       
                           <a href="/user/usuario" id="nombreLogeado"><%= locals.usuarioLogueado.nombre  %></a>
-                    
                           <a href="/user/usuario"><button class="usuario" type="button"><i class="fas fa-user-circle"></i></button></a>
-                          <div id="contador-carrito">
-                          <a href="/carrito"><button class="usuario" type="button"><i class="fas fa-shopping-cart"></i></button></a>
-                          </div>
+                          <a href="/carrito"><button id="carrito" type="button"><i class="fas fa-shopping-cart"></i></button></p></a>
+                          <div id="contador-carrito"></div>
 
                          <% } else { %> 
 

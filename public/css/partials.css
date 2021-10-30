@@ -176,6 +176,31 @@ header{
     color: white;
     margin-right: 15px;
 }
+#carrito{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+#contador-carrito h3{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+}
 /*HEADER 2*/
 
 /* footer */

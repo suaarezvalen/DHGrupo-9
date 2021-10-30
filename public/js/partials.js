@@ -13,8 +13,8 @@ window.addEventListener('load', () => {
             sumador = i
         }
         contadorCarrito.innerHTML +=
-            `<div>
-                <h3 class="total-subtotal-descuento-js">${sumador}</h3>
-            </div>`
+            `
+                <h3>${sumador}</h3>
+            `
     }
 })
