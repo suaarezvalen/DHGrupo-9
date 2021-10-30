@@ -72,7 +72,7 @@ router.post('/crear',uploadFile.any("Imagen"), validateCrear, productControllers
 router.get('/detalle/:id', productControllers.detalle);
 
 router.get('/editar/:id', productControllers.editarProducto);
-router.put('/editar/:id',uploadFile.single("Imagen"), validateEditar, productControllers.editarProductoAccion);
+router.put('/editar/:id',uploadFile.any("Imagen"), validateEditar, productControllers.editarProductoAccion);
 
 router.delete('/detalle/:id', productControllers.eliminarProducto);
 

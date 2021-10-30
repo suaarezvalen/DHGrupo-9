@@ -49,18 +49,14 @@ main{
 
     
 /* portada*/
-
 #contenedor-portada{
-    display: flex;
-    flex-direction: row;
+    background-image: url("/img/bannerback4.jpg");
     height: 45vh;
-
 }
 #portada{
-    height: 100%;
-    width: 70%;
-
+    display: none;
 }
+
 #banner{
     height: 100%;
     width: 100%;
@@ -73,6 +69,7 @@ main{
     padding-top: 30px;
     width: 50%;
     font-size: 20px;
+    height: 100%;
      
 }
 #info-portada{
@@ -141,7 +138,7 @@ img{
     height: 300px;
 }
 .juego-catalogo{
-    margin: 45px;
+    margin: 5%;
     text-decoration: none;
 }
 .info{
@@ -179,7 +176,7 @@ img{
         width: 90vw;
     }
     #contenedor-portada{
-        background-image: url("/img/panoramica1.jpg");
+        background-image: url("/img/bannerback4.jpg");
         height: 45vh;
     }
     #contenedor-izq{
@@ -191,6 +188,9 @@ img{
 }
 
 @media (min-width: 360px) and (max-width:769px){
+    #contenedor-portada{
+        background-image: none;
+    }
     .logo-texto{
         display: none;
     }
