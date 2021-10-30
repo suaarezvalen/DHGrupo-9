@@ -64,9 +64,16 @@
                         <%= errores.descripcion.msg %>
                     </div>
                     <% } %>
-
+                    
+                <p class="text-img">Imagen de portada</p>
                 <div class="formularios">
-                    <input class="input-formulario" type="file" name="Imagen" value="<%=productoEncontrado.img %>">
+                    <input class="input-formulario" type="file" name="Imagen" multiple>
+                </div>
+                   
+                <p class="text-img">Imagenes de gameplay</p>
+                <div class="formularios">
+                    <input class="input-formulario" type="file" name="Imagen" multiple>
+
                 </div>
 
                 <p class="boton-ingreso">

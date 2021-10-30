@@ -146,6 +146,14 @@ const productControllers =
     editarProductoAccion : async (req, res) => {
         
         const resultValidate = validationResult(req);
+        
+        const imagenes = Object.keys(req.files)
+        let nombresImagenes = "" 
+
+        for(i in imagenes) {
+            nombresImagenes += req.files[i].filename + ";"
+            
+        }
 
         if(resultValidate.errors.length == 0){
             
@@ -164,7 +172,7 @@ const productControllers =
             titulo: req.body.titulo,
 		    precio: req.body.precio,
 		    decuento: req.body.decuento,
-            img: req.file.filename,
+            img: nombresImagenes,
             categoria_fk: categorias["id"],
             descripcion: req.body.descripcion
         },

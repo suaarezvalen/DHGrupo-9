@@ -25,6 +25,7 @@ header{
 }
 #logohiper{
     text-decoration: none;
+
 }
 #cambio{
     text-decoration: none;
@@ -145,11 +146,11 @@ header{
     font-family: 'Do Hyeon', sans-serif;
     border: solid 3px;
     border-color: white;
-   
 }
 
 .logo-texto2{
     display: none;
+
 }
 
 .botones-tienda{

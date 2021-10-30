@@ -26,7 +26,8 @@ main{
 #banners1{
     width: 645px;
     transition: 1.0s;
-    height: 100%;
+    height: 90%;
+
 }
 #banner1:hover #banners1{
     -webkit-transform: scale(1.3);
