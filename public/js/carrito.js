@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
         for(let producto of productoArray){
             articuloEnCarrito.innerHTML +=
             `<div class="items-carrito" indice="${producto.indice}">
-                <h3 class="carrito-nombre">${"x1 " + producto.nombre + " "}<i class="fas fa-trash borrar-producto"></i></h3>
+                <h3 class="carrito-nombre">${"x1 " + producto.nombre + " "}<i class="fas fa-times borrar-producto"></i></h3>
             </div>`
         }
 

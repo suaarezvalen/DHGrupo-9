@@ -216,7 +216,6 @@ footer{
     text-align: center;
     color: white; 
     font-family: 'Do Hyeon', sans-serif;
-
     font-size: 18px;
     width: 1100px;
     margin: auto;
@@ -266,6 +265,17 @@ footer{
     margin-top: 2%;
     width: 25%;
 }
+.copyright{
+    text-align: center;
+    color: white; 
+    font-size: 18px;
+    width: 1100px;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: solid white 2px;
+}
 
 /* FOOTER */
 
@@ -290,6 +300,10 @@ footer{
     .footerInfo{
         margin-top: 2%;
         width: 25%;
+    }
+
+    .copyright{
+        width: 90vw;
     }
 
     /*HEADDER*/
@@ -329,6 +343,9 @@ footer{
         display: none;
     }
 
+    .copyright{
+        width: 70vw;
+    }
 
     /*HEADDER*/
 }
