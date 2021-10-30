@@ -13,6 +13,12 @@ window.addEventListener('load', () => {
 
     if (productoArray.length >= 1){
 
+        let sumador;
+
+        for(let i = 1; i <= productoArray.length; i++){
+            sumador = i
+        }
+        
 
         //for normal y poner el indice
         for(let producto of productoArray){
