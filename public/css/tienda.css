@@ -12,29 +12,6 @@ main{
     background-color: #131823;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-
-/*ofertas*/
-
-
-/*ofertas {
-        
-        text-align: center;
-        background-color: black;
-        color: white;
-        font-size: 2vw;
-        font-weight: bold;
-        box-shadow: 4px 4px rgb(255, 255, 255);
-        margin-bottom: 25px;
-        padding-top: 12px;
-        padding-right: 10px;
-        padding-left: 10px;
-        margin-left: 41%;
-        margin-right: 41%;
-        
-    }*/
-
 .titulos{
     text-align: center;
     color: white; 
@@ -128,7 +105,7 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 85%;
     margin-left: 7.5%;
 }
@@ -138,8 +115,9 @@ img{
     height: 300px;
 }
 .juego-catalogo{
-    margin: 5%;
     text-decoration: none;
+    margin: 5%;
+    
 }
 .info{
     display: flex;
