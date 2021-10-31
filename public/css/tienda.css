@@ -99,12 +99,10 @@ main{
 /*catalogo*/
 
 
-
-
 .caja-catalogo{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     width: 85%;
     margin-left: 7.5%;
