@@ -101,8 +101,8 @@ main{
 
 .caja-catalogo{
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 85%;
     margin-left: 7.5%;
