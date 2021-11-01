@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="formularios">
-                    <input class="input-formulario" id="nombres" type="text" name="nombre" placeholder="Nombre y Apellido" value="<%= locals.oldData ? oldData.nombre : null %>">
+                    <input class="input-formulario" id="nombres" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 </div>
                 <% if(locals.errores && errores.nombre) { %> 
                 <div style="color:red" class="msg-validator">

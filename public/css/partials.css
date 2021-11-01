@@ -139,13 +139,10 @@ header{
 
 .logo-texto{
     font-size: 18px;
-    font-weight: bold;
     color: white;
     margin-top: 10px;
     margin-left: 20px;
     font-family: 'Do Hyeon', sans-serif;
-    border: solid 3px;
-    border-color: white;
 }
 
 .logo-texto2{
