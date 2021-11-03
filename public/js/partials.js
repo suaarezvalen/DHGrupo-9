@@ -10,7 +10,11 @@ window.addEventListener('load', () => {
         let sumador;
 
         for(let i = 1; i <= productoArray.length; i++){
-            sumador = i
+            if(productoArray.length < 0){
+                sumador = i
+            }else{
+                sumador = 0
+            }
         }
         contadorCarrito.innerHTML +=
             `
